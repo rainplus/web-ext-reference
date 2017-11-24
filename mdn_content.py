@@ -92,25 +92,31 @@ class MDN:
 			if isinstance(value, dict):
 				with open(summary, "aw+")  as file:
 					file.write("{}* [{}]({})\n".format(place, key, key + ".md"))
+				print key,value[key]
+				self.create_file_with_dir_and_md(key+".md",value[key])
 				del value[key]
 				dirs = key + "/"
 				self.print_content(value, index + 1, dirs)
 			else:
 				with open(summary, "aw+")  as file:
 					if index == 1:
-						file.write("{}* [{}]({})\n".format(place, key, key + ".md"))
-						self.create_file_with_dir_and_md(self.turn_path(key) + "/" + self.turn_path(key + ".md"), value)
+						md_name = self.turn_path(key) + "/" + self.turn_path(key + ".md")
+
+						file.write("{}* [{}]({})\n".format(place, key, md_name))
+						self.create_file_with_dir_and_md(md_name, value)
 					else:
-						file.write("{}* [{}]({})\n".format(place, key, self.turn_path(value + ".md")))
+						md_name = dirs + self.turn_path(key) + "/" + self.turn_path(value + ".md")
+						file.write("{}* [{}]({})\n".format(place, key, md_name))
 						self.create_file_with_dir_and_md(
-							dirs + self.turn_path(key) + "/" + self.turn_path(value + ".md"), value)
+							md_name, value)
 
 	def create_file_with_dir_and_md(self, file_name, url):
 
 		if str(file_name).__contains__("http"):
 			return
 		dirName = os.path.dirname(file_name)
-		if not os.path.exists(dirName):
+		# print dirName
+		if not os.path.exists(dirName) and dirName !="./" and dirName != '':
 			os.system("mkdir -p " + dirName)
 		with open(file_name, "aw+") as file:
 
@@ -118,9 +124,10 @@ class MDN:
 				response = r.get(self.base_url + url)
 				if response.status_code == 200:
 					html2text.inline_links = False
+					article = str(BeautifulSoup(response.content, 'html.parser').select("#wikiArticle"))
+					# print html2text(article)
 					md = html2text.html2text(
-						str(BeautifulSoup(response.content, 'html.parser').select("#wikiArticle")))
-					# print md.replace("/n", " ")
+						article)
 					file.writelines(md)
 
 
@@ -128,3 +135,4 @@ if __name__ == "__main__":
 	mdn = MDN(start_url)
 	mdn.get_content()
 	mdn.print_content(mdn.content)
+	os.system("find . -type f -name *.md|xargs  sed -i '' 's/\\n//g' ")

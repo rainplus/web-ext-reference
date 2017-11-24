@@ -200,8 +200,7 @@ function will be called for any HTTP, HTTPS, or FTP requests.")
 
 \n[`proxy.unregister()`](/en-US/docs/Mozilla/Add-
 ons/WebExtensions/API/proxy/unregister "Unregisters a Proxy Auto-Configuration
-\(PAC\) file. that was registered by an earlier call to
-{{WebExtAPIRef\("proxy.register\(\)"\)}}.")
+\(PAC\) file. that was registered by an earlier call to proxy.register\(\).")
 
 \n    Unregisters the\xa0proxy script.
 
