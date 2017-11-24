@@ -1,8 +1,8 @@
-[\n
+[
 
-\n
 
-\n
+
+
 
 Although the APIs are based on the [Chrome devtools
 APIs](https://developer.chrome.com/extensions/devtools), there are still many
@@ -11,26 +11,26 @@ documented here. To see which features are currently missing please see
 [Limitations of the devtools APIs](/en-US/Add-
 ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs).
 
-\n
 
-\n
+
+
 
 The `devtools.panels` API lets a devtools extension define its user interface
 inside the devtools window.
 
-\n
+
 
 The devtools window hosts a number of separate tools - the JavaScript
 Debugger, Network Monitor, and so on. A row of tabs across the top lets the
 user switch between the different tools. The window hosting each tool's user
 interface is called a "panel".
 
-\n
+
 
 With the `devtools.panels` API you can create new panels in the devtools
 window.
 
-\n
+
 
 Like all the `devtools` APIs, this API is only available to code running in
 the document defined in the [devtools_page](/en-US/docs/Mozilla/Add-
@@ -39,88 +39,88 @@ devtools documents created by the extension (such as the panel's own
 document). See [Extending the developer tools](/en-US/docs/Mozilla/Add-
 ons/WebExtensions/Extending_the_developer_tools) for more.
 
-\n
+
 
 ## Types
 
-\n
 
-\n`[devtools.panels.ElementsPanel](/en-US/Add-
+
+`[devtools.panels.ElementsPanel](/en-US/Add-
 ons/WebExtensions/API/devtools.panels/ElementsPanel)`
 
-\n    Represents the HTML/CSS inspector in the browser's devtools.
+    Represents the HTML/CSS inspector in the browser's devtools.
 
-\n`[devtools.panels.ExtensionPanel](/en-US/Add-
+`[devtools.panels.ExtensionPanel](/en-US/Add-
 ons/WebExtensions/API/devtools.panels/ExtensionPanel)`
 
-\n    Represents a devtools panel created by the extension.
+    Represents a devtools panel created by the extension.
 
-\n`[devtools.panels.ExtensionSidebarPane](/en-US/Add-
+`[devtools.panels.ExtensionSidebarPane](/en-US/Add-
 ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane)`
 
-\n    Represents a pane that an extension has added to the\xa0HTML/CSS
+    Represents a pane that an extension has added to the\xa0HTML/CSS
 inspector in the browser's devtools.
 
-\n\n
+
 
 ## Properties
 
-\n
 
-\n`[devtools.panels.elements](/en-US/Add-
+
+`[devtools.panels.elements](/en-US/Add-
 ons/WebExtensions/API/devtools.panels/elements)`
 
-\n    A reference to an `[ElementsPanel](/en-US/Add-
+    A reference to an `[ElementsPanel](/en-US/Add-
 ons/WebExtensions/API/devtools.panels/ElementsPanel)` object.
 
-\n`[devtools.panels.themeName](/en-US/Add-
+`[devtools.panels.themeName](/en-US/Add-
 ons/WebExtensions/API/devtools.panels/themeName)`
 
-\n    The name of the current devtools theme.
+    The name of the current devtools theme.
 
-\n\n
+
 
 ## Functions
 
-\n
 
-\n`[devtools.panels.create()](/en-US/Add-
+
+`[devtools.panels.create()](/en-US/Add-
 ons/WebExtensions/API/devtools.panels/create)`
 
-\n    Creates a new devtools panel.
+    Creates a new devtools panel.
 
-\n\n
+
 
 ## Events
 
-\n
 
-\n`[devtools.panels.onThemeChanged](/en-US/Add-
+
+`[devtools.panels.onThemeChanged](/en-US/Add-
 ons/WebExtensions/API/devtools.panels/onThemeChanged)`
 
-\n    Fired when the devtools theme changes.
+    Fired when the devtools theme changes.
 
-\n\n
+
 
 ## Browser compatibility
 
-\n
+
 
 | Chrome| Edge| Firefox| Firefox for Android| Opera  
 ---|---|---|---|---|---  
-`ElementsPanel.createSidebarPane`| \n Yes| \n No| 57| \n No| \n Yes  
-`ElementsPanel.onSelectionChanged`| \n Yes| \n No| 56| \n No| \n Yes  
-`ExtensionPanel.onHidden`| \n Yes| \n No| 54| \n No| \n Yes  
-`ExtensionPanel.onSearch`| \n Yes| \n No| \n No| \n No| \n Yes  
-`ExtensionPanel.onShown`| \n Yes| \n No| 54| \n No| \n Yes  
-`ExtensionSidebarPane.onHidden`| \n Yes| \n No| 571| \n No| \n Yes  
-`ExtensionSidebarPane.onShown`| \n Yes| \n No| 571| \n No| \n Yes  
-`ExtensionSidebarPane.setExpression`| \n Yes2| \n No| 573| \n No| \n Yes  
-`ExtensionSidebarPane.setObject`| \n Yes4| \n No| 575| \n No| \n Yes  
-`create`| \n Yes| \n No| 54| \n No| \n Yes  
-`elements`| \n Yes| \n No| 56| \n No| \n Yes  
-`onThemeChanged`| \n No| \n No| 55| \n No| \n No  
-`themeName`| 54| \n No| 55| \n No| 41  
+`ElementsPanel.createSidebarPane`|  Yes|  No| 57|  No|  Yes  
+`ElementsPanel.onSelectionChanged`|  Yes|  No| 56|  No|  Yes  
+`ExtensionPanel.onHidden`|  Yes|  No| 54|  No|  Yes  
+`ExtensionPanel.onSearch`|  Yes|  No|  No|  No|  Yes  
+`ExtensionPanel.onShown`|  Yes|  No| 54|  No|  Yes  
+`ExtensionSidebarPane.onHidden`|  Yes|  No| 571|  No|  Yes  
+`ExtensionSidebarPane.onShown`|  Yes|  No| 571|  No|  Yes  
+`ExtensionSidebarPane.setExpression`|  Yes2|  No| 573|  No|  Yes  
+`ExtensionSidebarPane.setObject`|  Yes4|  No| 575|  No|  Yes  
+`create`|  Yes|  No| 54|  No|  Yes  
+`elements`|  Yes|  No| 56|  No|  Yes  
+`onThemeChanged`|  No|  No| 55|  No|  No  
+`themeName`| 54|  No| 55|  No| 41  
   
 1\. This event is only fired when the user switches between sidebar panes, not
 when the user switches between devtools panels. See [bug
@@ -142,121 +142,121 @@ and DOM nodes are not supported. See [bug 1403130](https://bugzil.la/1403130).
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`ElementsPanel.createSidebarPane`|  \nFull support\n\n Yes| \nNo support\n\n
-No| \nFull support\n\n 57| \nFull support\n\n Yes| \nNo support\n\n No  
-`ElementsPanel.onSelectionChanged`| \nFull support\n\n Yes| \nNo support\n\n
-No| \nFull support\n\n 56| \nFull support\n\n Yes| \nNo support\n\n No  
-`ExtensionPanel.onHidden`| \nFull support\n\n Yes| \nNo support\n\n No| \nFull
-support\n\n 54| \nFull support\n\n Yes| \nNo support\n\n No  
-`ExtensionPanel.onSearch`| \nFull support\n\n Yes| \nNo support\n\n No| \nNo
-support\n\n No| \nFull support\n\n Yes| \nNo support\n\n No  
-`ExtensionPanel.onShown`| \nFull support\n\n Yes| \nNo support\n\n No| \nFull
-support\n\n 54| \nFull support\n\n Yes| \nNo support\n\n No  
-`ExtensionSidebarPane.onHidden`| \nFull support\n\n Yes| \nNo support\n\n No|
-\nFull support\n\n 57
+`ElementsPanel.createSidebarPane`|  Full support Yes| No support
+No| Full support 57| Full support Yes| No support No  
+`ElementsPanel.onSelectionChanged`| Full support Yes| No support
+No| Full support 56| Full support Yes| No support No  
+`ExtensionPanel.onHidden`| Full support Yes| No support No| Full
+support 54| Full support Yes| No support No  
+`ExtensionPanel.onSearch`| Full support Yes| No support No| No
+support No| Full support Yes| No support No  
+`ExtensionPanel.onShown`| Full support Yes| No support No| Full
+support 54| Full support Yes| No support No  
+`ExtensionSidebarPane.onHidden`| Full support Yes| No support No|
+Full support 57
 
 Notes __
 
-\nFull support\n\n 57
-
-Notes __
-
-     Notes __This event is only fired when the user switches between sidebar panes, not when the user switches between devtools panels. See[bug 1412317](https://bugzil.la/1412317).
-|  \nFull support\n\n Yes| \nNo support\n\n No  
-`ExtensionSidebarPane.onShown`| \nFull support\n\n Yes| \nNo support\n\n No|
-\nFull support\n\n 57
-
-Notes __
-
-\nFull support\n\n 57
+Full support 57
 
 Notes __
 
      Notes __This event is only fired when the user switches between sidebar panes, not when the user switches between devtools panels. See[bug 1412317](https://bugzil.la/1412317).
-|  \nFull support\n\n Yes| \nNo support\n\n No  
-`ExtensionSidebarPane.setExpression`| \nFull support\n\n Yes
+|  Full support Yes| No support No  
+`ExtensionSidebarPane.onShown`| Full support Yes| No support No|
+Full support 57
 
 Notes __
 
-\nFull support\n\n Yes
+Full support 57
+
+Notes __
+
+     Notes __This event is only fired when the user switches between sidebar panes, not when the user switches between devtools panels. See[bug 1412317](https://bugzil.la/1412317).
+|  Full support Yes| No support No  
+`ExtensionSidebarPane.setExpression`| Full support Yes
+
+Notes __
+
+Full support Yes
 
 Notes __
 
      Notes __The expression must evaluate to a JavaScript object or a DOM node, or nothing is shown in the sidebar.
-|  \nNo support\n\n No| \nFull support\n\n 57
+|  No support No| Full support 57
 
 Notes __
 
-\nFull support\n\n 57
+Full support 57
 
 Notes __
 
      Notes __The expression must evaluate to an object that can be serialized to JSON, or nothing is shown in the sidebar. In particular, JavaScript cyclic objects and DOM nodes are not supported. See[bug 1403130](https://bugzil.la/1403130).
-|  \nFull support\n\n Yes| \nNo support\n\n No  
-`ExtensionSidebarPane.setObject`| \nFull support\n\n Yes
+|  Full support Yes| No support No  
+`ExtensionSidebarPane.setObject`| Full support Yes
 
 Notes __
 
-\nFull support\n\n Yes
+Full support Yes
 
 Notes __
 
      Notes __If the`jsonObject` parameter is a string, it is not displayed.
-|  \nNo support\n\n No| \nFull support\n\n 57
+|  No support No| Full support 57
 
 Notes __
 
-\nFull support\n\n 57
+Full support 57
 
 Notes __
 
      Notes __If the`jsonObject` is a string, then `rootTitle` must also be given, or `jsonObject` will not be displayed. See [bug 1412310](https://bugzil.la/1412310).
-|  \nFull support\n\n Yes| \nNo support\n\n No  
-`create`| \nFull support\n\n Yes| \nNo support\n\n No| \nFull support\n\n 54|
-\nFull support\n\n Yes| \nNo support\n\n No  
-`elements`| \nFull support\n\n Yes| \nNo support\n\n No| \nFull support\n\n
-56| \nFull support\n\n Yes| \nNo support\n\n No  
-`onThemeChanged`| \nNo support\n\n No| \nNo support\n\n No| \nFull support\n\n
-55| \nNo support\n\n No| \nNo support\n\n No  
-`themeName`| \nFull support\n\n 54| \nNo support\n\n No| \nFull support\n\n
-55| \nFull support\n\n 41| \nNo support\n\n No  
+|  Full support Yes| No support No  
+`create`| Full support Yes| No support No| Full support 54|
+Full support Yes| No support No  
+`elements`| Full support Yes| No support No| Full support
+56| Full support Yes| No support No  
+`onThemeChanged`| No support No| No support No| Full support
+55| No support No| No support No  
+`themeName`| Full support 54| No support No| Full support
+55| Full support 41| No support No  
   
-\n
 
-\n
 
- **Acknowledgements** \n
+
+
+ **Acknowledgements** 
 
 This API is based on Chromium's
 [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels)
 API.
 
-\n
+
 
 Microsoft Edge compatibility data is supplied by Microsoft Corporation and is
 included here under the Creative Commons Attribution 3.0 United States
 License.
 
-\n
 
-\n
 
-\n
+
+
+
 
     
     
-    // Copyright 2015 The Chromium Authors. All rights reserved.\n//\n// Redistribution and use in source and binary forms, with or without\n// modification, are permitted provided that the following conditions are\n// met:\n//\n//    * Redistributions of source code must retain the above copyright\n// notice, this list of conditions and the following disclaimer.\n//    * Redistributions in binary form must reproduce the above\n// copyright notice, this list of conditions and the following disclaimer\n// in the documentation and/or other materials provided with the\n// distribution.\n//    * Neither the name of Google Inc. nor the names of its\n// contributors may be used to endorse or promote products derived from\n// this software without specific prior written permission.\n//\n// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n
+    // Copyright 2015 The Chromium Authors. All rights reserved.//// Redistribution and use in source and binary forms, with or without// modification, are permitted provided that the following conditions are// met:////    * Redistributions of source code must retain the above copyright// notice, this list of conditions and the following disclaimer.//    * Redistributions in binary form must reproduce the above// copyright notice, this list of conditions and the following disclaimer// in the documentation and/or other materials provided with the// distribution.//    * Neither the name of Google Inc. nor the names of its// contributors may be used to endorse or promote products derived from// this software without specific prior written permission.//// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-\n
 
-\n]
 
-  *[\nFull support\n]: Full support
-  *[ \nFull support\n]: Full support
+]
+
+  *[Full support]: Full support
+  *[ Full support]: Full support
   *[Edge __]: Edge
   *[Opera __]: Opera
-  *[\nNo support\n]: No support
-  *[ \nNo support\n]: No support
+  *[No support]: No support
+  *[ No support]: No support
   *[Firefox for Android __]: Firefox for Android
   *[Desktop __]: Desktop
   *[Mobile __]: Mobile

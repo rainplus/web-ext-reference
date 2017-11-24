@@ -1,6 +1,6 @@
-[\n
+[
 
-\n
+
 
 Extensions can extend and modify the capability of a browser. Extensions for
 Firefox are built using the WebExtensions API, a cross-browser system for
@@ -16,7 +16,7 @@ ons/WebExtensions/Porting_from_Google_Chrome). The API is also fully
 compatible with [multiprocess Firefox](https://developer.mozilla.org/en-
 US/Firefox/Multiprocess_Firefox).
 
-\n
+
 
 If you have ideas or questions, or need help migrating a legacy add-on to use
 WebExtensions APIs, you can reach us on the [dev-addons mailing
@@ -24,222 +24,222 @@ list](https://mail.mozilla.org/listinfo/dev-addons) or
 [#webextensions](irc://irc.mozilla.org/webextensions) on
 [IRC](https://wiki.mozilla.org/IRC).
 
-\n
 
-\n
 
-\n
+
+
+
 
 ## Getting started
 
-\n
 
-\n
+
+
 
   * [What are extensions?](/en-US/Add-ons/WebExtensions/What_are_WebExtensions)
-\n
+
 
   * [Your first extension](/en-US/Add-ons/WebExtensions/Your_first_WebExtension)
-\n
+
 
   * [Your second extension](/en-US/Add-ons/WebExtensions/Your_second_WebExtension)
-\n
+
 
   * [Anatomy of an extension](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
-\n
+
 
   * [Example extensions](/en-US/Add-ons/WebExtensions/Examples)
-\n
 
-\n
+
+
 
 ## How to
 
-\n
 
-\n
+
+
 
   * [Intercept HTTP requests](/en-US/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests)
-\n
+
 
   * [Modify a web page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page)
-\n
+
 
   * [Add a button to the toolbar](/en-US/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
-\n
+
 
   * [Implement a settings page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page)
-\n
+
 
   * [Interact with the clipboard](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard)
-\n
 
-\n
+
+
 
 ## User interface
 
-\n
 
-\n
+
+
 
   * [Introduction](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface)
-\n
+
 
   * [Browser toolbar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action)
-\n
+
 
   * [Browser toolbar button with a popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)
-\n
+
 
   * [Address bar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)
-\n
+
 
   * [Address bar button with a popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)
-\n
+
 
   * [Context menu items](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items)
-\n
+
 
   * [Sidebars](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)
-\n
+
 
   * [Options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)
-\n
+
 
   * [Bundled web pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Bundled_web_pages)
-\n
+
 
   * [Notifications](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications)
-\n
+
 
   * [Address bar suggestions](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox)
-\n
+
 
   * [Developer tools panels](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels)
-\n
 
-\n
+
+
 
 ## Concepts
 
-\n
 
-\n
+
+
 
   * [JavaScript API overview](/en-US/docs/Mozilla/Add-ons/WebExtensions/API)
-\n
+
 
   * [Content scripts](/en-US/Add-ons/WebExtensions/Content_scripts)
-\n
+
 
   * [Match patterns](/en-US/Add-ons/WebExtensions/Match_patterns)
-\n
+
 
   * [Working with files](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_files)
-\n
+
 
   * [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization)
-\n
+
 
   * [Content Security Policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
-\n
+
 
   * [Native messaging](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)
-\n
+
 
   * [Using the devtools APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Using_the_devtools_APIs)
-\n
+
 
   * [User experience best practices](/en-US/Add-ons/WebExtensions/User_experience_best_practices)
-\n
 
-\n
+
+
 
 ## Porting
 
-\n
 
-\n
+
+
 
   * [Porting a Google Chrome extension](/en-US/Add-ons/WebExtensions/Porting_from_Google_Chrome)
-\n
+
 
   * [Porting a legacy Firefox extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on)
-\n
+
 
   * [Developing for Firefox for Android](/en-US/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Firefox_for_Android)
-\n
+
 
   * [Embedded WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions)
-\n
+
 
   * [Comparison with the Add-on SDK](/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK)
-\n
+
 
   * [Comparison with XUL/XPCOM extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_XUL_XPCOM_extensions)
-\n
+
 
   * [Chrome incompatibilities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
-\n
+
 
   * [Differences between desktop and Android](/en-US/docs/Mozilla/Add-ons/WebExtensions/Differences_between_desktop_and_Android)
-\n
 
-\n
+
+
 
 ## Firefox workflow
 
-\n
 
-\n
+
+
 
   * [User experience](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_experience_best_practices)
-\n
+
 
   * [Installation](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
-\n
+
 
   * [Debugging](/en-US/Add-ons/WebExtensions/Debugging)
-\n
+
 
   * [Getting started with web-ext](/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext)
-\n
+
 
   * [web-ext command reference](/en-US/docs/Mozilla/Add-ons/WebExtensions/web-ext_command_reference)
-\n
+
 
   * [Extensions and the Add-on ID](/en-US/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID)
-\n
+
 
   * [Alternative distribution options](/en-US/Add-ons/WebExtensions/Alternative_distribution_options)
-\n
+
 
   * [Publishing your extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension)
-\n
 
-\n
 
-\n
 
-\n
+
+
+
+
 
 ## Reference
 
-\n
+
 
 ### JavaScript APIs
 
-\n
 
-\n
+
+
 
   * [JavaScript API overview](/en-US/docs/Mozilla/Add-ons/WebExtensions/API)
-\n
+
 
   * [Browser compatibility tables for JavaScript APIs](/en-US/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
-\n
 
-\n
+
+
 
   * [alarms](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms)
   * [bookmarks](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks)
@@ -283,21 +283,21 @@ list](https://mail.mozilla.org/listinfo/dev-addons) or
   * [webRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)
   * [windows](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows)
 
-\n
+
 
 ### Manifest keys
 
-\n
 
-\n
+
+
 
   * [manifest.json overview](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
-\n
+
 
   * [Browser compatibility for manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
-\n
 
-\n
+
+
 
   * [applications](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications)
   * [author](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author)
@@ -329,9 +329,9 @@ list](https://mail.mozilla.org/listinfo/dev-addons) or
   * [version](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version)
   * [web_accessible_resources](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources)
 
-\n
 
-\n
 
-\n]
+
+
+]
 

@@ -1,8 +1,8 @@
-[\n
+[
 
-\n
 
-\n
+
+
 
 JavaScript APIs for\xa0WebExtensions can be used inside the extension's
 [background scripts](https://developer.mozilla.org/en-US/Add-
@@ -19,43 +19,43 @@ ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts) (see the [list in
 the content script guide](https://developer.mozilla.org/en-US/Add-
 ons/WebExtensions/Content_scripts#WebExtension_APIs)).
 
-\n
+
 
 To use the more powerful APIs you need to [request
 permission](https://developer.mozilla.org/en-US/Add-
 ons/WebExtensions/manifest.json/permissions) in your extension's
 manifest.json.
 
-\n
+
 
 You can access the APIs using the `browser` namespace:
 
-\n
+
 
     
     
-    function logTabs(tabs) {\n  console.log(tabs);\n}\n\nbrowser.tabs.query({currentWindow: true}, logTabs);
+    function logTabs(tabs) {  console.log(tabs);}browser.tabs.query({currentWindow: true}, logTabs);
 
-\n
 
-\n
 
-\n
+
+
+
 
 Many of the APIs are asynchronous, returning a `[Promise](/en-
 US/docs/Web/JavaScript/Reference/Global_Objects/Promise)`:
 
-\n
+
 
     
     
-    function logCookie(c) {\n  console.log(c);\n}\n\nfunction logError(e) {\n  console.error(e);\n}\n\nvar setCookie = browser.cookies.set(\n  {url: "https://developer.mozilla.org/"}\n);\nsetCookie.then(logCookie, logError);
+    function logCookie(c) {  console.log(c);}function logError(e) {  console.error(e);}var setCookie = browser.cookies.set(  {url: "https://developer.mozilla.org/"});setCookie.then(logCookie, logError);
 
-\n
 
-\n
 
-\n
+
+
+
 
 Note that this is different from Google Chrome's extension system, which uses
 the `chrome` namespace instead of `browser`, and which uses callbacks instead
@@ -65,27 +65,27 @@ as `browser` and promises. Mozilla has also written a polyfill which enables
 code that uses `browser` and promises to work unchanged in Chrome:
 <https://github.com/mozilla/webextension-polyfill>.
 
-\n
+
 
 Firefox also implements these APIs under the `chrome` namespace using
 callbacks. This allows code written for Chrome to run largely unchanged in
 Firefox for the APIs documented here.
 
-\n
+
 
 Microsoft Edge uses the `browser` namespace, but doesn't yet support promise-
 based asynchronous APIs. In Edge, for the time being, asynchronous APIs must
 use callbacks.
 
-\n
+
 
 Not all browsers support all the APIs: for the details, see [Browser support
 for JavaScript APIs](/en-US/docs/Mozilla/Add-
 ons/WebExtensions/Browser_support_for_JavaScript_APIs).
 
-\n
 
-\n
+
+
 
 ## alarms
 
@@ -431,5 +431,5 @@ window open, close, and activate events.
 [API reference documentation](/en-US/docs/Mozilla/Add-
 ons/WebExtensions/API/windows)
 
-\n]
+]
 

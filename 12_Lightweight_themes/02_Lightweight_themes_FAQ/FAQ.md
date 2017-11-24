@@ -1,14 +1,14 @@
-[\n
+[
 
-\n
+
 
 ## Introducing Lightweight themes
 
-\n
+
 
 ### What are Lightweight themes?
 
-\n
+
 
 Lightweight themes are easy-to-install, easy-to-use skins that change the look
 of your Firefox web browser. There are hundreds of thousands community-
@@ -16,40 +16,40 @@ designed themes to choose from, with more added every day. [Start looking here
 for designs that fit your style.](https://addons.mozilla.org/en-
 US/firefox/themes/)
 
-\n
+
 
 ### What kind of computers and operating systems do Lightweight themes work
 with?
 
-\n
+
 
 Lightweight themes work with any type of computer that has Firefox installed.
 This includes Mac, Linux, Windows, and Android platforms.
 
-\n
+
 
 ### What's the difference between Lightweight themes and Complete Themes?
 
-\n
+
 
 Complete Themes transform the look of your browser with styles for the window
 frame, address bar, buttons, tabs, and menus.
 
-\n
+
 
 Lightweight themes change just the header and footer areas of your browser.
 You can instantly preview a design and install it in one click without needing
 to restart.
 
-\n
+
 
 ## Installing Lightweight themes
 
-\n
+
 
 ### How do I add Lightweight themes to my Firefox?
 
-\n
+
 
 In just a few seconds, you can install a theme and transform the look of your
 Firefox web browser. Preview any theme by simply mousing over it; the design
@@ -59,86 +59,86 @@ saved in the Add-ons Manager, where you can enable or disable them as you
 wish. Simply go to the `Tools` > `Add-ons` menu and click on the `Appearance`
 tab.
 
-\n
+
 
 ### Are Lightweight themes free?
 
-\n
+
 
 Yes. Themes are free to download and free to use.
 
-\n
+
 
 ## Using Lightweight themes
 
-\n
+
 
 ### How do I change my current Lightweight theme?
 
-\n
+
 
 There are two easy ways to change your theme. You can either:
 
-\n
 
-\n
+
+
 
   * Visit the [gallery](https://addons.mozilla.org/en-US/firefox/themes/), choose your favorite theme, and click on your choice to instantly change the look of your browser.
-\n
+
 
   * Once a theme is installed, it is saved in the Add-ons Manager, where you can enable or disable them as you wish. Simply go to the `Tools` > `Add-ons` menu and click on the `Appearance` tab.
-\n
 
-\n
+
+
 
 ### If I have a Complete Theme installed, will Lightweight themes still work?
 
-\n
+
 
 Yes. If you have a non-default Complete Theme installed, Firefox will
 automatically switch to a default theme in order to allow you to use your
 choice of Lightweight theme designs.
 
-\n
+
 
 ### How do I undo a Lightweight theme?
 
-\n
+
 
 To undo the design you most recently selected, go to `Tools` > `Add-ons` in
 the menu bar and select the `Appearance` tab. Next to the theme you want to
 undo, click the `Disable` button.
 
-\n
+
 
 ### How do I provide feedback?
 
-\n
+
 
 We're always looking for ways to improve themes, and would love to hear what
 you think. Visit the [Themes forum](https://discourse.mozilla.org/c/add-
 ons/themes) to send us your feedback.
 
-\n
+
 
 ## Creating Your Own Themes
 
-\n
+
 
 ### Can I create my own Theme?
 
-\n
+
 
 Absolutely! All you need to do is create two graphics files in your favorite
 graphics editing program (e.g., Photoshop). To get started [read more about
 how to create a theme](https://addons.mozilla.org/en-
 US/developers/docs/themes).
 
-\n
+
 
 ### Are there any content guidelines?
 
-\n
+
 
 Yes. We are big fans of creativity, but want to ensure that the art displayed
 in the Themes gallery meets a basic set of guidelines. Please review the
@@ -146,19 +146,19 @@ in the Themes gallery meets a basic set of guidelines. Please review the
 and [Conditions of Use](https://www.mozilla.org/en-US/about/legal/acceptable-
 use/) for authoritative and complete language.
 
-\n
+
 
 ### Do I still retain ownership over artwork that I upload?
 
-\n
+
 
 Yes. Your artwork will always be _your_ artwork.
 
-\n
+
 
 ### After creating a Lightweight theme, can I edit the design?
 
-\n
+
 
 Yes. If at any point you need to edit or delete your theme design after it has
 been submitted to the gallery, you can access it from the [Submissions
@@ -166,19 +166,19 @@ dashboard](https://addons.mozilla.org/en-US/developers/addons). From there,
 you can view your current designs. By clicking on each, you can make changes
 to each design's settings.
 
-\n
+
 
 ### What's the maximum file size allowable for my Lightweight theme?
 
-\n
+
 
 The theme you upload may not exceed 300 KB for the header or the footer image.
 
-\n
+
 
 Couldn't find the answer you're looking for? Consider visiting the [Firefox
 support](http://support.mozilla.com/search?esab=a&q=themes) website or the
 [Themes forum](https://discourse.mozilla.org/c/add-ons/themes) for more help.
 
-\n]
+]
 

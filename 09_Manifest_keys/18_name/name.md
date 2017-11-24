@@ -1,61 +1,61 @@
-[\n
+[
 
-\n\n\n\nType\n| `String`\n  
+Type| `String`  
 ---|---  
-\n\nMandatory\n| Yes\n  
-\n\nExample\n| \n
-
-    
-    
-    \n"name": "My Extension"
-
-\n\n  
-\n\n\n
-
-Name of the extension. This is used to identify the extension in the browser's
-user interface and on sites like addons.mozilla.org.
-
-\n
-
-This is a [localizable property](/en-US/Add-
-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
-
-\n
-
-## Example
-
-\n
+Mandatory| Yes  
+Example| 
 
     
     
     "name": "My Extension"
 
-\n
+  
+
+
+Name of the extension. This is used to identify the extension in the browser's
+user interface and on sites like addons.mozilla.org.
+
+
+
+This is a [localizable property](/en-US/Add-
+ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
+
+
+
+## Example
+
+
+
+    
+    
+    "name": "My Extension"
+
+
 
 ## Browser compatibility
 
-\n
+
 
 The compatibility table in this page is generated from structured data. If
 you'd like to contribute to the data, please check out <https://github.com/mdn
 /browser-compat-data> and send us a pull request.
 
-\n
+
 
 | Chrome| Edge| Firefox| Firefox for Android| Opera  
 ---|---|---|---|---|---  
-Basic support| \n Yes| \n Yes| 48| 48| \n Yes  
+Basic support|  Yes|  Yes| 48| 48|  Yes  
   
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-Basic support|  \nFull support\n\n Yes| \nFull support\n\n Yes| \nFull
-support\n\n 48| \nFull support\n\n Yes| \nFull support\n\n 48  
+Basic support|  Full support Yes| Full support Yes| Full
+support 48| Full support Yes| Full support 48  
   
-\n]
+]
 
-  *[\nFull support\n]: Full support
-  *[ \nFull support\n]: Full support
+  *[Full support]: Full support
+  *[ Full support]: Full support
   *[Edge __]: Edge
   *[Opera __]: Opera
   *[Firefox for Android __]: Firefox for Android
