@@ -1,0 +1,378 @@
+[\n
+
+\n
+
+Your browser extension may need to work with files to deliver its full
+functionality. This article looks at the five mechanisms you have for handling
+files:
+
+\n
+
+\n
+
+  * Downloading files to the user\u2019s selected download folder.
+\n
+
+  * Opening files using a file picker on a web page.
+\n
+
+  * Opening files using drag and drop onto a web page.
+\n
+
+  * Storing files or blobs locally with IndexedDB using the idb-file-storage library.
+\n
+
+  * Passing files to a native application on the user\u2019s computer.
+\n
+
+\n
+
+For each of these mechanisms, we introduce their use with references to the
+relevant API documentation, guides, and any examples that show how to use the
+API.
+
+\n
+
+## Download files using the downloads API
+
+\n
+
+This mechanism enables you to get a file from your website (or any location
+you can define as a URL) to the user\u2019s computer. The key method is
+[`downloads.download()`](/en-US/docs/Mozilla/Add-
+ons/WebExtensions/API/downloads/download "The download\(\) function of the
+downloads API downloads a file, given its URL and other optional
+preferences."), which in its simplest form accepts a URL and downloads the
+file from that URL to the user\u2019s default downloads folder:
+
+\n
+
+    
+    
+    browser.downloads.download({ url : \u2018https://example.org/image.png\u2019 })
+
+\n
+
+You can let the user download to a location of their choice by specifying the
+`saveAs` parameter.
+
+\n
+
+\n
+
+Using [URL.createObjectURL()](https://developer.mozilla.org/en-
+US/docs/Web/API/URL/createObjectURL) you can also download files and blobs
+defined in your JavaScript, which can include local content retrieved from
+IndexedDB.
+
+\n
+
+\n
+
+The downloads API also provides features to cancel, pause, resume, erase, and
+remove downloads; search for downloaded files in the download manager; show
+downloaded files in the computer\u2019s file manager; and open a file in an
+associated application.
+
+\n
+
+To use this API you need to have the "downloads"[ API permission](/en-
+US/docs/Web/API/Permissions#API_permissions) specified in your[ manifest.json
+](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
+
+\n
+
+Example: [Latest download](https://github.com/mdn/webextensions-
+examples/tree/master/latest-download)  
+\n API reference: [downloads API](/en-US/docs/Mozilla/Add-
+ons/WebExtensions/API/downloads)
+
+\n
+
+## Open files in an extension using a file picker
+
+\n
+
+If you want to work with a file from the user\u2019s computer one option is to
+let the user select a file using the computer\u2019s file browser. Either
+create a new page or inject code into an existing page to use the `file` type
+of the HTML `input` element to offer the user a file picker. Once the user has
+picked a file or files the script associated with the page can access the
+content of the file using the [DOM File API](/en-US/docs/Web/API/File), in the
+same way a web application does.
+
+\n
+
+Example: [Imagify](https://github.com/mdn/webextensions-
+examples/tree/master/imagify)  
+\n Guide: [Using files from web applications](/en-
+US/docs/Using_files_from_web_applications)  
+\n API references: [HTML input element](/en-
+US/docs/Web/HTML/Element/input/file) | [DOM File API](/en-
+US/docs/Web/API/File)
+
+\n
+
+\n
+
+If you want to access or process all the files in a selected folder, you can
+do so using `<input type="file" ``webkitdirectory="true"/>` to select the
+folder and return all the files it contains.
+
+\n
+
+\n
+
+## Open files in an extension using drag and drop
+
+\n
+
+The Web Drag and Drop API offers an alternative to using a file picker. To use
+this method, establish a \u2018drop zone\u2019 that fits with your UI, then
+add listeners for the[ dragenter](/en-US/docs/Web/Events/dragenter),[ dragover
+](/en-US/docs/Web/Events/dragover), and[ drop](/en-US/docs/Web/Events/drop)
+events to the element. In the handler for the drop event, your code can access
+any file dropped by the user from the object offered by the dataTransfer
+property using [DataTransfer.files](/en-US/docs/Web/API/DataTransfer/files).
+Your code can then access and manipulate the files using the [DOM File API
+](/en-US/docs/Web/API/File).
+
+\n
+
+Example: [Imagify](https://github.com/mdn/webextensions-
+examples/tree/master/imagify)  
+\n Guides: [Using files from web applications](/en-
+US/docs/Using_files_from_web_applications) | [File drag and drop](/en-
+US/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop)  
+\n API references: [DOM File API](/en-US/docs/Web/API/File)
+
+\n
+
+## Store files data locally using the IndexedDB file storage library
+
+\n
+
+If your extension needs to save files locally, the [idb-file-storage
+library](https://www.npmjs.com/package/idb-file-storage) provides a simple
+Promise-based wrapper to the [IndexedDB API](/en-
+US/docs/Web/API/IndexedDB_API) to aid the storage and retrieval of files and
+blobs.
+
+\n
+
+On Firefox, this library also provides a Promise-based API wrapper for the
+non-standard IDBMutableFile API. (The IDBMutableFile API enables extensions to
+create and persist an IndexedDB database file object that provides an API to
+read and change the file\u2019s content without loading all the file into
+memory.)
+
+\n
+
+The key features of the library are:
+
+\n
+
+\n
+
+  * [getFileStorage](https://rpl.github.io/idb-file-storage/function/index.html#static-function-getFileStorage) that returns an IDBFileStorage instance, creating the named storage if it does not exist.
+\n
+
+  * [IDBFileStorage](https://rpl.github.io/idb-file-storage/class/src/idb-file-storage.js~IDBFileStorage.html) that provides the methods to save and retrieve files, such as:\n \n
+    * list to obtain an optionally filtered list of file in the database.
+\n
+
+    * put to add a file or blob to the database.
+\n
+
+    * get to retrieve a file or blob from the database.
+\n
+
+    * remove to delete a file or blob from the database.
+\n\n
+
+\n
+
+\n
+
+The [Store Collected Images](https://github.com/mdn/webextensions-
+examples/tree/master/store-collected-images/webextension-plain) example
+illustrates how to use most of these features. (IDBMutableFile is not
+included, but you can find examples in the [idb-file-storage
+examples](https://rpl.github.io/idb-file-storage/examples/) along with a
+number of other examples of the library in action).
+
+\n
+
+The Store Collected Images example lets users add images to a collection using
+an option on the image context menu. Selected images are collected in a popup
+and can be saved to a named collection. A toolbar button ([`browserAction
+`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction "Adds a button
+to the browser's toolbar.")) opens a navigate collection page, on which the
+user can view and delete saved images, with a filter option to narrow choices.
+[See the example in action](https://youtu.be/t6aVqMMe2Rc).
+
+\n
+
+The workings of the library can be understood by viewing [image-
+store.js](https://github.com/mdn/webextensions-examples/blob/master/store-
+collected-images/webextension-plain/utils/image-store.js) in /utils/:
+
+\n
+
+### Creating the store and saving the images
+
+\n
+
+    
+    
+    async function saveCollectedBlobs(collectionName, collectedBlobs) {\n const storedImages = await getFileStorage({name: "stored-images"});\n\n for (const item of collectedBlobs) {\n    await storedImages.put(`${collectionName}/${item.uuid}`, item.blob);\n }\n}
+
+\n
+
+`saveCollectedBlobs` is called when the user clicks save in the popup and has
+provided a name for the image collection. First, `getFileStorage` creates, if
+it does not exist already, or retrieves the IndexedDB database \u201cstored-
+images\u201d to the object `storedImages`. `storedImages.put` then adds each
+collected image to the database, under the collection name, using the
+blob\u2019s unique id (the file name). If the image being store has the same
+name as one already in the database, it is overwritten. If you want to avoid
+this, query the database first using `imagesStore.list()` with a filter for
+the file name, and, if the list returns a file, add a suitable suffix to the
+name of the new image to store a separate item.
+
+\n
+
+### Retrieving stored images for display
+
+\n
+
+    
+    
+    export async function loadStoredImages(filter) {\n\xa0const imagesStore = await getFileStorage({name: "stored-images"});\n\xa0let listOptions = filter ? {includes: filter} : undefined;\n\xa0const imagesList = await imagesStore.list(listOptions);\n\xa0let storedImages = [];\n\xa0for (const storedName of imagesList) {\n\xa0\xa0\xa0 const blob = await imagesStore.get(storedName);\n\xa0\xa0\xa0 storedImages.push({storedName, blobUrl: URL.createObjectURL(blob)});\n\xa0}\n\xa0return storedImages;\n}\n
+
+\n
+
+`loadStoredImages` is called when the user clicks view or reload in the
+navigate collection page. `getFileStorage` opens the \u201cstored-images\u201d
+database, then `imagesStore.list` gets a filtered list of the stored images.
+This list is then used to retrieve images with `imagesStore.get` and build a
+list to return to the UI.
+
+\n
+
+Note the use of [URL.createObjectURL(blob)](/en-
+US/docs/Web/API/URL/createObjectURL) to create a URL that references the image
+blob. This URL is then used in the UI ([navigate-
+collection.js](https://github.com/mdn/webextensions-examples/blob/master
+/store-collected-images/webextension-plain/navigate-
+collection.js)[collection.js](https://github.com/mdn/webextensions-
+examples/blob/master/store-collected-images/webextension-plain/navigate-
+collection.js)) to display the image.
+
+\n
+
+### Delete collected images
+
+\n
+
+    
+    
+    async function removeStoredImages(storedImages) {\n\xa0const imagesStore = await getFileStorage({name: "stored-images"});\n\xa0for (const storedImage of storedImages) {\n\xa0\xa0\xa0 URL.revokeObjectURL(storedImage.blobUrl);\n\xa0\xa0\xa0 await imagesStore.remove(storedImage.storedName);\n\xa0}\n}\n
+
+\n
+
+`removeStoredImages` is called when the user clicks delete in the navigate
+collection page. Again, `getFileStorage` opens the \u201cstored-images\u201d
+database then `imagesStore.remove` removes each image from the filtered list
+of images.
+
+\n
+
+Note the use of [URL.revokeObjectURL()](/en-
+US/docs/Web/API/URL/revokeObjectURL) to explicitly revoke the blob URL. This
+enables the garbage collector to free the memory allocated to the URL. If this
+is not done, the memory will not get returned until the page on which it was
+created is closed. If the URL was created in an extension\u2019s background
+page, this is not unloaded until the extension is disabled, uninstalled, or
+reloaded, so holding this memory unnecessarily could affect browser
+performance. If the URL is created in an extension\u2019s page (new tab,
+popup, or sidebar) the memory is released when the page is closed, but it is
+still a good practice to revoke the URL when it is no longer needed.
+
+\n
+
+Once the blob URL has been revoked any attempt to load it will result in an
+error. For example, if the blob url was used as the `SRC` attribute of an
+`IMG` tag, the image will not load and will not be visible. It is therefore
+good practice to remove any revoked blob urls from generated HTML elements
+when the blob URL is revoked.
+
+\n
+
+Example: [Store Collected Images](https://github.com/mdn/webextensions-
+examples/tree/master/store-collected-images/webextension-plain)  
+\n API References: \xa0[idb-file-storage library](https://rpl.github.io/idb-
+file-storage/)
+
+\n
+
+\n
+
+Note: You can also use the full Web [IndexedDB
+API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) to store
+data from your extension. This can be useful where you need to store data that
+isn\u2019t handled well by the simple key/value pairs offered by the DOM
+[Storage API](https://developer.mozilla.org/en-US/Add-
+ons/WebExtensions/API/Storage).
+
+\n
+
+\n
+
+## Process files in a local app
+
+\n
+
+Where you have a native app or want to deliver additional native features for
+file processing, use native messaging to pass a file to a native app for
+processing.
+
+\n
+
+You have two options:
+
+\n
+
+\n
+
+  * Connection-based messaging. Here you trigger the process with runtime.connectNative(), which returns a [runtime.Port](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) object. You can then pass a JSON message to the native application using the postMessage() function of Port. Using the onMessage.addListener() function of Port you can listen for messages from the native application. The native application is opened if it is not running when runtime.connectNative() is called and the application remains running until the extension calls Port.disconnect() or the page that connected to it is closed.
+\n
+
+  * Connectionless messaging. Here you use runtime.sendNativeMessage() to send a JSON message to a new, temporary instance of the native application. The browser closes the native application after receiving any message back from the native application.
+\n
+
+\n
+
+To add the file or blob you want the native application to process use
+[JSON.stringify()](https://developer.mozilla.org/en-
+US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
+
+\n
+
+To use this method the extension must request the "nativeMessaging"[
+permission](https://developer.mozilla.org/en-US/docs/Mozilla/Add-
+ons/WebExtensions/manifest.json/permissions) in its manifest.json file.
+Reciprocally, the native application must grant permission for the extension
+by including its ID in the "allowed_extensions" field of the app manifest.
+
+\n
+
+Example: [Native Messaging](https://github.com/mdn/webextensions-
+examples/tree/master/native-messaging) (illustrates simple messaging only)  
+\n Guides: [Native messaging](https://developer.mozilla.org/en-US/Add-
+ons/WebExtensions/Native_messaging)  
+\n API references: [runtime API](https://developer.mozilla.org/en-US/Add-
+ons/WebExtensions/API/runtime)
+
+\n]
+
