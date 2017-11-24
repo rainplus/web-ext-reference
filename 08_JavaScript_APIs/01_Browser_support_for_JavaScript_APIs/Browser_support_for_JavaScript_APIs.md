@@ -1,7 +1,3 @@
-[
-
-
-
 ## alarms
 
 | Chrome| Edge| Firefox| Firefox for Android| Opera  
@@ -17,20 +13,20 @@
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`Alarm`|  Full support Yes| No support No| Full support 45|
-Full support Yes| Full support 48  
-`clear`| Full support Yes| No support No| Full support 45|
-Full support Yes| Full support 48  
-`clearAll`| Full support Yes| No support No| Full support
-45| Full support Yes| Full support 48  
-`create`| Full support Yes| No support No| Full support 45|
-Full support Yes| Full support 48  
-`get`| Full support Yes| No support No| Full support 45|
-Full support Yes| Full support 48  
-`getAll`| Full support Yes| No support No| Full support 45|
-Full support Yes| Full support 48  
-`onAlarm`| Full support Yes| No support No| Full support 45|
-Full support Yes| Full support 48  
+`Alarm`|  Full support Yes|  No support No|  Full support 45|  Full support
+Yes|  Full support 48  
+`clear`|  Full support Yes|  No support No|  Full support 45|  Full support
+Yes|  Full support 48  
+`clearAll`|  Full support Yes|  No support No|  Full support 45|  Full support
+Yes|  Full support 48  
+`create`|  Full support Yes|  No support No|  Full support 45|  Full support
+Yes|  Full support 48  
+`get`|  Full support Yes|  No support No|  Full support 45|  Full support Yes|
+Full support 48  
+`getAll`|  Full support Yes|  No support No|  Full support 45|  Full support
+Yes|  Full support 48  
+`onAlarm`|  Full support Yes|  No support No|  Full support 45|  Full support
+Yes|  Full support 48  
   
 ## bookmarks
 
@@ -64,54 +60,54 @@ Full support Yes| Full support 48
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`BookmarkTreeNode`|  Partial supportPartial| No support No|
-Partial support45| Partial supportPartial| No support No  
-`BookmarkTreeNode.type`| No support No| No support No| Full
-support 57| No support No| No support No  
-`BookmarkTreeNodeType`| No support No| No support No| Full
-support 57| No support No| No support No  
-`BookmarkTreeNodeUnmodifiable`| Full support Yes| No support No|
-Full support 45| Full support Yes| No support No  
-`CreateDetails`| Partial supportPartial| No support No| Partial
-support45| Partial supportPartial| No support No  
-`CreateDetails.type`| No support No| No support No| Full
-support 57| No support No| No support No  
-`create`| Full support Yes| Full support 15| Full support
-45| Full support Yes| No support No  
-`get`| Full support Yes| No support No| Full support 45|
-Full support Yes| No support No  
-`getChildren`| Full support Yes| No support No| Full support
-45| Full support Yes| No support No  
-`getRecent`| Full support Yes| No support No| Full support
-47| Full support Yes| No support No  
-`getSubTree`| Full support Yes| No support No| Full support
-45| Full support Yes| No support No  
-`getTree`| Full support Yes| Full support 15| Full support
-45| Full support Yes| No support No  
-`move`| Full support Yes| Full support 15| Full support 45|
-Full support Yes| No support No  
-`onChanged`| Full support Yes| No support No| Full support
-52| Full support Yes| No support No  
-`onChildrenReordered`| Full support Yes| No support No| No
-support No| Full support Yes| No support No  
-`onCreated`| Full support Yes| No support No| Full support
-52| Full support Yes| No support No  
-`onImportBegan`| Full support Yes| No support No| No support
-No| Full support Yes| No support No  
-`onImportEnded`| Full support Yes| No support No| No support
-No| Full support Yes| No support No  
-`onMoved`| Full support Yes| No support No| Full support 52|
-Full support Yes| No support No  
-`onRemoved`| Full support Yes| No support No| Full support
-52| Full support Yes| No support No  
-`remove`| Full support Yes| Full support 15| Full support
-45| Full support Yes| No support No  
-`removeTree`| Full support Yes| Full support 15| Full
-support 47| Full support Yes| No support No  
-`search`| Full support Yes| No support No| Full support 47|
-Full support Yes| No support No  
-`update`| Full support Yes| Full support 15| Full support
-45| Full support Yes| No support No  
+`BookmarkTreeNode`|  Partial support Partial|  No support No|  Partial support
+45|  Partial support Partial|  No support No  
+`BookmarkTreeNode.type`|  No support No|  No support No|  Full support 57|  No
+support No|  No support No  
+`BookmarkTreeNodeType`|  No support No|  No support No|  Full support 57|  No
+support No|  No support No  
+`BookmarkTreeNodeUnmodifiable`|  Full support Yes|  No support No|  Full
+support 45|  Full support Yes|  No support No  
+`CreateDetails`|  Partial support Partial|  No support No|  Partial support
+45|  Partial support Partial|  No support No  
+`CreateDetails.type`|  No support No|  No support No|  Full support 57|  No
+support No|  No support No  
+`create`|  Full support Yes|  Full support 15|  Full support 45|  Full support
+Yes|  No support No  
+`get`|  Full support Yes|  No support No|  Full support 45|  Full support Yes|
+No support No  
+`getChildren`|  Full support Yes|  No support No|  Full support 45|  Full
+support Yes|  No support No  
+`getRecent`|  Full support Yes|  No support No|  Full support 47|  Full
+support Yes|  No support No  
+`getSubTree`|  Full support Yes|  No support No|  Full support 45|  Full
+support Yes|  No support No  
+`getTree`|  Full support Yes|  Full support 15|  Full support 45|  Full
+support Yes|  No support No  
+`move`|  Full support Yes|  Full support 15|  Full support 45|  Full support
+Yes|  No support No  
+`onChanged`|  Full support Yes|  No support No|  Full support 52|  Full
+support Yes|  No support No  
+`onChildrenReordered`|  Full support Yes|  No support No|  No support No|
+Full support Yes|  No support No  
+`onCreated`|  Full support Yes|  No support No|  Full support 52|  Full
+support Yes|  No support No  
+`onImportBegan`|  Full support Yes|  No support No|  No support No|  Full
+support Yes|  No support No  
+`onImportEnded`|  Full support Yes|  No support No|  No support No|  Full
+support Yes|  No support No  
+`onMoved`|  Full support Yes|  No support No|  Full support 52|  Full support
+Yes|  No support No  
+`onRemoved`|  Full support Yes|  No support No|  Full support 52|  Full
+support Yes|  No support No  
+`remove`|  Full support Yes|  Full support 15|  Full support 45|  Full support
+Yes|  No support No  
+`removeTree`|  Full support Yes|  Full support 15|  Full support 47|  Full
+support Yes|  No support No  
+`search`|  Full support Yes|  No support No|  Full support 47|  Full support
+Yes|  No support No  
+`update`|  Full support Yes|  Full support 15|  Full support 45|  Full support
+Yes|  No support No  
   
 ## browserAction
 
@@ -137,30 +133,29 @@ Full support Yes| No support No
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`ColorArray`|  Full support Yes| Full support Yes| Full
-support 45| Full support Yes| No support No  
-`ImageDataType`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| No support No  
-`disable`| Full support Yes| Full support Yes| Full support
-45| Full support Yes| No support No  
-`enable`| Full support Yes| Full support Yes| Full support
-45| Full support Yes| No support No  
-`getBadgeBackgroundColor`| Full support Yes| Full support Yes|
-Full support 45| Full support Yes| No support No  
-`getBadgeText`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| No support No  
-`getPopup`| Full support Yes| No support No| Full support
-45| Full support Yes| Full support 57  
-`getTitle`| Full support Yes| Full support 15| Full support
-45| Full support Yes| Full support 55  
-`onClicked`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 55  
-`openPopup`| No support No| No support No| Full support 57|
-No support No| No support No  
-`setBadgeBackgroundColor`| Full support Yes| Full support Yes|
-Full support 45| Full support Yes| No support No  
-`setBadgeText`| Full support Yes| Full support Yes| Full
-support 45
+`ColorArray`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  No support No  
+`ImageDataType`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  No support No  
+`disable`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  No support No  
+`enable`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  No support No  
+`getBadgeBackgroundColor`|  Full support Yes|  Full support Yes|  Full support
+45|  Full support Yes|  No support No  
+`getBadgeText`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  No support No  
+`getPopup`|  Full support Yes|  No support No|  Full support 45|  Full support
+Yes|  Full support 57  
+`getTitle`|  Full support Yes|  Full support 15|  Full support 45|  Full
+support Yes|  Full support 55  
+`onClicked`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 55  
+`openPopup`|  No support No|  No support No|  Full support 57|  No support No|
+No support No  
+`setBadgeBackgroundColor`|  Full support Yes|  Full support Yes|  Full support
+45|  Full support Yes|  No support No  
+`setBadgeText`|  Full support Yes|  Full support Yes|  Full support 45
 
 Notes __
 
@@ -169,24 +164,23 @@ Full support 45
 Notes __
 
      Notes __On Firefox, the badge text is not cleared on navigation, see[bug 1395074](https://bugzil.la/1395074).
-|  Full support Yes| No support No  
-`setIcon`| Partial supportPartial
+|  Full support Yes|  No support No  
+`setIcon`|  Partial support Partial
 
 Notes __
 
-Partial supportPartial
+Partial support Partial
 
 Notes __
 
      Notes __Before Chrome 23, `path` couldn't specify multiple icon files, but had to be a string specifying a single icon path.
-|  Partial supportPartial| Full support 45| Full support 15|
-No support No  
-`setIcon.imageData`| Full support 23| No support No| Full
-support 45| Full support 15| No support No  
-`setPopup`| Full support Yes| Full support Yes| Full support
-45| Full support Yes| Full support 57  
-`setTitle`| Full support Yes| Full support 15| Full support
-45| Full support Yes| Full support 55  
+|  Partial support Partial|  Full support 45|  Full support 15|  No support No  
+`setIcon.imageData`|  Full support 23|  No support No|  Full support 45|  Full
+support 15|  No support No  
+`setPopup`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 57  
+`setTitle`|  Full support Yes|  Full support 15|  Full support 45|  Full
+support Yes|  Full support 55  
   
 ## browserSettings
 
@@ -201,16 +195,16 @@ support 45| Full support 15| No support No
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`allowPopupsForUserEvents`|  No support No| No support No| Full
-support 57| No support No| Full support 57  
-`cacheEnabled`| No support No| No support No| Full support
-56| No support No| Full support 56  
-`homepageOverride`| No support No| No support No| Full
-support 57| No support No| Full support 57  
-`imageAnimationBehavior`| No support No| No support No| Full
-support 57| No support No| Full support 57  
-`newTabPageOverride`| No support No| No support No| Full
-support 57| No support No| Full support 57  
+`allowPopupsForUserEvents`|  No support No|  No support No|  Full support 57|
+No support No|  Full support 57  
+`cacheEnabled`|  No support No|  No support No|  Full support 56|  No support
+No|  Full support 56  
+`homepageOverride`|  No support No|  No support No|  Full support 57|  No
+support No|  Full support 57  
+`imageAnimationBehavior`|  No support No|  No support No|  Full support 57|
+No support No|  Full support 57  
+`newTabPageOverride`|  No support No|  No support No|  Full support 57|  No
+support No|  Full support 57  
   
 ## browsingData
 
@@ -245,37 +239,35 @@ support 57| No support No| Full support 57
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`DataTypeSet.cache`|  Full support Yes| No support No| Full
-support 53| Full support Yes| Full support 56  
-`DataTypeSet.cookies`| Full support Yes| No support No| Full
-support 53| Full support Yes| Full support 56  
-`DataTypeSet.downloads`| Full support Yes| No support No| Full
-support 53| Full support Yes| Full support 56  
-`DataTypeSet.fileSystems`| Full support Yes| No support No| No
-support No| Full support Yes| No support No  
-`DataTypeSet.formData`| Full support Yes| No support No| Full
-support 53| Full support Yes| Full support 56  
-`DataTypeSet.history`| Full support Yes| No support No| Full
-support 53| Full support Yes| Full support 56  
-`DataTypeSet.indexedDB`| Full support Yes| No support No| No
-support No| Full support Yes| No support No  
-`DataTypeSet.localStorage`| Full support Yes| No support No|
-Full support 57| Full support Yes| Full support 57  
-`DataTypeSet.passwords`| Full support Yes| No support No| Full
-support 53| Full support Yes| Full support 56  
-`DataTypeSet.pluginData`| Full support Yes| No support No| Full
-support 53| Full support Yes| Full support 56  
-`DataTypeSet.serverBoundCertificates`| Full support Yes| No
-support No| No support No| Full support Yes| No support
-No  
-`DataTypeSet.serviceWorkers`| Full support Yes| No support No|
-Full support 53| Full support Yes| Full support 56  
-`RemovalOptions.hostnames`| No support No| No support No| Full
-support 56| No support No| Full support 56  
-`RemovalOptions.originTypes`| Full support Yes| No support No|
-No support No| Full support Yes| No support No  
-`RemovalOptions.since`| Full support Yes| No support No| Full
-support 53
+`DataTypeSet.cache`|  Full support Yes|  No support No|  Full support 53|
+Full support Yes|  Full support 56  
+`DataTypeSet.cookies`|  Full support Yes|  No support No|  Full support 53|
+Full support Yes|  Full support 56  
+`DataTypeSet.downloads`|  Full support Yes|  No support No|  Full support 53|
+Full support Yes|  Full support 56  
+`DataTypeSet.fileSystems`|  Full support Yes|  No support No|  No support No|
+Full support Yes|  No support No  
+`DataTypeSet.formData`|  Full support Yes|  No support No|  Full support 53|
+Full support Yes|  Full support 56  
+`DataTypeSet.history`|  Full support Yes|  No support No|  Full support 53|
+Full support Yes|  Full support 56  
+`DataTypeSet.indexedDB`|  Full support Yes|  No support No|  No support No|
+Full support Yes|  No support No  
+`DataTypeSet.localStorage`|  Full support Yes|  No support No|  Full support
+57|  Full support Yes|  Full support 57  
+`DataTypeSet.passwords`|  Full support Yes|  No support No|  Full support 53|
+Full support Yes|  Full support 56  
+`DataTypeSet.pluginData`|  Full support Yes|  No support No|  Full support 53|
+Full support Yes|  Full support 56  
+`DataTypeSet.serverBoundCertificates`|  Full support Yes|  No support No|  No
+support No|  Full support Yes|  No support No  
+`DataTypeSet.serviceWorkers`|  Full support Yes|  No support No|  Full support
+53|  Full support Yes|  Full support 56  
+`RemovalOptions.hostnames`|  No support No|  No support No|  Full support 56|
+No support No|  Full support 56  
+`RemovalOptions.originTypes`|  Full support Yes|  No support No|  No support
+No|  Full support Yes|  No support No  
+`RemovalOptions.since`|  Full support Yes|  No support No|  Full support 53
 
 Notes __
 
@@ -284,7 +276,7 @@ Full support 53
 Notes __
 
      Notes __`since` is not supported with the following data types: `cache`, `indexedDB`, `localStorage`, and `serviceWorkers`.
-|  Full support Yes| Full support 56
+|  Full support Yes|  Full support 56
 
 Notes __
 
@@ -293,7 +285,7 @@ Full support 56
 Notes __
 
      Notes __`since` is not supported with the following data types: `cache`, `indexedDB`, `localStorage`, and `serviceWorkers`.  
-`remove`|  Full support Yes| No support No| Full support 53
+`remove`|  Full support Yes|  No support No|  Full support 53
 
 Notes __
 
@@ -302,7 +294,7 @@ Full support 53
 Notes __
 
      Notes __Specifying`dataTypes.history` will also remove download history and service workers.
-|  Full support Yes| Full support 57
+|  Full support Yes|  Full support 57
 
 Notes __
 
@@ -311,8 +303,7 @@ Full support 57
 Notes __
 
      Notes __Specifying`dataTypes.history` will also remove download history and service workers.  
-`removeCache`|  Full support Yes| No support No| Full
-support 53
+`removeCache`|  Full support Yes|  No support No|  Full support 53
 
 Notes __
 
@@ -321,7 +312,7 @@ Full support 53
 Notes __
 
      Notes __`removalOptions.since` is not supported.
-|  Full support Yes| Full support 57
+|  Full support Yes|  Full support 57
 
 Notes __
 
@@ -330,14 +321,13 @@ Full support 57
 Notes __
 
      Notes __`removalOptions.since` is not supported.  
-`removeCookies`|  Full support Yes| No support No| Full
-support 53| Full support Yes| Full support 56  
-`removeDownloads`| Full support Yes| No support No| Full
-support 53| Full support Yes| Full support 57  
-`removeFormData`| Full support Yes| No support No| Full
-support 53| Full support Yes| Full support 57  
-`removeHistory`| Full support Yes| No support No| Full
-support 53
+`removeCookies`|  Full support Yes|  No support No|  Full support 53|  Full
+support Yes|  Full support 56  
+`removeDownloads`|  Full support Yes|  No support No|  Full support 53|  Full
+support Yes|  Full support 57  
+`removeFormData`|  Full support Yes|  No support No|  Full support 53|  Full
+support Yes|  Full support 57  
+`removeHistory`|  Full support Yes|  No support No|  Full support 53
 
 Notes __
 
@@ -346,9 +336,8 @@ Full support 53
 Notes __
 
      Notes __This function also removes download history and service workers.
-|  Full support Yes| No support No  
-`removeLocalStorage`| Full support Yes| No support No| Full
-support 57
+|  Full support Yes|  No support No  
+`removeLocalStorage`|  Full support Yes|  No support No|  Full support 57
 
 Notes __
 
@@ -357,7 +346,7 @@ Full support 57
 Notes __
 
      Notes __`removalOptions.since` is not supported.
-|  Full support Yes| Full support 57
+|  Full support Yes|  Full support 57
 
 Notes __
 
@@ -366,12 +355,12 @@ Full support 57
 Notes __
 
      Notes __`removalOptions.since` is not supported.  
-`removePasswords`|  Full support Yes| No support No| Full
-support 53| Full support Yes| No support No  
-`removePluginData`| Full support Yes| No support No| Full
-support 53| Full support Yes| No support No  
-`settings`| Full support Yes| No support No| Full support
-53| Full support Yes| Full support 56  
+`removePasswords`|  Full support Yes|  No support No|  Full support 53|  Full
+support Yes|  No support No  
+`removePluginData`|  Full support Yes|  No support No|  Full support 53|  Full
+support Yes|  No support No  
+`settings`|  Full support Yes|  No support No|  Full support 53|  Full support
+Yes|  Full support 56  
   
 ## clipboard
 
@@ -382,8 +371,8 @@ support 53| Full support Yes| No support No
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`setImageData`|  No support No| No support No| Full support
-57| No support No| Full support 57  
+`setImageData`|  No support No|  No support No|  Full support 57|  No support
+No|  Full support 57  
   
 ## commands
 
@@ -396,12 +385,12 @@ support 53| Full support Yes| No support No
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`Command`|  Full support Yes| No support No| Full support
-48| Full support Yes| No support No  
-`getAll`| Full support Yes| No support No| Full support 48|
-Full support Yes| No support No  
-`onCommand`| Full support Yes| No support No| Full support
-48| Full support Yes| No support No  
+`Command`|  Full support Yes|  No support No|  Full support 48|  Full support
+Yes|  No support No  
+`getAll`|  Full support Yes|  No support No|  Full support 48|  Full support
+Yes|  No support No  
+`onCommand`|  Full support Yes|  No support No|  Full support 48|  Full
+support Yes|  No support No  
   
 ## contextualIdentities
 
@@ -425,19 +414,19 @@ Full support Yes| No support No
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`ContextualIdentity.cookieStoreId`|  No support No| No support No|
-Full support 53| No support No| Full support 53  
-`ContextualIdentity.color`| No support No| No support No| Full
-support 53| No support No| Full support 53  
-`ContextualIdentity.colorCode`| No support No| No support No|
-Full support 57| No support No| Full support 57  
-`ContextualIdentity.icon`| No support No| No support No| Full
-support 53| No support No| Full support 53  
-`ContextualIdentity.iconUrl`| No support No| No support No| Full
-support 57| No support No| Full support 57  
-`ContextualIdentity.name`| No support No| No support No| Full
-support 53| No support No| Full support 53  
-`create`| No support No| No support No| Full support 53
+`ContextualIdentity.cookieStoreId`|  No support No|  No support No|  Full
+support 53|  No support No|  Full support 53  
+`ContextualIdentity.color`|  No support No|  No support No|  Full support 53|
+No support No|  Full support 53  
+`ContextualIdentity.colorCode`|  No support No|  No support No|  Full support
+57|  No support No|  Full support 57  
+`ContextualIdentity.icon`|  No support No|  No support No|  Full support 53|
+No support No|  Full support 53  
+`ContextualIdentity.iconUrl`|  No support No|  No support No|  Full support
+57|  No support No|  Full support 57  
+`ContextualIdentity.name`|  No support No|  No support No|  Full support 53|
+No support No|  Full support 53  
+`create`|  No support No|  No support No|  Full support 53
 
 Notes __
 
@@ -446,7 +435,7 @@ Full support 53
 Notes __
 
      Notes __Before version 57, this method resolves its promise with`false` if the contextual identities feature is disabled.
-|  No support No| Full support 53
+|  No support No|  Full support 53
 
 Notes __
 
@@ -455,7 +444,7 @@ Full support 53
 Notes __
 
      Notes __Before version 57, this method resolves its promise with`false` if the contextual identities feature is disabled.  
-`get`|  No support No| No support No| Full support 53
+`get`|  No support No|  No support No|  Full support 53
 
 Notes __
 
@@ -465,7 +454,7 @@ Notes __
 
      Notes __Before version 57, this method resolves its promise with`false` if the contextual identities feature is disabled.
      Notes __Before version 57, this method resolves its promise with`null` if the given identity was not found.
-|  No support No| Full support 53
+|  No support No|  Full support 53
 
 Notes __
 
@@ -475,13 +464,13 @@ Notes __
 
      Notes __Before version 57, this method resolves its promise with`false` if the contextual identities feature is disabled.
      Notes __Before version 57, this method resolves its promise with`null` if the given identity was not found.  
-`onCreated`|  No support No| No support No| Full support 57|
-No support No| Full support 57  
-`onRemoved`| No support No| No support No| Full support 57|
-No support No| Full support 57  
-`onUpdated`| No support No| No support No| Full support 57|
-No support No| Full support 57  
-`query`| No support No| No support No| Full support 53
+`onCreated`|  No support No|  No support No|  Full support 57|  No support No|
+Full support 57  
+`onRemoved`|  No support No|  No support No|  Full support 57|  No support No|
+Full support 57  
+`onUpdated`|  No support No|  No support No|  Full support 57|  No support No|
+Full support 57  
+`query`|  No support No|  No support No|  Full support 53
 
 Notes __
 
@@ -490,7 +479,7 @@ Full support 53
 Notes __
 
      Notes __Before version 57, this method resolves its promise with`false` if the contextual identities feature is disabled.
-|  No support No| Full support 53
+|  No support No|  Full support 53
 
 Notes __
 
@@ -499,7 +488,7 @@ Full support 53
 Notes __
 
      Notes __Before version 57, this method resolves its promise with`false` if the contextual identities feature is disabled.  
-`remove`|  No support No| No support No| Full support 53
+`remove`|  No support No|  No support No|  Full support 53
 
 Notes __
 
@@ -509,7 +498,7 @@ Notes __
 
      Notes __Before version 57, this method resolves its promise with`false` if the contextual identities feature is disabled.
      Notes __Before version 57, this method resolves its promise with`null` if the given identity was not found.
-|  No support No| Full support 53
+|  No support No|  Full support 53
 
 Notes __
 
@@ -519,7 +508,7 @@ Notes __
 
      Notes __Before version 57, this method resolves its promise with`false` if the contextual identities feature is disabled.
      Notes __Before version 57, this method resolves its promise with`null` if the given identity was not found.  
-`update`|  No support No| No support No| Full support 53
+`update`|  No support No|  No support No|  Full support 53
 
 Notes __
 
@@ -529,7 +518,7 @@ Notes __
 
      Notes __Before version 57, this method resolves its promise with`false` if the contextual identities feature is disabled.
      Notes __Before version 57, this method resolves its promise with`null` if the given identity was not found.
-|  No support No| Full support 53
+|  No support No|  Full support 53
 
 Notes __
 
@@ -557,13 +546,13 @@ Notes __
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`Cookie`|  Full support Yes| Full support Yes| Full support
-45| Full support Yes| Full support 48  
-`CookieStore`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 48  
-`OnChangedCause`| Full support Yes| No support No| Full
-support 45| Full support Yes| Full support 48  
-`get`| Full support Yes| Full support Yes| Full support 45
+`Cookie`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 48  
+`CookieStore`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 48  
+`OnChangedCause`|  Full support Yes|  No support No|  Full support 45|  Full
+support Yes|  Full support 48  
+`get`|  Full support Yes|  Full support Yes|  Full support 45
 
 Notes __
 
@@ -572,8 +561,8 @@ Full support 45
 Notes __
 
      Notes __Provides access to cookies from private browsing mode and container tabs since version 52.
-|  Full support Yes| Full support 48  
-`getAll`| Full support Yes| Full support Yes
+|  Full support Yes|  Full support 48  
+`getAll`|  Full support Yes|  Full support Yes
 
 Notes __
 
@@ -591,8 +580,8 @@ Full support 45
 Notes __
 
      Notes __Before version 52, the 'tabIds' list was empty and only cookies from the default cookie store were returned. From version 52 onwards, this has been fixed and the result includes cookies from private browsing mode and container tabs.
-|  Full support Yes| Full support 48  
-`getAllCookieStores`| Full support Yes| Full support Yes
+|  Full support Yes|  Full support 48  
+`getAllCookieStores`|  Full support Yes|  Full support Yes
 
 Notes __
 
@@ -610,11 +599,10 @@ Full support 45
 Notes __
 
      Notes __Before version 52, only the default cookie store was visible. From version 52 onwards, the cookie stores for private browsing mode and container tabs are also readable.
-|  Full support Yes| Full support 48  
-`onChanged`| Full support Yes| No support No| Full support
-45| Full support Yes| Full support 48  
-`remove`| Full support Yes| Full support Yes| Full support
-45
+|  Full support Yes|  Full support 48  
+`onChanged`|  Full support Yes|  No support No|  Full support 45|  Full
+support Yes|  Full support 48  
+`remove`|  Full support Yes|  Full support Yes|  Full support 45
 
 Notes __
 
@@ -623,7 +611,7 @@ Full support 45
 Notes __
 
      Notes __Before version 56, this function did not remove cookies from private browsing mode. From version 56 onwards this is fixed.
-|  Full support Yes| Full support 48
+|  Full support Yes|  Full support 48
 
 Notes __
 
@@ -632,7 +620,7 @@ Full support 48
 Notes __
 
      Notes __Before version 56, this function did not remove cookies from private browsing mode. From version 56 onwards this is fixed.  
-`set`|  Full support Yes| Full support Yes| Full support 45
+`set`|  Full support Yes|  Full support Yes|  Full support 45
 
 Notes __
 
@@ -641,7 +629,7 @@ Full support 45
 Notes __
 
      Notes __Before version 56, this function did not modify cookies in private browsing mode. From version 56 onwards this is fixed.
-|  Full support Yes| Full support 48
+|  Full support Yes|  Full support 48
 
 Notes __
 
@@ -667,22 +655,22 @@ Notes __
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`inspectedWindow.eval`|  Full support Yes| No support No|
-Partial support54| Full support Yes| No support No  
-`inspectedWindow.reload`| Full support Yes| No support No| Full
-support 54| Full support Yes| No support No  
-`inspectedWindow.tabId`| Full support Yes| No support No| Full
-support 54| Full support Yes| No support No  
-`network.onNavigated`| Full support Yes| No support No| Full
-support 54| Full support Yes| No support No  
-`panels.create`| Full support Yes| No support No| Full
-support 54| Full support Yes| No support No  
-`panels.elements`| Full support Yes| No support No| Full
-support 56| Full support Yes| No support No  
-`panels.onThemeChanged`| No support No| No support No| Full
-support 55| No support No| No support No  
-`panels.themeName`| Full support 54| No support No| Full
-support 55| Full support 41| No support No  
+`inspectedWindow.eval`|  Full support Yes|  No support No|  Partial support
+54|  Full support Yes|  No support No  
+`inspectedWindow.reload`|  Full support Yes|  No support No|  Full support 54|
+Full support Yes|  No support No  
+`inspectedWindow.tabId`|  Full support Yes|  No support No|  Full support 54|
+Full support Yes|  No support No  
+`network.onNavigated`|  Full support Yes|  No support No|  Full support 54|
+Full support Yes|  No support No  
+`panels.create`|  Full support Yes|  No support No|  Full support 54|  Full
+support Yes|  No support No  
+`panels.elements`|  Full support Yes|  No support No|  Full support 56|  Full
+support Yes|  No support No  
+`panels.onThemeChanged`|  No support No|  No support No|  Full support 55|  No
+support No|  No support No  
+`panels.themeName`|  Full support 54|  No support No|  Full support 55|  Full
+support 41|  No support No  
   
 ## downloads
 
@@ -746,22 +734,21 @@ support 55| Full support 41| No support No
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`BooleanDelta`|  Full support Yes| No support No| Full
-support 47| Full support Yes| Full support 48  
-`DangerType`| Full support Yes| No support No| Full support
-47| Full support Yes| Full support 48  
-`DoubleDelta`| Full support Yes| No support No| Full support
-47| Full support Yes| Full support 48  
-`DownloadItem.byExtensionId`| Full support Yes| No support No|
-Full support 47| Full support Yes| Full support 48  
-`DownloadItem.byExtensionName`| Full support Yes| No support No|
-Full support 47| Full support Yes| Full support 48  
-`DownloadItem.bytesReceived`| Full support Yes| No support No|
-Full support 47| Full support Yes| Full support 48  
-`DownloadItem.canResume`| Full support Yes| No support No| Full
-support 47| Full support Yes| Full support 48  
-`DownloadItem.danger`| Full support Yes| No support No| No
-support No
+`BooleanDelta`|  Full support Yes|  No support No|  Full support 47|  Full
+support Yes|  Full support 48  
+`DangerType`|  Full support Yes|  No support No|  Full support 47|  Full
+support Yes|  Full support 48  
+`DoubleDelta`|  Full support Yes|  No support No|  Full support 47|  Full
+support Yes|  Full support 48  
+`DownloadItem.byExtensionId`|  Full support Yes|  No support No|  Full support
+47|  Full support Yes|  Full support 48  
+`DownloadItem.byExtensionName`|  Full support Yes|  No support No|  Full
+support 47|  Full support Yes|  Full support 48  
+`DownloadItem.bytesReceived`|  Full support Yes|  No support No|  Full support
+47|  Full support Yes|  Full support 48  
+`DownloadItem.canResume`|  Full support Yes|  No support No|  Full support 47|
+Full support Yes|  Full support 48  
+`DownloadItem.danger`|  Full support Yes|  No support No|  No support No
 
 Notes __
 
@@ -770,7 +757,7 @@ No support No
 Notes __
 
      Notes __Always given as 'safe'.
-|  Full support Yes| No support No
+|  Full support Yes|  No support No
 
 Notes __
 
@@ -779,68 +766,67 @@ No support No
 Notes __
 
      Notes __Always given as 'safe'.  
-`DownloadItem.endTime`|  Full support Yes| No support No| No
-support No| Full support Yes| No support No  
-`DownloadItem.error`| Full support Yes| No support No| Full
-support 47| Full support Yes| Full support 48  
-`DownloadItem.estimatedEndTime`| Full support Yes| No support No|
-Full support 57| Full support Yes| Full support 57  
-`DownloadItem.exists`| Full support Yes| No support No| Full
-support 47| Full support Yes| Full support 48  
-`DownloadItem.filename`| Full support Yes| No support No| Full
-support 47| Full support Yes| Full support 48  
-`DownloadItem.fileSize`| Full support Yes| No support No| Full
-support 47| Full support Yes| Full support 48  
-`DownloadItem.id`| Full support Yes| No support No| Full
-support 47| Full support Yes| Full support 48  
-`DownloadItem.incognito`| Full support Yes| No support No| Full
-support 47| Full support Yes| Full support 48  
-`DownloadItem.mime`| Full support Yes| No support No| Full
-support 47| Full support Yes| Full support 48  
-`DownloadItem.paused`| Full support Yes| No support No| Full
-support 47| Full support Yes| Full support 48  
-`DownloadItem.referrer`| Full support Yes| No support No| Full
-support 47| Full support Yes| Full support 48  
-`DownloadItem.startTime`| Full support Yes| No support No| Full
-support 47| Full support Yes| Full support 48  
-`DownloadItem.state`| Full support Yes| No support No| Full
-support 47| Full support Yes| Full support 48  
-`DownloadItem.totalBytes`| Full support Yes| No support No| Full
-support 47| Full support Yes| Full support 48  
-`DownloadItem.url`| Full support Yes| No support No| Full
-support 47| Full support Yes| Full support 48  
-`DownloadQuery`| Full support Yes| No support No| Full
-support 47| Full support Yes| Full support 48  
-`DownloadTime`| Full support Yes| No support No| Full
-support 47| Full support Yes| Full support 48  
-`FilenameConflictAction`| Full support Yes| No support No|
-Partial support47| Full support Yes| Partial support48  
-`FilenameConflictAction.prompt`| Full support Yes| No support No|
-No support No| Full support Yes| No support No  
-`InterruptReason`| Full support Yes| No support No| Full
-support 47| Full support Yes| Full support 48  
-`State`| Full support Yes| No support No| Full support 47|
-Full support Yes| Full support 48  
-`StringDelta`| Full support Yes| No support No| Full support
-47| Full support Yes| Full support 48  
-`acceptDanger`| Full support Yes| No support No| No support
-No| Full support Yes| No support No  
-`cancel`| Full support Yes| No support No| Full support 48|
-Full support Yes| Full support 48  
-`download`| Partial supportPartial| No support No| Partial
-support47| Partial supportPartial| Partial support48  
-`download.body`| Full support Yes| No support No| Full
-support 52| Full support Yes| Full support 52  
-`download.conflictAction`| Full support Yes| No support No| Full
-support 47| Full support Yes| Full support 48  
-`download.filename`| Full support Yes| No support No| Full
-support 47| Full support Yes| Full support 48  
-`download.headers`| Full support Yes| No support No| Full
-support 47| Full support Yes| Full support 48  
-`download.incognito`| No support No| No support No| Full
-support 57| No support No| Full support 57  
-`download.method`| Full support Yes| No support No| Full
-support 47
+`DownloadItem.endTime`|  Full support Yes|  No support No|  No support No|
+Full support Yes|  No support No  
+`DownloadItem.error`|  Full support Yes|  No support No|  Full support 47|
+Full support Yes|  Full support 48  
+`DownloadItem.estimatedEndTime`|  Full support Yes|  No support No|  Full
+support 57|  Full support Yes|  Full support 57  
+`DownloadItem.exists`|  Full support Yes|  No support No|  Full support 47|
+Full support Yes|  Full support 48  
+`DownloadItem.filename`|  Full support Yes|  No support No|  Full support 47|
+Full support Yes|  Full support 48  
+`DownloadItem.fileSize`|  Full support Yes|  No support No|  Full support 47|
+Full support Yes|  Full support 48  
+`DownloadItem.id`|  Full support Yes|  No support No|  Full support 47|  Full
+support Yes|  Full support 48  
+`DownloadItem.incognito`|  Full support Yes|  No support No|  Full support 47|
+Full support Yes|  Full support 48  
+`DownloadItem.mime`|  Full support Yes|  No support No|  Full support 47|
+Full support Yes|  Full support 48  
+`DownloadItem.paused`|  Full support Yes|  No support No|  Full support 47|
+Full support Yes|  Full support 48  
+`DownloadItem.referrer`|  Full support Yes|  No support No|  Full support 47|
+Full support Yes|  Full support 48  
+`DownloadItem.startTime`|  Full support Yes|  No support No|  Full support 47|
+Full support Yes|  Full support 48  
+`DownloadItem.state`|  Full support Yes|  No support No|  Full support 47|
+Full support Yes|  Full support 48  
+`DownloadItem.totalBytes`|  Full support Yes|  No support No|  Full support
+47|  Full support Yes|  Full support 48  
+`DownloadItem.url`|  Full support Yes|  No support No|  Full support 47|  Full
+support Yes|  Full support 48  
+`DownloadQuery`|  Full support Yes|  No support No|  Full support 47|  Full
+support Yes|  Full support 48  
+`DownloadTime`|  Full support Yes|  No support No|  Full support 47|  Full
+support Yes|  Full support 48  
+`FilenameConflictAction`|  Full support Yes|  No support No|  Partial support
+47|  Full support Yes|  Partial support 48  
+`FilenameConflictAction.prompt`|  Full support Yes|  No support No|  No
+support No|  Full support Yes|  No support No  
+`InterruptReason`|  Full support Yes|  No support No|  Full support 47|  Full
+support Yes|  Full support 48  
+`State`|  Full support Yes|  No support No|  Full support 47|  Full support
+Yes|  Full support 48  
+`StringDelta`|  Full support Yes|  No support No|  Full support 47|  Full
+support Yes|  Full support 48  
+`acceptDanger`|  Full support Yes|  No support No|  No support No|  Full
+support Yes|  No support No  
+`cancel`|  Full support Yes|  No support No|  Full support 48|  Full support
+Yes|  Full support 48  
+`download`|  Partial support Partial|  No support No|  Partial support 47|
+Partial support Partial|  Partial support 48  
+`download.body`|  Full support Yes|  No support No|  Full support 52|  Full
+support Yes|  Full support 52  
+`download.conflictAction`|  Full support Yes|  No support No|  Full support
+47|  Full support Yes|  Full support 48  
+`download.filename`|  Full support Yes|  No support No|  Full support 47|
+Full support Yes|  Full support 48  
+`download.headers`|  Full support Yes|  No support No|  Full support 47|  Full
+support Yes|  Full support 48  
+`download.incognito`|  No support No|  No support No|  Full support 57|  No
+support No|  Full support 57  
+`download.method`|  Full support Yes|  No support No|  Full support 47
 
 Notes __
 
@@ -849,7 +835,7 @@ Full support 47
 Notes __
 
      Notes __POST is supported from version 52.
-|  Full support Yes| Full support 48
+|  Full support Yes|  Full support 48
 
 Notes __
 
@@ -858,8 +844,7 @@ Full support 48
 Notes __
 
      Notes __POST is supported from version 52.  
-`download.saveAs`|  Full support Yes| No support No| Full
-support 52
+`download.saveAs`|  Full support Yes|  No support No|  Full support 52
 
 Notes __
 
@@ -868,7 +853,7 @@ Full support 52
 Notes __
 
      Notes __Before version 58, if this option was omitted, Firefox would never show the file chooser, regardless of the value of the browser's preference.
-|  Full support Yes| Full support 52
+|  Full support Yes|  Full support 52
 
 Notes __
 
@@ -877,34 +862,34 @@ Full support 52
 Notes __
 
      Notes __Before version 58, if this option was omitted, Firefox would never show the file chooser, regardless of the value of the browser's preference.  
-`drag`|  Full support Yes| No support No| No support No|
-Full support Yes| No support No  
-`erase`| Full support Yes| No support No| Full support 48|
-Full support Yes| Full support 48  
-`getFileIcon`| Full support Yes| No support No| Full support
-48| Full support Yes| No support No  
-`onChanged`| Full support Yes| No support No| Full support
-47| Full support Yes| Full support 48  
-`onCreated`| Full support Yes| No support No| Full support
-48| Full support Yes| Full support 48  
-`onErased`| Full support Yes| No support No| Full support
-48| Full support Yes| Full support 48  
-`open`| Full support Yes| No support No| Full support 48|
-Full support Yes| Full support 48  
-`pause`| Full support Yes| No support No| Full support 48|
-Full support Yes| Full support 48  
-`removeFile`| Full support Yes| No support No| Full support
-48| Full support Yes| Full support 48  
-`resume`| Full support Yes| No support No| Full support 48|
-Full support Yes| Full support 48  
-`search`| Full support Yes| No support No| Full support 47|
-Full support Yes| Full support 48  
-`setShelfEnabled`| Full support Yes| No support No| No
-support No| Full support Yes| No support No  
-`show`| Full support Yes| No support No| Full support 48|
-Full support Yes| Full support 48  
-`showDefaultFolder`| Full support Yes| No support No| Full
-support 48| Full support Yes| Full support 48  
+`drag`|  Full support Yes|  No support No|  No support No|  Full support Yes|
+No support No  
+`erase`|  Full support Yes|  No support No|  Full support 48|  Full support
+Yes|  Full support 48  
+`getFileIcon`|  Full support Yes|  No support No|  Full support 48|  Full
+support Yes|  No support No  
+`onChanged`|  Full support Yes|  No support No|  Full support 47|  Full
+support Yes|  Full support 48  
+`onCreated`|  Full support Yes|  No support No|  Full support 48|  Full
+support Yes|  Full support 48  
+`onErased`|  Full support Yes|  No support No|  Full support 48|  Full support
+Yes|  Full support 48  
+`open`|  Full support Yes|  No support No|  Full support 48|  Full support
+Yes|  Full support 48  
+`pause`|  Full support Yes|  No support No|  Full support 48|  Full support
+Yes|  Full support 48  
+`removeFile`|  Full support Yes|  No support No|  Full support 48|  Full
+support Yes|  Full support 48  
+`resume`|  Full support Yes|  No support No|  Full support 48|  Full support
+Yes|  Full support 48  
+`search`|  Full support Yes|  No support No|  Full support 47|  Full support
+Yes|  Full support 48  
+`setShelfEnabled`|  Full support Yes|  No support No|  No support No|  Full
+support Yes|  No support No  
+`show`|  Full support Yes|  No support No|  Full support 48|  Full support
+Yes|  Full support 48  
+`showDefaultFolder`|  Full support Yes|  No support No|  Full support 48|
+Full support Yes|  Full support 48  
   
 ## events
 
@@ -917,12 +902,12 @@ support 48| Full support Yes| Full support 48
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`Event`|  Full support Yes| Full support Yes| No support No|
-Full support Yes| No support No  
-`Rule`| Full support Yes| Full support Yes| No support No|
-Full support Yes| No support No  
-`UrlFilter`| Full support Yes| Full support Yes| Full
-support 50| Full support Yes| Full support 50  
+`Event`|  Full support Yes|  Full support Yes|  No support No|  Full support
+Yes|  No support No  
+`Rule`|  Full support Yes|  Full support Yes|  No support No|  Full support
+Yes|  No support No  
+`UrlFilter`|  Full support Yes|  Full support Yes|  Full support 50|  Full
+support Yes|  Full support 50  
   
 ## extension
 
@@ -945,24 +930,23 @@ support 50| Full support Yes| Full support 50
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`ViewType`|  Full support Yes| No support No| Full support
-45| Full support Yes| Full support 48  
-`getBackgroundPage`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 48  
+`ViewType`|  Full support Yes|  No support No|  Full support 45|  Full support
+Yes|  Full support 48  
+`getBackgroundPage`|  Full support Yes|  Full support Yes|  Full support 45|
+Full support Yes|  Full support 48  
 `getExtensionTabs`
 
 Deprecated __Non-standard __
 
-|  Full support Yes| No support No| No support No| No
-support No| No support No  
+|  Full support Yes|  No support No|  No support No|  No support No|  No
+support No  
 `getURL`
 
 Deprecated __Non-standard __
 
-|  Full support Yes| Full support Yes| Full support 45|
-Full support Yes| Full support 48  
-`getViews`| Full support Yes| Full support Yes| Full support
-45
+|  Full support Yes|  Full support Yes|  Full support 45|  Full support Yes|
+Full support 48  
+`getViews`|  Full support Yes|  Full support Yes|  Full support 45
 
 Notes __
 
@@ -971,7 +955,7 @@ Full support 45
 Notes __
 
      Notes __If this is called from a page that is part of a private browsing window, such as a sidebar in a private window or a popup opened from a private window, then its return value will not include the extension's background page.
-|  Full support Yes| Full support 48
+|  Full support Yes|  Full support 48
 
 Notes __
 
@@ -980,34 +964,34 @@ Full support 48
 Notes __
 
      Notes __If this is called from a page that is part of a private browsing window, such as a sidebar in a private window or a popup opened from a private window, then its return value will not include the extension's background page.  
-`inIncognitoContext`|  Full support Yes| No support No| Full
-support 45| Full support Yes| Full support 48  
-`isAllowedFileSchemeAccess`| Full support Yes| No support No|
-Full support 48| Full support Yes| Full support 48  
-`isAllowedIncognitoAccess`| Full support Yes| No support No|
-Full support 48| Full support Yes| Full support 48  
-`lastError`| Full support Yes| No support No| Full support
-47| Full support Yes| Full support 48  
+`inIncognitoContext`|  Full support Yes|  No support No|  Full support 45|
+Full support Yes|  Full support 48  
+`isAllowedFileSchemeAccess`|  Full support Yes|  No support No|  Full support
+48|  Full support Yes|  Full support 48  
+`isAllowedIncognitoAccess`|  Full support Yes|  No support No|  Full support
+48|  Full support Yes|  Full support 48  
+`lastError`|  Full support Yes|  No support No|  Full support 47|  Full
+support Yes|  Full support 48  
 `onRequest`
 
 Deprecated __Non-standard __
 
-|  Full support Yes| No support No| No support No| Full
-support Yes| No support No  
+|  Full support Yes|  No support No|  No support No|  Full support Yes|  No
+support No  
 `onRequestExternal`
 
 Deprecated __Non-standard __
 
-|  Full support Yes| No support No| No support No| Full
-support Yes| No support No  
+|  Full support Yes|  No support No|  No support No|  Full support Yes|  No
+support No  
 `sendRequest`
 
 Deprecated __Non-standard __
 
-|  Full support Yes| No support No| No support No| No
-support No| No support No  
-`setUpdateUrlData`| Full support Yes| No support No| No
-support No| Full support Yes| No support No  
+|  Full support Yes|  No support No|  No support No|  No support No|  No
+support No  
+`setUpdateUrlData`|  Full support Yes|  No support No|  No support No|  Full
+support Yes|  No support No  
   
 ## extensionTypes
 
@@ -1021,83 +1005,83 @@ support No| Full support Yes| No support No
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`ImageDetails`|  Partial supportPartial
+`ImageDetails`|  Partial support Partial
 
 Notes __
 
-Partial supportPartial
-
-Notes __
-
-     Notes __This feature is supported but not exposed through the 'extensionTypes' object.
-|  Partial supportPartial
-
-Notes __
-
-Partial supportPartial
+Partial support Partial
 
 Notes __
 
      Notes __This feature is supported but not exposed through the 'extensionTypes' object.
-|  Full support 45| Partial supportPartial
+|  Partial support Partial
 
 Notes __
 
-Partial supportPartial
-
-Notes __
-
-     Notes __This feature is supported but not exposed through the 'extensionTypes' object.
-|  Full support 48  
-`ImageFormat`| Partial supportPartial
-
-Notes __
-
-Partial supportPartial
+Partial support Partial
 
 Notes __
 
      Notes __This feature is supported but not exposed through the 'extensionTypes' object.
-|  Partial supportPartial
+|  Full support 45|  Partial support Partial
 
 Notes __
 
-Partial supportPartial
-
-Notes __
-
-     Notes __This feature is supported but not exposed through the 'extensionTypes' object.
-|  Full support 45| Partial supportPartial
-
-Notes __
-
-Partial supportPartial
+Partial support Partial
 
 Notes __
 
      Notes __This feature is supported but not exposed through the 'extensionTypes' object.
 |  Full support 48  
-`RunAt`| Partial support20
+`ImageFormat`|  Partial support Partial
 
 Notes __
 
-Partial support20
+Partial support Partial
 
 Notes __
 
      Notes __This feature is supported but not exposed through the 'extensionTypes' object.
-|  No support No| Full support 45| Partial support15
+|  Partial support Partial
 
 Notes __
 
-Partial support15
+Partial support Partial
+
+Notes __
+
+     Notes __This feature is supported but not exposed through the 'extensionTypes' object.
+|  Full support 45|  Partial support Partial
+
+Notes __
+
+Partial support Partial
 
 Notes __
 
      Notes __This feature is supported but not exposed through the 'extensionTypes' object.
 |  Full support 48  
-`CSSOrigin`| No support No| No support No| Full support 53|
-No support No| Full support 53  
+`RunAt`|  Partial support 20
+
+Notes __
+
+Partial support 20
+
+Notes __
+
+     Notes __This feature is supported but not exposed through the 'extensionTypes' object.
+|  No support No|  Full support 45|  Partial support 15
+
+Notes __
+
+Partial support 15
+
+Notes __
+
+     Notes __This feature is supported but not exposed through the 'extensionTypes' object.
+|  Full support 48  
+`CSSOrigin`|  No support No|  No support No|  Full support 53|  No support No|
+Full support 53  
   
 ## find
 
@@ -1110,12 +1094,12 @@ No support No| Full support 53
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`find`|  No support No| No support No| Full support 57| No
-support No| No support No  
-`highlightResults`| No support No| No support No| Full
-support 57| No support No| No support No  
-`removeHighlighting`| No support No| No support No| Full
-support 57| No support No| No support No  
+`find`|  No support No|  No support No|  Full support 57|  No support No|  No
+support No  
+`highlightResults`|  No support No|  No support No|  Full support 57|  No
+support No|  No support No  
+`removeHighlighting`|  No support No|  No support No|  Full support 57|  No
+support No|  No support No  
   
 ## history
 
@@ -1141,36 +1125,35 @@ support 57| No support No| No support No
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`HistoryItem`|  Full support Yes| No support No| Partial
-support49| Full support Yes| No support No  
-`HistoryItem.typedCount`| Full support Yes| No support No| No
-support No| Full support Yes| No support No  
-`TransitionType`| Full support Yes| No support No| Full
-support 50| Full support Yes| No support No  
-`VisitItem`| Full support Yes| No support No| Full support
-50| Full support Yes| No support No  
-`addUrl`| Partial supportPartial| No support No| Full support
-49| Partial supportPartial| No support No  
-`addUrl.title`| No support No| No support No| Full support
-49| No support No| No support No  
-`addUrl.transition`| No support No| No support No| Full
-support 49| No support No| No support No  
-`addUrl.visitTime`| No support No| No support No| Full
-support 49| No support No| No support No  
-`deleteAll`| Full support Yes| No support No| Full support
-49| Full support Yes| No support No  
-`deleteRange`| Full support Yes| No support No| Full support
-49| Full support Yes| No support No  
-`deleteUrl`| Full support Yes| No support No| Full support
-49| Full support Yes| No support No  
-`getVisits`| Full support Yes| No support No| Full support
-50| Full support Yes| No support No  
-`onTitleChanged`| No support No| No support No| Full support
-55| No support No| No support No  
-`onVisitRemoved`| Full support Yes| No support No| Full
-support 50| Full support Yes| No support No  
-`onVisited`| Full support Yes| No support No| Full support
-50
+`HistoryItem`|  Full support Yes|  No support No|  Partial support 49|  Full
+support Yes|  No support No  
+`HistoryItem.typedCount`|  Full support Yes|  No support No|  No support No|
+Full support Yes|  No support No  
+`TransitionType`|  Full support Yes|  No support No|  Full support 50|  Full
+support Yes|  No support No  
+`VisitItem`|  Full support Yes|  No support No|  Full support 50|  Full
+support Yes|  No support No  
+`addUrl`|  Partial support Partial|  No support No|  Full support 49|  Partial
+support Partial|  No support No  
+`addUrl.title`|  No support No|  No support No|  Full support 49|  No support
+No|  No support No  
+`addUrl.transition`|  No support No|  No support No|  Full support 49|  No
+support No|  No support No  
+`addUrl.visitTime`|  No support No|  No support No|  Full support 49|  No
+support No|  No support No  
+`deleteAll`|  Full support Yes|  No support No|  Full support 49|  Full
+support Yes|  No support No  
+`deleteRange`|  Full support Yes|  No support No|  Full support 49|  Full
+support Yes|  No support No  
+`deleteUrl`|  Full support Yes|  No support No|  Full support 49|  Full
+support Yes|  No support No  
+`getVisits`|  Full support Yes|  No support No|  Full support 50|  Full
+support Yes|  No support No  
+`onTitleChanged`|  No support No|  No support No|  Full support 55|  No
+support No|  No support No  
+`onVisitRemoved`|  Full support Yes|  No support No|  Full support 50|  Full
+support Yes|  No support No  
+`onVisited`|  Full support Yes|  No support No|  Full support 50
 
 Notes __
 
@@ -1179,9 +1162,9 @@ Full support 50
 Notes __
 
      Notes __Before version 56, the result object's 'title' was always an empty string. From version 56 onwards, it is set to the last known title, if that is available, or an empty string otherwise.
-|  Full support Yes| No support No  
-`search`| Full support Yes| No support No| Full support 49|
-Full support Yes| No support No  
+|  Full support Yes|  No support No  
+`search`|  Full support Yes|  No support No|  Full support 49|  Full support
+Yes|  No support No  
   
 ## i18n
 
@@ -1196,13 +1179,13 @@ Full support Yes| No support No
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`LanguageCode`|  Full support 47| Full support Yes| Full
-support 45| Full support 34| Full support 48  
-`detectLanguage`| Full support 47| No support No| Full
-support 47| Full support 34| Full support 48  
-`getAcceptLanguages`| Full support 47| Full support Yes| Full
-support 47| Full support 34| Full support 48  
-`getMessage`| Full support 17| Full support Yes
+`LanguageCode`|  Full support 47|  Full support Yes|  Full support 45|  Full
+support 34|  Full support 48  
+`detectLanguage`|  Full support 47|  No support No|  Full support 47|  Full
+support 34|  Full support 48  
+`getAcceptLanguages`|  Full support 47|  Full support Yes|  Full support 47|
+Full support 34|  Full support 48  
+`getMessage`|  Full support 17|  Full support Yes
 
 Notes __
 
@@ -1221,9 +1204,9 @@ Full support 45
 Notes __
 
      Notes __Firefox 47 and earlier returns "??" instead of "" if the message is not found in _locales,[bug 1258199](https://bugzil.la/1258199) changed this act to match Chrome, landed on Firefox 48.
-|  Full support 15| Full support 48  
-`getUILanguage`| Full support 35| Full support Yes| Full
-support 47| Full support Yes| Full support 48  
+|  Full support 15|  Full support 48  
+`getUILanguage`|  Full support 35|  Full support Yes|  Full support 47|  Full
+support Yes|  Full support 48  
   
 ## identity
 
@@ -1235,10 +1218,10 @@ support 47| Full support Yes| Full support 48
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`getRedirectURL`|  Full support Yes| No support No| Full
-support 53| No support No| Full support 53  
-`launchWebAuthFlow`| Full support Yes| No support No| Full
-support 53| Full support Yes| Full support 53  
+`getRedirectURL`|  Full support Yes|  No support No|  Full support 53|  No
+support No|  Full support 53  
+`launchWebAuthFlow`|  Full support Yes|  No support No|  Full support 53|
+Full support Yes|  Full support 53  
   
 ## idle
 
@@ -1254,35 +1237,34 @@ support 53| Full support Yes| Full support 53
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`IdleState`|  Full support Yes| No support No| Full support
-45| Full support Yes| Full support 48  
-`onStateChanged`| Full support Yes| No support No| Partial
-support51| Full support Yes| Partial support51  
-`onStateChanged.locked`| Full support Yes| No support No| No
-support No| Full support Yes| No support No  
-`queryState`| Full support Yes| Partial support15| Partial
-support45
+`IdleState`|  Full support Yes|  No support No|  Full support 45|  Full
+support Yes|  Full support 48  
+`onStateChanged`|  Full support Yes|  No support No|  Partial support 51|
+Full support Yes|  Partial support 51  
+`onStateChanged.locked`|  Full support Yes|  No support No|  No support No|
+Full support Yes|  No support No  
+`queryState`|  Full support Yes|  Partial support 15|  Partial support 45
 
 Notes __
 
-Partial support45
+Partial support 45
 
 Notes __
 
      Notes __Before version 51, Firefox always reports 'active'. After version 51, Firefox reports 'active' or 'idle' as appropriate.
-|  Full support Yes| Partial support48
+|  Full support Yes|  Partial support 48
 
 Notes __
 
-Partial support48
+Partial support 48
 
 Notes __
 
      Notes __Before version 51, Firefox always reports 'active'. After version 51, Firefox reports 'active' or 'idle' as appropriate.  
-`queryState.locked`|  Full support Yes| No support No| No
-support No| Full support Yes| No support No  
-`setDetectionInterval`| Full support Yes| Full support 15| Full
-support 51| Full support Yes| Full support 51  
+`queryState.locked`|  Full support Yes|  No support No|  No support No|  Full
+support Yes|  No support No  
+`setDetectionInterval`|  Full support Yes|  Full support 15|  Full support 51|
+Full support Yes|  Full support 51  
   
 ## management
 
@@ -1310,19 +1292,19 @@ support 51| Full support Yes| Full support 51
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`ExtensionInfo`|  Full support Yes| No support No| Partial
-support51| Full support Yes| Partial support51  
-`ExtensionInfo.disabledReason`| Full support Yes| No support No|
-No support No| Full support Yes| No support No  
-`ExtensionInfo.offlineEnabled`| Full support Yes| No support No|
-No support No| Full support Yes| No support No  
-`ExtensionInfo.type`| Full support Yes| No support No| Full
-support 55| Full support Yes| Full support 55  
-`ExtensionInfo.versionName`| Full support Yes| No support No| No
-support No| Full support Yes| No support No  
-`get`| Full support Yes| No support No| Full support 56|
-Full support Yes| Full support 56  
-`getAll`| Full support Yes| No support No| Full support 55
+`ExtensionInfo`|  Full support Yes|  No support No|  Partial support 51|  Full
+support Yes|  Partial support 51  
+`ExtensionInfo.disabledReason`|  Full support Yes|  No support No|  No support
+No|  Full support Yes|  No support No  
+`ExtensionInfo.offlineEnabled`|  Full support Yes|  No support No|  No support
+No|  Full support Yes|  No support No  
+`ExtensionInfo.type`|  Full support Yes|  No support No|  Full support 55|
+Full support Yes|  Full support 55  
+`ExtensionInfo.versionName`|  Full support Yes|  No support No|  No support
+No|  Full support Yes|  No support No  
+`get`|  Full support Yes|  No support No|  Full support 56|  Full support Yes|
+Full support 56  
+`getAll`|  Full support Yes|  No support No|  Full support 55
 
 Notes __
 
@@ -1331,7 +1313,7 @@ Full support 55
 Notes __
 
      Notes __Before version 56, only extensions whose 'type' is 'theme' are returned.
-|  Full support Yes| Full support 55
+|  Full support Yes|  Full support 55
 
 Notes __
 
@@ -1340,22 +1322,21 @@ Full support 55
 Notes __
 
      Notes __Before version 56, only extensions whose 'type' is 'theme' are returned.  
-`getPermissionWarningsById`|  Full support Yes| No support No|
-No support No| Full support Yes| No support No  
-`getPermissionWarningsByManifest`| Full support Yes| No support
-No| No support No| Full support Yes| No support No  
-`getSelf`| Full support Yes| No support No| Full support 51|
-No support No| Full support 51  
-`onDisabled`| Full support Yes| No support No| No support
-No| Full support Yes| No support No  
-`onEnabled`| Full support Yes| No support No| No support No|
-Full support Yes| No support No  
-`onInstalled`| Full support Yes| No support No| No support
-No| Full support Yes| No support No  
-`onUninstalled`| Full support Yes| No support No| No support
-No| Full support Yes| No support No  
-`setEnabled`| Full support Yes| No support No| Full support
-55
+`getPermissionWarningsById`|  Full support Yes|  No support No|  No support
+No|  Full support Yes|  No support No  
+`getPermissionWarningsByManifest`|  Full support Yes|  No support No|  No
+support No|  Full support Yes|  No support No  
+`getSelf`|  Full support Yes|  No support No|  Full support 51|  No support
+No|  Full support 51  
+`onDisabled`|  Full support Yes|  No support No|  No support No|  Full support
+Yes|  No support No  
+`onEnabled`|  Full support Yes|  No support No|  No support No|  Full support
+Yes|  No support No  
+`onInstalled`|  Full support Yes|  No support No|  No support No|  Full
+support Yes|  No support No  
+`onUninstalled`|  Full support Yes|  No support No|  No support No|  Full
+support Yes|  No support No  
+`setEnabled`|  Full support Yes|  No support No|  Full support 55
 
 Notes __
 
@@ -1364,7 +1345,7 @@ Full support 55
 Notes __
 
      Notes __Only extensions whose 'type' is 'theme' can be enabled and disabled.
-|  Full support Yes| Full support 55
+|  Full support Yes|  Full support 55
 
 Notes __
 
@@ -1373,12 +1354,12 @@ Full support 55
 Notes __
 
      Notes __Only extensions whose 'type' is 'theme' can be enabled and disabled.  
-`uninstall`|  Full support Yes| No support No| No support
-No| Full support Yes| No support No  
-`uninstallSelf`| Partial supportPartial| No support No| Full
-support 51| Partial supportPartial| Full support 51  
-`uninstallSelf.dialogMessage`| No support No| No support No|
-Full support 51| No support No| Full support 51  
+`uninstall`|  Full support Yes|  No support No|  No support No|  Full support
+Yes|  No support No  
+`uninstallSelf`|  Partial support Partial|  No support No|  Full support 51|
+Partial support Partial|  Full support 51  
+`uninstallSelf.dialogMessage`|  No support No|  No support No|  Full support
+51|  No support No|  Full support 51  
   
 ## menus
 
@@ -1499,20 +1480,20 @@ Alternate Name __
 
      Alternate Name __Uses the non-standard name:`contextMenus.ACTION_MENU_TOP_LEVEL_LIMIT`
 |  No support No  
-`ContextType`| Partial supportPartial
+`ContextType`|  Partial support Partial
 
 Alternate Name __
 
-Partial supportPartial
+Partial support Partial
 
 Alternate Name __
 
      Alternate Name __Uses the non-standard name:`contextMenus.ContextType`
-|  Partial supportPartial
+|  Partial support Partial
 
 Alternate Name __
 
-Partial supportPartial
+Partial support Partial
 
 Alternate Name __
 
@@ -1529,18 +1510,18 @@ Full support 48
 Alternate Name __
 
      Alternate Name __Uses the non-standard name:`contextMenus.ContextType`
-|  Partial supportPartial
+|  Partial support Partial
 
 Alternate Name __
 
-Partial supportPartial
+Partial support Partial
 
 Alternate Name __
 
      Alternate Name __Uses the non-standard name:`contextMenus.ContextType`
 |  No support No  
-`ContextType.browser_action`| Full support Yes| Full support Yes|
-Full support 53
+`ContextType.browser_action`|  Full support Yes|  Full support Yes|  Full
+support 53
 
 Notes __
 
@@ -1549,17 +1530,16 @@ Full support 53
 Notes __
 
      Notes __'The 'editable' context does not include password fields. Use the 'password' context for this.
-|  Full support Yes| No support No  
-`ContextType.page_action`| Full support Yes| Full support Yes|
-Full support 53| Full support Yes| No support No  
-`ContextType.launcher`| Full support Yes| No support No| Full
-support 48| Full support Yes| No support No  
-`ContextType.password`| No support No| No support No| Full
-support 53| No support No| No support No  
-`ContextType.tab`| No support No| No support No| Full
-support 53| No support No| No support No  
-`ContextType.tools_menu`| No support No| No support No| Full
-support 56
+|  Full support Yes|  No support No  
+`ContextType.page_action`|  Full support Yes|  Full support Yes|  Full support
+53|  Full support Yes|  No support No  
+`ContextType.launcher`|  Full support Yes|  No support No|  Full support 48|
+Full support Yes|  No support No  
+`ContextType.password`|  No support No|  No support No|  Full support 53|  No
+support No|  No support No  
+`ContextType.tab`|  No support No|  No support No|  Full support 53|  No
+support No|  No support No  
+`ContextType.tools_menu`|  No support No|  No support No|  Full support 56
 
 Notes __
 
@@ -1568,8 +1548,8 @@ Full support 56
 Notes __
 
      Notes __Only available at`menus.ContextType`, not at `contextMenus.ContextType`.
-|  No support No| No support No  
-`ItemType`| Full support Yes
+|  No support No|  No support No  
+`ItemType`|  Full support Yes
 
 Alternate Name __
 
@@ -1607,20 +1587,20 @@ Alternate Name __
 
      Alternate Name __Uses the non-standard name:`contextMenus.ItemType`
 |  No support No  
-`OnClickData`| Partial supportPartial
+`OnClickData`|  Partial support Partial
 
 Alternate Name __
 
-Partial supportPartial
+Partial support Partial
 
 Alternate Name __
 
      Alternate Name __Uses the non-standard name:`contextMenus.OnClickData`
-|  Partial supportPartial
+|  Partial support Partial
 
 Alternate Name __
 
-Partial supportPartial
+Partial support Partial
 
 Alternate Name __
 
@@ -1635,35 +1615,35 @@ Full support 48
 Alternate Name __
 
      Alternate Name __Uses the non-standard name:`contextMenus.OnClickData`
-|  Partial supportPartial
+|  Partial support Partial
 
 Alternate Name __
 
-Partial supportPartial
+Partial support Partial
 
 Alternate Name __
 
      Alternate Name __Uses the non-standard name:`contextMenus.OnClickData`
 |  No support No  
-`OnClickData.linkText`| No support No| No support No| Full
-support 56| No support No| No support No  
-`OnClickData.modifiers`| No support No| No support No| Full
-support 54| No support No| No support No  
-`create`| Partial supportPartial
+`OnClickData.linkText`|  No support No|  No support No|  Full support 56|  No
+support No|  No support No  
+`OnClickData.modifiers`|  No support No|  No support No|  Full support 54|  No
+support No|  No support No  
+`create`|  Partial support Partial
 
 Notes __ Alternate Name __
 
-Partial supportPartial
+Partial support Partial
 
 Notes __ Alternate Name __
 
      Notes __Items that don't specify 'contexts' do not inherit contexts from their parents.
      Alternate Name __Uses the non-standard name:`contextMenus.create`
-|  Partial supportPartial
+|  Partial support Partial
 
 Notes __ Alternate Name __
 
-Partial supportPartial
+Partial support Partial
 
 Notes __ Alternate Name __
 
@@ -1680,22 +1660,22 @@ Notes __ Alternate Name __
 
      Notes __Before version 53, items that don't specify 'contexts' do not inherit contexts from their parents.
      Alternate Name __Uses the non-standard name:`contextMenus.create`
-|  Partial supportPartial
+|  Partial support Partial
 
 Notes __ Alternate Name __
 
-Partial supportPartial
+Partial support Partial
 
 Notes __ Alternate Name __
 
      Notes __Items that don't specify 'contexts' do not inherit contexts from their parents.
      Alternate Name __Uses the non-standard name:`contextMenus.create`
 |  No support No  
-`create.command`| No support No| No support No| Full support
-55| No support No| No support No  
-`create.icons`| No support No| No support No| Full support
-56| No support No| No support No  
-`onClicked`| Full support Yes
+`create.command`|  No support No|  No support No|  Full support 55|  No
+support No|  No support No  
+`create.icons`|  No support No|  No support No|  Full support 56|  No support
+No|  No support No  
+`onClicked`|  Full support Yes
 
 Alternate Name __
 
@@ -1733,7 +1713,7 @@ Alternate Name __
 
      Alternate Name __Uses the non-standard name:`contextMenus.onClicked`
 |  No support No  
-`remove`| Full support Yes
+`remove`|  Full support Yes
 
 Alternate Name __
 
@@ -1771,7 +1751,7 @@ Alternate Name __
 
      Alternate Name __Uses the non-standard name:`contextMenus.remove`
 |  No support No  
-`removeAll`| Full support Yes
+`removeAll`|  Full support Yes
 
 Alternate Name __
 
@@ -1809,7 +1789,7 @@ Alternate Name __
 
      Alternate Name __Uses the non-standard name:`contextMenus.removeAll`
 |  No support No  
-`update`| Full support Yes
+`update`|  Full support Yes
 
 Alternate Name __
 
@@ -1867,8 +1847,7 @@ Alternate Name __
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`NotificationOptions`|  Full support Yes| No support No| Full
-support 45
+`NotificationOptions`|  Full support Yes|  No support No|  Full support 45
 
 Notes __
 
@@ -1877,7 +1856,7 @@ Full support 45
 Notes __
 
      Notes __Only 'type', 'iconUrl', 'title', and 'message' are supported.
-|  Full support Yes| Full support 48
+|  Full support Yes|  Full support 48
 
 Notes __
 
@@ -1886,8 +1865,7 @@ Full support 48
 Notes __
 
      Notes __Only 'type', 'iconUrl', 'title', and 'message' are supported.  
-`TemplateType`|  Full support Yes| No support No| Full
-support 45
+`TemplateType`|  Full support Yes|  No support No|  Full support 45
 
 Notes __
 
@@ -1914,24 +1892,23 @@ Full support 48
 Notes __
 
      Notes __Only the 'basic' type is supported.  
-`clear`|  Full support Yes| No support No| Full support 45|
-Full support Yes| Full support 48  
-`create`| Full support Yes| No support No| Full support 45|
-Full support Yes| Full support 48  
-`getAll`| Full support Yes| No support No| Full support 45|
-Full support Yes| Full support 48  
-`onButtonClicked`| Full support Yes| No support No| No
-support No| Full support Yes| No support No  
-`onClicked`| Full support Yes| No support No| Full support
-47| Full support Yes| Full support 48  
-`onClosed`| Full support Yes| No support No| Partial
-support45| Full support Yes| Partial support48  
-`onClosed.byUser`| Full support Yes| No support No| No
-support No| Full support Yes| No support No  
-`onShown`| No support No| No support No| Full support 56|
-No support No| Full support 56  
-`update`| Full support Yes| No support No| No support No|
-Full support Yes
+`clear`|  Full support Yes|  No support No|  Full support 45|  Full support
+Yes|  Full support 48  
+`create`|  Full support Yes|  No support No|  Full support 45|  Full support
+Yes|  Full support 48  
+`getAll`|  Full support Yes|  No support No|  Full support 45|  Full support
+Yes|  Full support 48  
+`onButtonClicked`|  Full support Yes|  No support No|  No support No|  Full
+support Yes|  No support No  
+`onClicked`|  Full support Yes|  No support No|  Full support 47|  Full
+support Yes|  Full support 48  
+`onClosed`|  Full support Yes|  No support No|  Partial support 45|  Full
+support Yes|  Partial support 48  
+`onClosed.byUser`|  Full support Yes|  No support No|  No support No|  Full
+support Yes|  No support No  
+`onShown`|  No support No|  No support No|  Full support 56|  No support No|
+Full support 56  
+`update`|  Full support Yes|  No support No|  No support No|  Full support Yes
 
 Notes __
 
@@ -1957,10 +1934,9 @@ Notes __
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`OnInputEnteredDisposition`|  Full support Yes| No support No|
-Full support 52| Full support Yes| No support No  
-`SuggestResult`| Full support Yes| No support No| Full
-support 52
+`OnInputEnteredDisposition`|  Full support Yes|  No support No|  Full support
+52|  Full support Yes|  No support No  
+`SuggestResult`|  Full support Yes|  No support No|  Full support 52
 
 Notes __
 
@@ -1969,17 +1945,16 @@ Full support 52
 Notes __
 
      Notes __'description' is interpreted as plain text, and XML markup is not recognised.
-|  Full support Yes| No support No  
-`onInputCancelled`| Full support Yes| No support No| Full
-support 52| Full support Yes| No support No  
-`onInputChanged`| Full support Yes| No support No| Full
-support 52| Full support Yes| No support No  
-`onInputEntered`| Full support Yes| No support No| Full
-support 52| Full support Yes| No support No  
-`onInputStarted`| Full support Yes| No support No| Full
-support 52| Full support Yes| No support No  
-`setDefaultSuggestion`| Full support Yes| No support No| Full
-support 52
+|  Full support Yes|  No support No  
+`onInputCancelled`|  Full support Yes|  No support No|  Full support 52|  Full
+support Yes|  No support No  
+`onInputChanged`|  Full support Yes|  No support No|  Full support 52|  Full
+support Yes|  No support No  
+`onInputEntered`|  Full support Yes|  No support No|  Full support 52|  Full
+support Yes|  No support No  
+`onInputStarted`|  Full support Yes|  No support No|  Full support 52|  Full
+support Yes|  No support No  
+`setDefaultSuggestion`|  Full support Yes|  No support No|  Full support 52
 
 Notes __
 
@@ -1988,7 +1963,7 @@ Full support 52
 Notes __
 
      Notes __'description' is interpreted as plain text, and XML markup is not recognised.
-|  Full support Yes| No support No  
+|  Full support Yes|  No support No  
   
 ## pageAction
 
@@ -2009,10 +1984,10 @@ Notes __
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`ImageDataType`|  Full support Yes| No support No| Full
-support 45| Full support Yes| No support No  
-`getPopup`| Full support Yes| Full support Yes| Full support
-45| Full support Yes| Full support 50
+`ImageDataType`|  Full support Yes|  No support No|  Full support 45|  Full
+support Yes|  No support No  
+`getPopup`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 50
 
 Notes __
 
@@ -2021,10 +1996,10 @@ Full support 50
 Notes __
 
      Notes __The 'tabId' parameter is ignored: the page action popup is the same for all tabs.  
-`getTitle`|  Full support Yes| Full support Yes| Full
-support 45| Full support Yes| No support No  
-`hide`| Full support Yes| Full support Yes| Full support 45|
-Full support Yes| Full support 50
+`getTitle`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  No support No  
+`hide`|  Full support Yes|  Full support Yes|  Full support 45|  Full support
+Yes|  Full support 50
 
 Notes __
 
@@ -2033,25 +2008,24 @@ Full support 50
 Notes __
 
      Notes __Before version 56, the 'tabId' parameter was ignored, and the page action was hidden for all tabs.  
-`onClicked`|  Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 50  
-`openPopup`| No support No| No support No| Full support 57|
-No support No| No support No  
-`setIcon`| Partial supportPartial
+`onClicked`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 50  
+`openPopup`|  No support No|  No support No|  Full support 57|  No support No|
+No support No  
+`setIcon`|  Partial support Partial
 
 Notes __
 
-Partial supportPartial
+Partial support Partial
 
 Notes __
 
      Notes __Before Chrome 23, `path` couldn't specify multiple icon files, but had to be a string specifying a single icon path.
-|  Partial supportPartial| Full support 45| Full support 15|
-No support No  
-`setIcon.imageData`| Full support 23| No support No| Full
-support 45| Full support 15| No support No  
-`setPopup`| Full support Yes| Full support Yes| Full support
-45| Full support Yes| Full support 50
+|  Partial support Partial|  Full support 45|  Full support 15|  No support No  
+`setIcon.imageData`|  Full support 23|  No support No|  Full support 45|  Full
+support 15|  No support No  
+`setPopup`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 50
 
 Notes __
 
@@ -2060,10 +2034,10 @@ Full support 50
 Notes __
 
      Notes __The 'tabId' parameter is ignored, and the popup is set for all tabs.  
-`setTitle`|  Full support Yes| Full support Yes| Full
-support 45| Full support Yes| No support No  
-`show`| Full support Yes| Full support Yes| Full support 45|
-Full support Yes| Full support 50
+`setTitle`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  No support No  
+`show`|  Full support Yes|  Full support Yes|  Full support 45|  Full support
+Yes|  Full support 50
 
 Notes __
 
@@ -2088,19 +2062,19 @@ Notes __
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`contains`|  Full support Yes| No support No| Full support
-55| Full support Yes| Full support 55  
-`getAll`| Full support Yes| No support No| Full support 55|
-Full support Yes| Full support 55  
-`onAdded`| Full support Yes| No support No| No support No|
-Full support Yes| No support No  
-`onRemoved`| Full support Yes| No support No| No support No|
-Full support Yes| No support No  
-`Permissions`| Full support Yes| No support No| Full support
-55| Full support Yes| Full support 55  
-`remove`| Full support Yes| No support No| Full support 55|
-Full support Yes| Full support 55  
-`request`| Full support Yes| No support No| Full support 55
+`contains`|  Full support Yes|  No support No|  Full support 55|  Full support
+Yes|  Full support 55  
+`getAll`|  Full support Yes|  No support No|  Full support 55|  Full support
+Yes|  Full support 55  
+`onAdded`|  Full support Yes|  No support No|  No support No|  Full support
+Yes|  No support No  
+`onRemoved`|  Full support Yes|  No support No|  No support No|  Full support
+Yes|  No support No  
+`Permissions`|  Full support Yes|  No support No|  Full support 55|  Full
+support Yes|  Full support 55  
+`remove`|  Full support Yes|  No support No|  Full support 55|  Full support
+Yes|  Full support 55  
+`request`|  Full support Yes|  No support No|  Full support 55
 
 Notes __
 
@@ -2109,7 +2083,7 @@ Full support 55
 Notes __
 
      Notes __The user will be prompted again for permissions that have been previously granted and then removed.
-|  Full support Yes| Full support 55
+|  Full support Yes|  Full support 55
 
 Notes __
 
@@ -2135,26 +2109,26 @@ Notes __
 
 Non-standard __
 
-|  No support No| No support No| Full support 58| No
-support No| No support No  
+|  No support No|  No support No|  Full support 58|  No support No|  No
+support No  
 `installModule`
 
 Non-standard __
 
-|  No support No| No support No| Full support 58| No
-support No| No support No  
+|  No support No|  No support No|  Full support 58|  No support No|  No
+support No  
 `isModuleInstalled`
 
 Non-standard __
 
-|  No support No| No support No| Full support 58| No
-support No| No support No  
+|  No support No|  No support No|  Full support 58|  No support No|  No
+support No  
 `uninstallModule`
 
 Non-standard __
 
-|  No support No| No support No| Full support 58| No
-support No| No support No  
+|  No support No|  No support No|  Full support 58|  No support No|  No
+support No  
   
 ## privacy
 
@@ -2175,28 +2149,28 @@ support No| No support No
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`network.networkPredictionEnabled`|  Full support Yes| No support
-No| Full support 54| Full support Yes| Full support 54  
-`network.peerConnectionEnabled`| No support No| No support No|
-Full support 55| No support No| Full support 55  
-`network.webRTCIPHandlingPolicy`| Full support Yes| No support No|
-Full support 54| Full support Yes| Full support 54  
-`services.passwordSavingEnabled`| Full support Yes| No support No|
-Full support 56| Full support Yes| Full support 56  
-`websites.firstPartyIsolate`| No support No| No support No| Full
-support 58| No support No| Full support 58  
-`websites.hyperlinkAuditingEnabled`| Full support Yes| No support
-No| Full support 54| Full support Yes| Full support 54  
-`websites.protectedContentEnabled`| Full support Yes| No support
-No| No support No| Full support Yes| No support No  
-`websites.referrersEnabled`| Full support Yes| No support No|
-Full support 56| Full support Yes| Full support 56  
-`websites.resistFingerprinting`| No support No| No support No|
-Full support 58| No support No| Full support 58  
-`websites.thirdPartyCookiesAllowed`| Full support Yes| No support
-No| No support No| Full support Yes| No support No  
-`websites.trackingProtectionMode`| No support No| No support No|
-Full support 57| No support No| Full support 57  
+`network.networkPredictionEnabled`|  Full support Yes|  No support No|  Full
+support 54|  Full support Yes|  Full support 54  
+`network.peerConnectionEnabled`|  No support No|  No support No|  Full support
+55|  No support No|  Full support 55  
+`network.webRTCIPHandlingPolicy`|  Full support Yes|  No support No|  Full
+support 54|  Full support Yes|  Full support 54  
+`services.passwordSavingEnabled`|  Full support Yes|  No support No|  Full
+support 56|  Full support Yes|  Full support 56  
+`websites.firstPartyIsolate`|  No support No|  No support No|  Full support
+58|  No support No|  Full support 58  
+`websites.hyperlinkAuditingEnabled`|  Full support Yes|  No support No|  Full
+support 54|  Full support Yes|  Full support 54  
+`websites.protectedContentEnabled`|  Full support Yes|  No support No|  No
+support No|  Full support Yes|  No support No  
+`websites.referrersEnabled`|  Full support Yes|  No support No|  Full support
+56|  Full support Yes|  Full support 56  
+`websites.resistFingerprinting`|  No support No|  No support No|  Full support
+58|  No support No|  Full support 58  
+`websites.thirdPartyCookiesAllowed`|  Full support Yes|  No support No|  No
+support No|  Full support Yes|  No support No  
+`websites.trackingProtectionMode`|  No support No|  No support No|  Full
+support 57|  No support No|  Full support 57  
   
 ## proxy
 
@@ -2215,9 +2189,9 @@ Full support 57| No support No| Full support 57
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`onProxyError`|  No support No| No support No| Full support
-55| No support No| Full support 55  
-`register`| No support No| No support No| Full support 56
+`onProxyError`|  No support No|  No support No|  Full support 55|  No support
+No|  Full support 55  
+`register`|  No support No|  No support No|  Full support 56
 
 Full support 56
 
@@ -2227,9 +2201,9 @@ Full support 55
 Alternate Name __
 
      Alternate Name __Uses the non-standard name:`registerProxyScript`
-|  No support No| Full support 55  
-`unregister`| No support No| No support No| Full support 56|
-No support No| Full support 56  
+|  No support No|  Full support 55  
+`unregister`|  No support No|  No support No|  Full support 56|  No support
+No|  Full support 56  
   
 ## runtime
 
@@ -2280,8 +2254,8 @@ No support No| Full support 56
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`MessageSender`|  Partial support26| Partial supportPartial| Full
-support 45
+`MessageSender`|  Partial support 26|  Partial support Partial|  Full support
+45
 
 Notes __
 
@@ -2290,7 +2264,7 @@ Full support 45
 Notes __
 
      Notes __Before version 54, 'id' was the add-on's internal UUID, not the add-on ID.
-|  Partial support15| Full support 48
+|  Partial support 15|  Full support 48
 
 Notes __
 
@@ -2299,7 +2273,7 @@ Full support 48
 Notes __
 
      Notes __Before version 54, 'id' was the add-on's internal UUID, not the add-on ID.  
-`MessageSender.url`|  Full support 28| Full support Yes
+`MessageSender.url`|  Full support 28|  Full support Yes
 
 Notes __
 
@@ -2308,12 +2282,12 @@ Full support Yes
 Notes __
 
      Notes __The `url` is missing when the message was sent by an extension view.
-|  Full support 45| Full support 15| Full support 48  
-`MessageSender.tlsChannelId`| Full support 32| No support No|
-Full support 45| Full support 19| Full support 48  
-`MessageSender.frameId`| Full support 41| Full support Yes| Full
-support 45| Full support 28| Full support 48  
-`OnInstalledReason`| Full support Yes
+|  Full support 45|  Full support 15|  Full support 48  
+`MessageSender.tlsChannelId`|  Full support 32|  No support No|  Full support
+45|  Full support 19|  Full support 48  
+`MessageSender.frameId`|  Full support 41|  Full support Yes|  Full support
+45|  Full support 28|  Full support 48  
+`OnInstalledReason`|  Full support Yes
 
 Notes __
 
@@ -2331,7 +2305,7 @@ Full support Yes
 Notes __
 
      Notes __Only supports 'install' and 'update'.
-|  Full support 45| Full support Yes
+|  Full support 45|  Full support Yes
 
 Notes __
 
@@ -2341,30 +2315,29 @@ Notes __
 
      Notes __Uses 'chrome_update' instead of 'browser_update'.
 |  Full support 48  
-`OnRestartRequiredReason`| Full support Yes| No support No| Full
-support 45| Full support Yes| Full support 48  
-`PlatformArch`| Full support Yes| No support No| Full
-support 45| Full support Yes| Full support 48  
-`PlatformInfo`| Full support Yes| No support No| Partial
-support45| Full support Yes| Partial support48  
-`PlatformInfo.nacl_arch`| Full support Yes| No support No| No
-support No| Full support Yes| No support No  
-`PlatformNaclArch`| Full support Yes| No support No| Full
-support 45| Full support Yes| Full support 48  
-`PlatformOs`| Full support Yes| No support No| Full support
-45| Full support Yes| Full support 48  
-`Port`| Partial support26| Partial support15| Partial support45|
-Partial support15| Partial support48  
-`Port.error`| No support No| No support No| Full support 52|
-No support No| Full support 52  
-`RequestUpdateCheckStatus`| Full support Yes| No support No| No
-support No| Full support Yes| No support No  
-`connect`| Full support 26| Full support Yes| Full support
-45| Full support 15| Full support 48  
-`connectNative`| Full support 29| Full support 15| Full
-support 50| Full support 16| No support No  
-`getBackgroundPage`| Full support 22| Full support Yes| Full
-support 45
+`OnRestartRequiredReason`|  Full support Yes|  No support No|  Full support
+45|  Full support Yes|  Full support 48  
+`PlatformArch`|  Full support Yes|  No support No|  Full support 45|  Full
+support Yes|  Full support 48  
+`PlatformInfo`|  Full support Yes|  No support No|  Partial support 45|  Full
+support Yes|  Partial support 48  
+`PlatformInfo.nacl_arch`|  Full support Yes|  No support No|  No support No|
+Full support Yes|  No support No  
+`PlatformNaclArch`|  Full support Yes|  No support No|  Full support 45|  Full
+support Yes|  Full support 48  
+`PlatformOs`|  Full support Yes|  No support No|  Full support 45|  Full
+support Yes|  Full support 48  
+`Port`|  Partial support 26|  Partial support 15|  Partial support 45|
+Partial support 15|  Partial support 48  
+`Port.error`|  No support No|  No support No|  Full support 52|  No support
+No|  Full support 52  
+`RequestUpdateCheckStatus`|  Full support Yes|  No support No|  No support No|
+Full support Yes|  No support No  
+`connect`|  Full support 26|  Full support Yes|  Full support 45|  Full
+support 15|  Full support 48  
+`connectNative`|  Full support 29|  Full support 15|  Full support 50|  Full
+support 16|  No support No  
+`getBackgroundPage`|  Full support 22|  Full support Yes|  Full support 45
 
 Notes __
 
@@ -2373,7 +2346,7 @@ Full support 45
 Notes __
 
      Notes __If this is called from a page that is part of a private browsing window, such as a sidebar in a private window or a popup opened from a private window, then it will always return`null`.
-|  Full support 15| Full support 48
+|  Full support 15|  Full support 48
 
 Notes __
 
@@ -2382,19 +2355,19 @@ Full support 48
 Notes __
 
      Notes __If this is called from a page that is part of a private browsing window, such as a sidebar in a private window or a popup opened from a private window, then it will always return`null`.  
-`getBrowserInfo`|  No support No| No support No| Full
-support 51| No support No| Full support 51  
-`getManifest`| Full support 22| Full support Yes| Full
-support 45| Full support 15| Full support 48  
-`getPackageDirectoryEntry`| Full support 29| No support No| No
-support No| Full support 16| No support No  
-`getPlatformInfo`| Full support 29| No support No| Full
-support 45| Full support 16| Full support 48  
-`getURL`| Full support 22| Full support Yes| Full support
-45| Full support 15| Full support 48  
-`id`| Full support 22| Full support Yes| Full support 45|
-Full support 15| Full support 48  
-`lastError`| Full support Yes
+`getBrowserInfo`|  No support No|  No support No|  Full support 51|  No
+support No|  Full support 51  
+`getManifest`|  Full support 22|  Full support Yes|  Full support 45|  Full
+support 15|  Full support 48  
+`getPackageDirectoryEntry`|  Full support 29|  No support No|  No support No|
+Full support 16|  No support No  
+`getPlatformInfo`|  Full support 29|  No support No|  Full support 45|  Full
+support 16|  Full support 48  
+`getURL`|  Full support 22|  Full support Yes|  Full support 45|  Full support
+15|  Full support 48  
+`id`|  Full support 22|  Full support Yes|  Full support 45|  Full support 15|
+Full support 48  
+`lastError`|  Full support Yes
 
 Notes __
 
@@ -2403,7 +2376,7 @@ Full support Yes
 Notes __
 
      Notes __lastError is not an Error object. Instead, it is a plain Object with the error text as the string value of the 'message' property.
-|  Full support Yes| Full support 47| Full support Yes
+|  Full support Yes|  Full support 47|  Full support Yes
 
 Notes __
 
@@ -2417,14 +2390,13 @@ Notes __
 
 Deprecated __Non-standard __
 
-|  Full support 27| No support No| No support No| Full
-support 15| No support No  
-`onConnect`| Full support 26| Full support Yes| Full support
-45| Full support 15| Full support 48  
-`onConnectExternal`| Full support 26| No support No| Full
-support 54| Full support 15| Full support 54  
-`onInstalled`| Full support 22| Full support Yes| Full
-support 52
+|  Full support 27|  No support No|  No support No|  Full support 15|  No
+support No  
+`onConnect`|  Full support 26|  Full support Yes|  Full support 45|  Full
+support 15|  Full support 48  
+`onConnectExternal`|  Full support 26|  No support No|  Full support 54|  Full
+support 15|  Full support 54  
+`onInstalled`|  Full support 22|  Full support Yes|  Full support 52
 
 Notes __
 
@@ -2433,7 +2405,7 @@ Full support 52
 Notes __
 
      Notes __Before version 55, this event is not triggered for temporarily installed add-ons.
-|  Full support 15| Full support 52
+|  Full support 15|  Full support 52
 
 Notes __
 
@@ -2442,27 +2414,27 @@ Full support 52
 Notes __
 
      Notes __Before version 55, this event is not triggered for temporarily installed add-ons.  
-`onMessage`|  Full support 26| Full support Yes| Full
-support 45| Full support 15| Full support 48  
-`onMessageExternal`| Full support 26| No support No| Full
-support 54| Full support 15| Full support 54  
-`onRestartRequired`| Full support 29| No support No| No
-support No| Full support 16| No support No  
-`onStartup`| Full support 23| No support No| Full support
-52| Full support 15| Full support 52  
-`onSuspend`| Full support 22| No support No| No support No|
-Full support 15| No support No  
-`onSuspendCanceled`| Full support 22| No support No| No
-support No| Full support 15| No support No  
-`onUpdateAvailable`| Full support 25| No support No| Full
-support 51| Full support 15| Full support 51  
-`openOptionsPage`| Full support 42| No support No| Full
-support 48| Full support 29| Full support 57  
-`reload`| Full support 25| Full support 15| Full support 51|
-Full support 15| Full support 51  
-`requestUpdateCheck`| Full support 25| No support No| No
-support No| Full support 15| No support No  
-`sendMessage`| Full support 26| Full support Yes
+`onMessage`|  Full support 26|  Full support Yes|  Full support 45|  Full
+support 15|  Full support 48  
+`onMessageExternal`|  Full support 26|  No support No|  Full support 54|  Full
+support 15|  Full support 54  
+`onRestartRequired`|  Full support 29|  No support No|  No support No|  Full
+support 16|  No support No  
+`onStartup`|  Full support 23|  No support No|  Full support 52|  Full support
+15|  Full support 52  
+`onSuspend`|  Full support 22|  No support No|  No support No|  Full support
+15|  No support No  
+`onSuspendCanceled`|  Full support 22|  No support No|  No support No|  Full
+support 15|  No support No  
+`onUpdateAvailable`|  Full support 25|  No support No|  Full support 51|  Full
+support 15|  Full support 51  
+`openOptionsPage`|  Full support 42|  No support No|  Full support 48|  Full
+support 29|  Full support 57  
+`reload`|  Full support 25|  Full support 15|  Full support 51|  Full support
+15|  Full support 51  
+`requestUpdateCheck`|  Full support 25|  No support No|  No support No|  Full
+support 15|  No support No  
+`sendMessage`|  Full support 26|  Full support Yes
 
 Notes __
 
@@ -2471,11 +2443,11 @@ Full support Yes
 Notes __
 
      Notes __`runtime.onMessage` listeners in extension views receive the messages they sent.
-|  Full support 45| Full support 15| Full support 48  
-`sendNativeMessage`| Full support 29| Full support 15| Full
-support 50| Full support 16| No support No  
-`setUninstallURL`| Full support 41| Full support 15| Full
-support 47| Full support 28| Full support 48  
+|  Full support 45|  Full support 15|  Full support 48  
+`sendNativeMessage`|  Full support 29|  Full support 15|  Full support 50|
+Full support 16|  No support No  
+`setUninstallURL`|  Full support 41|  Full support 15|  Full support 47|  Full
+support 28|  Full support 48  
   
 ## sessions
 
@@ -2499,11 +2471,11 @@ support 47| Full support 28| Full support 48
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`Filter`|  Full support Yes| No support No| Full support 52|
-Full support Yes| No support No  
-`MAX_SESSION_RESULTS`| Full support Yes| No support No| Full
-support 52| Full support Yes| No support No  
-`Session`| Full support Yes| No support No| Full support 52
+`Filter`|  Full support Yes|  No support No|  Full support 52|  Full support
+Yes|  No support No  
+`MAX_SESSION_RESULTS`|  Full support Yes|  No support No|  Full support 52|
+Full support Yes|  No support No  
+`Session`|  Full support Yes|  No support No|  Full support 52
 
 Notes __
 
@@ -2512,29 +2484,29 @@ Full support 52
 Notes __
 
      Notes __'Tab' objects in Sessions don't contain the 'url', 'title', or 'favIconUrl' properties.
-|  Full support Yes| No support No  
-`forgetClosedTab`| No support No| No support No| Full
-support 55| No support No| No support No  
-`forgetClosedWindow`| No support No| No support No| Full
-support 55| No support No| No support No  
-`getRecentlyClosed`| Full support Yes| No support No| Full
-support 52| Full support Yes| No support No  
-`getTabValue`| No support No| No support No| Full support
-57| No support No| No support No  
-`getWindowValue`| No support No| No support No| Full support
-57| No support No| No support No  
-`onChanged`| Full support Yes| No support No| Full support
-53| Full support Yes| No support No  
-`removeTabValue`| No support No| No support No| Full support
-57| No support No| No support No  
-`removeWindowValue`| No support No| No support No| Full
-support 57| No support No| No support No  
-`restore`| Full support Yes| No support No| Full support 52|
-Full support Yes| No support No  
-`setTabValue`| No support No| No support No| Full support
-57| No support No| No support No  
-`setWindowValue`| No support No| No support No| Full support
-57| No support No| No support No  
+|  Full support Yes|  No support No  
+`forgetClosedTab`|  No support No|  No support No|  Full support 55|  No
+support No|  No support No  
+`forgetClosedWindow`|  No support No|  No support No|  Full support 55|  No
+support No|  No support No  
+`getRecentlyClosed`|  Full support Yes|  No support No|  Full support 52|
+Full support Yes|  No support No  
+`getTabValue`|  No support No|  No support No|  Full support 57|  No support
+No|  No support No  
+`getWindowValue`|  No support No|  No support No|  Full support 57|  No
+support No|  No support No  
+`onChanged`|  Full support Yes|  No support No|  Full support 53|  Full
+support Yes|  No support No  
+`removeTabValue`|  No support No|  No support No|  Full support 57|  No
+support No|  No support No  
+`removeWindowValue`|  No support No|  No support No|  Full support 57|  No
+support No|  No support No  
+`restore`|  Full support Yes|  No support No|  Full support 52|  Full support
+Yes|  No support No  
+`setTabValue`|  No support No|  No support No|  Full support 57|  No support
+No|  No support No  
+`setWindowValue`|  No support No|  No support No|  Full support 57|  No
+support No|  No support No  
   
 ## sidebarAction
 
@@ -2552,22 +2524,22 @@ Full support Yes| No support No
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`ImageDataType`|  No support No| No support No| Full support
-54| Full support Yes| No support No  
-`close`| No support No| No support No| Full support 57| No
-support No| No support No  
-`getPanel`| No support No| No support No| Full support 54|
-Full support Yes| No support No  
-`getTitle`| No support No| No support No| Full support 54|
-Full support Yes| No support No  
-`open`| No support No| No support No| Full support 57| No
-support No| No support No  
-`setIcon`| No support No| No support No| Full support 54|
-Full support Yes| No support No  
-`setPanel`| No support No| No support No| Full support 54|
-Full support Yes| No support No  
-`setTitle`| No support No| No support No| Full support 54|
-Full support Yes| No support No  
+`ImageDataType`|  No support No|  No support No|  Full support 54|  Full
+support Yes|  No support No  
+`close`|  No support No|  No support No|  Full support 57|  No support No|  No
+support No  
+`getPanel`|  No support No|  No support No|  Full support 54|  Full support
+Yes|  No support No  
+`getTitle`|  No support No|  No support No|  Full support 54|  Full support
+Yes|  No support No  
+`open`|  No support No|  No support No|  Full support 57|  No support No|  No
+support No  
+`setIcon`|  No support No|  No support No|  Full support 54|  Full support
+Yes|  No support No  
+`setPanel`|  No support No|  No support No|  Full support 54|  Full support
+Yes|  No support No  
+`setTitle`|  No support No|  No support No|  Full support 54|  Full support
+Yes|  No support No  
   
 ## storage
 
@@ -2588,17 +2560,17 @@ Full support Yes| No support No
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`StorageArea`|  Full support Yes| Partial supportPartial| Partial
-support45| Partial supportPartial| Partial support48  
-`StorageArea.clear`| Full support Yes| Full support Yes| Full
-support 45| Full support 33| Full support 48  
-`StorageArea.get`| Full support Yes| Full support Yes| Full
-support 45| Full support 33| Full support 48  
-`StorageArea.getBytesInUse`| Full support Yes| Full support Yes|
-No support No| Full support 33| No support No  
-`StorageArea.remove`| Full support Yes| Full support Yes| Full
-support 45| Full support 33| Full support 48  
-`StorageArea.set`| Full support Yes| Full support Yes
+`StorageArea`|  Full support Yes|  Partial support Partial|  Partial support
+45|  Partial support Partial|  Partial support 48  
+`StorageArea.clear`|  Full support Yes|  Full support Yes|  Full support 45|
+Full support 33|  Full support 48  
+`StorageArea.get`|  Full support Yes|  Full support Yes|  Full support 45|
+Full support 33|  Full support 48  
+`StorageArea.getBytesInUse`|  Full support Yes|  Full support Yes|  No support
+No|  Full support 33|  No support No  
+`StorageArea.remove`|  Full support Yes|  Full support Yes|  Full support 45|
+Full support 33|  Full support 48  
+`StorageArea.set`|  Full support Yes|  Full support Yes
 
 Notes __
 
@@ -2607,10 +2579,10 @@ Full support Yes
 Notes __
 
      Notes __storage is limited to 1MB per value.
-|  Full support 45| Full support 33| Full support 48  
-`StorageChange`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 48  
-`local`| Full support Yes| Full support Yes| Full support 45
+|  Full support 45|  Full support 33|  Full support 48  
+`StorageChange`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 48  
+`local`|  Full support Yes|  Full support Yes|  Full support 45
 
 Notes __
 
@@ -2619,8 +2591,8 @@ Full support 45
 Notes __
 
      Notes __The storage API is supported in content scripts from version 48.
-|  Full support Yes| Full support 48  
-`managed`| Full support Yes| No support No| Full support 57
+|  Full support Yes|  Full support 48  
+`managed`|  Full support Yes|  No support No|  Full support 57
 
 Notes __
 
@@ -2631,11 +2603,11 @@ Notes __
      Notes __Platform-specific storage backends, such as Windows registry keys, are not supported.
      Notes __Enforcement of extension-provided storage schemas is not supported.
      Notes __The`onChanged` event is not supported.
-|  No support No| No support No  
-`onChanged`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 48  
-`sync`| Full support Yes| Full support 15| Full support 53|
-No support No| No support No  
+|  No support No|  No support No  
+`onChanged`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 48  
+`sync`|  Full support Yes|  Full support 15|  Full support 53|  No support No|
+No support No  
   
 ## tabs
 
@@ -2726,33 +2698,33 @@ No support No| No support No
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`MutedInfo`|  Full support Yes| No support No| Full support
-47| Full support Yes| No support No  
-`MutedInfoReason`| Full support Yes| No support No| Full
-support 47| Full support Yes| No support No  
-`PageSettings`| No support No| No support No| Full support
-56| No support No| No support No  
-`TAB_ID_NONE`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 54  
-`Tab.active`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 54  
-`Tab.audible`| Full support 45| No support No| Full support
-45| Full support 32| Full support 54  
-`Tab.autoDiscardable`| Full support 54| No support No| No
-support No| Full support 41| No support No  
-`Tab.cookieStoreId`| No support No| No support No| Full
-support 52| No support No| No support No  
-`Tab.discarded`| Full support 54| No support No| Full
-support 57| Full support 41| Full support 57  
-`Tab.favIconUrl`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| No support No  
-`Tab.height`| Full support 31| No support No| Full support
-45| Full support 18| Full support 54  
-`Tab.highlighted`| Full support Yes| No support No| Full
-support 45| Full support Yes| Full support 54  
-`Tab.id`| Full support Yes| Full support Yes| Full support
-45| Full support Yes| Full support 54  
-`Tab.incognito`| Full support Yes| Full support Yes
+`MutedInfo`|  Full support Yes|  No support No|  Full support 47|  Full
+support Yes|  No support No  
+`MutedInfoReason`|  Full support Yes|  No support No|  Full support 47|  Full
+support Yes|  No support No  
+`PageSettings`|  No support No|  No support No|  Full support 56|  No support
+No|  No support No  
+`TAB_ID_NONE`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 54  
+`Tab.active`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 54  
+`Tab.audible`|  Full support 45|  No support No|  Full support 45|  Full
+support 32|  Full support 54  
+`Tab.autoDiscardable`|  Full support 54|  No support No|  No support No|  Full
+support 41|  No support No  
+`Tab.cookieStoreId`|  No support No|  No support No|  Full support 52|  No
+support No|  No support No  
+`Tab.discarded`|  Full support 54|  No support No|  Full support 57|  Full
+support 41|  Full support 57  
+`Tab.favIconUrl`|  Full support Yes|  Full support Yes|  Full support 45|
+Full support Yes|  No support No  
+`Tab.height`|  Full support 31|  No support No|  Full support 45|  Full
+support 18|  Full support 54  
+`Tab.highlighted`|  Full support Yes|  No support No|  Full support 45|  Full
+support Yes|  Full support 54  
+`Tab.id`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 54  
+`Tab.incognito`|  Full support Yes|  Full support Yes
 
 Alternate Name __
 
@@ -2761,50 +2733,50 @@ Full support Yes
 Alternate Name __
 
      Alternate Name __Uses the non-standard name:`inPrivate`
-|  Full support 45| Full support Yes| Full support 54  
-`Tab.index`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 54  
-`Tab.isArticle`| No support No| No support No| Full support
-58| No support No| No support No  
-`Tab.isInReaderMode`| No support No| No support No| Full
-support 58| No support No| No support No  
-`Tab.lastAccessed`| No support No| No support No| Full
-support 56| No support No| Full support 56  
-`Tab.mutedInfo`| Full support 46| No support No| Full
-support 45| Full support 33| Full support 54  
-`Tab.openerTabId`| Full support 18| No support No| Full
-support 57| Full support 15| No support No  
-`Tab.pinned`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 54  
+|  Full support 45|  Full support Yes|  Full support 54  
+`Tab.index`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 54  
+`Tab.isArticle`|  No support No|  No support No|  Full support 58|  No support
+No|  No support No  
+`Tab.isInReaderMode`|  No support No|  No support No|  Full support 58|  No
+support No|  No support No  
+`Tab.lastAccessed`|  No support No|  No support No|  Full support 56|  No
+support No|  Full support 56  
+`Tab.mutedInfo`|  Full support 46|  No support No|  Full support 45|  Full
+support 33|  Full support 54  
+`Tab.openerTabId`|  Full support 18|  No support No|  Full support 57|  Full
+support 15|  No support No  
+`Tab.pinned`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 54  
 `Tab.selected`
 
 Deprecated __Non-standard __
 
-|  Full support Yes| No support No| Full support 45| Full
-support Yes| Full support 54  
-`Tab.sessionId`| Full support 31| No support No| No support
-No| Full support 18| No support No  
-`Tab.status`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 54  
-`Tab.title`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 54  
-`Tab.url`| Full support Yes| Full support Yes| Full support
-45| Full support Yes| Full support 54  
-`Tab.width`| Full support 31| No support No| Full support
-45| Full support 18| Full support 54  
-`Tab.windowId`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 54  
-`TabStatus`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 54  
-`WindowType`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 54  
-`ZoomSettings`| Full support Yes| No support No| Full
-support 45| Full support Yes| No support No  
-`ZoomSettingsMode`| Full support Yes| No support No| Full
-support 45| Full support Yes| No support No  
-`ZoomSettingsScope`| Full support Yes| No support No| Full
-support 45| Full support Yes| No support No  
-`captureVisibleTab`| Full support Yes
+|  Full support Yes|  No support No|  Full support 45|  Full support Yes|
+Full support 54  
+`Tab.sessionId`|  Full support 31|  No support No|  No support No|  Full
+support 18|  No support No  
+`Tab.status`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 54  
+`Tab.title`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 54  
+`Tab.url`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 54  
+`Tab.width`|  Full support 31|  No support No|  Full support 45|  Full support
+18|  Full support 54  
+`Tab.windowId`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 54  
+`TabStatus`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 54  
+`WindowType`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 54  
+`ZoomSettings`|  Full support Yes|  No support No|  Full support 45|  Full
+support Yes|  No support No  
+`ZoomSettingsMode`|  Full support Yes|  No support No|  Full support 45|  Full
+support Yes|  No support No  
+`ZoomSettingsScope`|  Full support Yes|  No support No|  Full support 45|
+Full support Yes|  No support No  
+`captureVisibleTab`|  Full support Yes
 
 Notes __
 
@@ -2813,7 +2785,7 @@ Full support Yes
 Notes __
 
      Notes __The default file format is 'jpeg'.
-|  Full support 15| Full support 47| Full support Yes
+|  Full support 15|  Full support 47|  Full support Yes
 
 Notes __
 
@@ -2823,29 +2795,28 @@ Notes __
 
      Notes __The default file format is 'jpeg'.
 |  Full support 54  
-`connect`| Full support Yes| No support No| Full support 45|
-Full support Yes| Full support 54  
-`create`| Full support Yes| Full support Yes| Full support
-45| Full support Yes| Full support 54  
-`detectLanguage`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| No support No  
-`duplicate`| Full support Yes| No support No| Full support
-47| Full support Yes| Full support 54  
-`executeScript`| Partial supportPartial| Partial supportPartial|
-Partial support43
+`connect`|  Full support Yes|  No support No|  Full support 45|  Full support
+Yes|  Full support 54  
+`create`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 54  
+`detectLanguage`|  Full support Yes|  Full support Yes|  Full support 45|
+Full support Yes|  No support No  
+`duplicate`|  Full support Yes|  No support No|  Full support 47|  Full
+support Yes|  Full support 54  
+`executeScript`|  Partial support Partial|  Partial support Partial|  Partial
+support 43
 
 Notes __
 
-Partial support43
+Partial support 43
 
 Notes __
 
      Notes __Before version 50, Firefox would pass a single result value into its callback rather than an array, unless 'allFrames' had been set.
-|  Partial supportPartial| Partial support54  
-`executeScript.runAt`| Full support 20| No support No| Full
-support 43| Full support 15| Full support 54  
-`executeScript.frameId`| Full support 39| No support No| Full
-support 43
+|  Partial support Partial|  Partial support 54  
+`executeScript.runAt`|  Full support 20|  No support No|  Full support 43|
+Full support 15|  Full support 54  
+`executeScript.frameId`|  Full support 39|  No support No|  Full support 43
 
 Notes __
 
@@ -2854,7 +2825,7 @@ Full support 43
 Notes __
 
      Notes __'allFrames' and 'frameId' can't both be set at the same time.
-|  Full support 26| Full support 54
+|  Full support 26|  Full support 54
 
 Notes __
 
@@ -2863,85 +2834,85 @@ Full support 54
 Notes __
 
      Notes __'allFrames' and 'frameId' can't both be set at the same time.  
-`executeScript.matchAboutBlank`|  Full support 39| Full support
-Yes| Full support 53| Full support 26| Full support 54  
-`get`| Full support Yes| Full support Yes| Full support 45|
-Full support Yes| Full support 54  
+`executeScript.matchAboutBlank`|  Full support 39|  Full support Yes|  Full
+support 53|  Full support 26|  Full support 54  
+`get`|  Full support Yes|  Full support Yes|  Full support 45|  Full support
+Yes|  Full support 54  
 `getAllInWindow`
 
 Deprecated __Non-standard __
 
-|  Full support Yes| No support No| Full support 45| No
-support No| Full support 54  
-`getCurrent`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 54  
+|  Full support Yes|  No support No|  Full support 45|  No support No|  Full
+support 54  
+`getCurrent`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 54  
 `getSelected`
 
 Deprecated __Non-standard __
 
-|  Full support Yes| No support No| No support No| No
-support No| No support No  
-`getZoom`| Full support Yes| No support No| Full support 45|
-Full support Yes| No support No  
-`getZoomSettings`| Full support Yes| No support No| Full
-support 45| Full support Yes| No support No  
-`highlight`| Full support Yes| No support No| No support No|
-No support No| No support No  
-`insertCSS`| Partial supportPartial| Partial supportPartial| Partial
-support47| Partial supportPartial| Partial support54  
-`insertCSS.runAt`| Full support 20| No support No| Full
-support 47| Full support 15| Full support 54  
-`insertCSS.frameId`| Full support 39| Full support Yes| Full
-support 47| Full support 26| Full support 54  
-`insertCSS.matchAboutBlank`| Full support 39| Full support Yes|
-No support No| Full support 26| No support No  
-`insertCSS.cssOrigin`| No support No| No support No| Full
-support 53| No support No| Full support 54  
-`move`| Full support Yes| No support No| Full support 46|
-Full support Yes| No support No  
-`onActivated`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 54  
+|  Full support Yes|  No support No|  No support No|  No support No|  No
+support No  
+`getZoom`|  Full support Yes|  No support No|  Full support 45|  Full support
+Yes|  No support No  
+`getZoomSettings`|  Full support Yes|  No support No|  Full support 45|  Full
+support Yes|  No support No  
+`highlight`|  Full support Yes|  No support No|  No support No|  No support
+No|  No support No  
+`insertCSS`|  Partial support Partial|  Partial support Partial|  Partial
+support 47|  Partial support Partial|  Partial support 54  
+`insertCSS.runAt`|  Full support 20|  No support No|  Full support 47|  Full
+support 15|  Full support 54  
+`insertCSS.frameId`|  Full support 39|  Full support Yes|  Full support 47|
+Full support 26|  Full support 54  
+`insertCSS.matchAboutBlank`|  Full support 39|  Full support Yes|  No support
+No|  Full support 26|  No support No  
+`insertCSS.cssOrigin`|  No support No|  No support No|  Full support 53|  No
+support No|  Full support 54  
+`move`|  Full support Yes|  No support No|  Full support 46|  Full support
+Yes|  No support No  
+`onActivated`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 54  
 `onActiveChanged`
 
 Deprecated __Non-standard __
 
-|  Full support Yes| No support No| No support No| No
-support No| No support No  
-`onAttached`| Full support Yes| Full support 15| Full
-support 45| Full support Yes| Full support 54  
-`onCreated`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 54  
-`onDetached`| Full support Yes| Full support 15| Full
-support 45| Full support Yes| Full support 54  
+|  Full support Yes|  No support No|  No support No|  No support No|  No
+support No  
+`onAttached`|  Full support Yes|  Full support 15|  Full support 45|  Full
+support Yes|  Full support 54  
+`onCreated`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 54  
+`onDetached`|  Full support Yes|  Full support 15|  Full support 45|  Full
+support Yes|  Full support 54  
 `onHighlightChanged`
 
 Deprecated __Non-standard __
 
-|  Full support Yes| No support No| No support No| No
-support No| No support No  
-`onHighlighted`| Full support Yes| No support No| Full
-support 45| No support No| Full support 54  
-`onMoved`| Full support Yes| No support No| Full support 45|
-Full support Yes| No support No  
-`onRemoved`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 54  
-`onReplaced`| Full support Yes| No support No| No support
-No| Full support Yes| No support No  
+|  Full support Yes|  No support No|  No support No|  No support No|  No
+support No  
+`onHighlighted`|  Full support Yes|  No support No|  Full support 45|  No
+support No|  Full support 54  
+`onMoved`|  Full support Yes|  No support No|  Full support 45|  Full support
+Yes|  No support No  
+`onRemoved`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 54  
+`onReplaced`|  Full support Yes|  No support No|  No support No|  Full support
+Yes|  No support No  
 `onSelectionChanged`
 
 Deprecated __Non-standard __
 
-|  Full support Yes| No support No| No support No| No
-support No| No support No  
-`onUpdated`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 54  
-`onZoomChange`| Full support Yes| No support No| Full
-support 45| Full support Yes| No support No  
-`print`| No support No| No support No| Full support 56| No
-support No| No support No  
-`printPreview`| No support No| No support No| Full support
-56| No support No| No support No  
-`query`| Full support Yes| Full support Yes
+|  Full support Yes|  No support No|  No support No|  No support No|  No
+support No  
+`onUpdated`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 54  
+`onZoomChange`|  Full support Yes|  No support No|  Full support 45|  Full
+support Yes|  No support No  
+`print`|  No support No|  No support No|  Full support 56|  No support No|  No
+support No  
+`printPreview`|  No support No|  No support No|  Full support 56|  No support
+No|  No support No  
+`query`|  Full support Yes|  Full support Yes
 
 Notes __
 
@@ -2950,14 +2921,14 @@ Full support Yes
 Notes __
 
      Notes __The`panel`, `app`, `devtools` and `popup` values for `WindowType` are not supported.
-|  Full support 45| Full support Yes| Full support 54  
-`reload`| Full support Yes| No support No| Full support 45|
-Full support Yes| Full support 54  
-`remove`| Full support Yes| Full support Yes| Full support
-45| Full support Yes| Full support 54  
-`removeCSS`| No support No| No support No| Full support 49|
-No support No| Full support 54  
-`saveAsPDF`| No support No| No support No| Full support 56
+|  Full support 45|  Full support Yes|  Full support 54  
+`reload`|  Full support Yes|  No support No|  Full support 45|  Full support
+Yes|  Full support 54  
+`remove`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 54  
+`removeCSS`|  No support No|  No support No|  Full support 49|  No support No|
+Full support 54  
+`saveAsPDF`|  No support No|  No support No|  Full support 56
 
 Notes __
 
@@ -2966,8 +2937,8 @@ Full support 56
 Notes __
 
      Notes __This function does not work on Mac OS X.
-|  No support No| No support No  
-`sendMessage`| Full support Yes| Full support Yes
+|  No support No|  No support No  
+`sendMessage`|  Full support Yes|  Full support Yes
 
 Notes __
 
@@ -2976,21 +2947,21 @@ Full support Yes
 Notes __
 
      Notes __No response is sent after the receiving tab is refreshed if there is no `runtime.onMessage` listener.
-|  Full support 45| Full support Yes| Full support 54  
+|  Full support 45|  Full support Yes|  Full support 54  
 `sendRequest`
 
 Deprecated __Non-standard __
 
-|  Full support Yes| No support No| No support No| No
-support No| No support No  
-`setZoom`| Full support Yes| No support No| Full support 45|
-Full support Yes| No support No  
-`setZoomSettings`| Full support Yes| No support No| Full
-support 45| Full support Yes| No support No  
-`toggleReaderMode`| No support No| No support No| Full
-support 58| No support No| No support No  
-`update`| Full support Yes| Full support Yes| Full support
-45| Full support Yes| Full support 54  
+|  Full support Yes|  No support No|  No support No|  No support No|  No
+support No  
+`setZoom`|  Full support Yes|  No support No|  Full support 45|  Full support
+Yes|  No support No  
+`setZoomSettings`|  Full support Yes|  No support No|  Full support 45|  Full
+support Yes|  No support No  
+`toggleReaderMode`|  No support No|  No support No|  Full support 58|  No
+support No|  No support No  
+`update`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 54  
   
 ## theme
 
@@ -3007,20 +2978,20 @@ support 58| No support No| No support No
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`Theme`|  No support No| No support No| Full support 55|
-No support No| No support No  
-`getCurrent`| No support No| No support No| Full support 58|
-No support No| No support No  
-`onUpdated`| No support No| No support No| Full support 58|
-No support No| No support No  
-`reset`| No support No| No support No| Partial support56| No
-support No| No support No  
-`reset.windowId`| No support No| No support No| Full support
-57| No support No| No support No  
-`update`| No support No| No support No| Partial support55|
-No support No| No support No  
-`update.windowId`| No support No| No support No| Full
-support 57| No support No| No support No  
+`Theme`|  No support No|  No support No|  Full support 55|  No support No|  No
+support No  
+`getCurrent`|  No support No|  No support No|  Full support 58|  No support
+No|  No support No  
+`onUpdated`|  No support No|  No support No|  Full support 58|  No support No|
+No support No  
+`reset`|  No support No|  No support No|  Partial support 56|  No support No|
+No support No  
+`reset.windowId`|  No support No|  No support No|  Full support 57|  No
+support No|  No support No  
+`update`|  No support No|  No support No|  Partial support 55|  No support No|
+No support No  
+`update.windowId`|  No support No|  No support No|  Full support 57|  No
+support No|  No support No  
   
 ## topSites
 
@@ -3032,10 +3003,10 @@ support 57| No support No| No support No
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`MostVisitedURL`|  Full support Yes| No support No| Full
-support 52| Full support Yes| Full support 52  
-`get`| Full support Yes| No support No| Full support 52|
-Full support Yes| Full support 52  
+`MostVisitedURL`|  Full support Yes|  No support No|  Full support 52|  Full
+support Yes|  Full support 52  
+`get`|  Full support Yes|  No support No|  Full support 52|  Full support Yes|
+Full support 52  
   
 ## types
 
@@ -3047,10 +3018,10 @@ Full support Yes| Full support 52
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`BrowserSetting`|  Full support Yes| No support No| Partial
-support54| Full support Yes| Partial support54  
-`BrowserSetting.onChange`| Full support Yes| No support No| No
-support No| Full support Yes| No support No  
+`BrowserSetting`|  Full support Yes|  No support No|  Partial support 54|
+Full support Yes|  Partial support 54  
+`BrowserSetting.onChange`|  Full support Yes|  No support No|  No support No|
+Full support Yes|  No support No  
   
 ## webNavigation
 
@@ -3083,30 +3054,27 @@ support No| Full support Yes| No support No
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`TransitionQualifier`|  Full support Yes| No support No| Partial
-support48
+`TransitionQualifier`|  Full support Yes|  No support No|  Partial support 48
 
 Notes __
 
-Partial support48
+Partial support 48
 
 Notes __
 
      Notes __'server_redirect' is limited to top-level frames and 'client_redirect' is not supplied when redirections are created by JavaScript.
-|  Full support 17| Partial support48
+|  Full support 17|  Partial support 48
 
 Notes __
 
-Partial support48
+Partial support 48
 
 Notes __
 
      Notes __'server_redirect' is limited to top-level frames and 'client_redirect' is not supplied when redirections are created by JavaScript.  
-`TransitionQualifier.from_address_bar`|  Full support Yes| No
-support No| No support No| Full support 17| No support
-No  
-`TransitionType`| Full support Yes| No support No| Full
-support 48
+`TransitionQualifier.from_address_bar`|  Full support Yes|  No support No|  No
+support No|  Full support 17|  No support No  
+`TransitionType`|  Full support Yes|  No support No|  Full support 48
 
 Notes __
 
@@ -3115,7 +3083,7 @@ Full support 48
 Notes __
 
      Notes __'link' and 'auto_subframe' are partially supported as the default transition type for top-level frames and subframes respectively. 'reload' and 'form_submit' are supported. All other properties are unsupported.
-|  Full support 17| Full support 48
+|  Full support 17|  Full support 48
 
 Notes __
 
@@ -3124,11 +3092,11 @@ Full support 48
 Notes __
 
      Notes __'link' and 'auto_subframe' are partially supported as the default transition type for top-level frames and subframes respectively. 'reload' and 'form_submit' are supported. All other properties are unsupported.  
-`getAllFrames`|  Full support Yes| Full support Yes| Full
-support 47| Full support 17| Full support 48  
-`getFrame`| Full support Yes| Full support Yes| Full support
-47| Full support 17| Full support 48  
-`onBeforeNavigate`| Full support Yes
+`getAllFrames`|  Full support Yes|  Full support Yes|  Full support 47|  Full
+support 17|  Full support 48  
+`getFrame`|  Full support Yes|  Full support Yes|  Full support 47|  Full
+support 17|  Full support 48  
+`onBeforeNavigate`|  Full support Yes
 
 Notes __
 
@@ -3184,20 +3152,20 @@ Full support Yes
 Notes __
 
      Notes __If the filter parameter is empty, Chrome matches all URLs.
-|  Partial supportPartial
+|  Partial support Partial
 
 Notes __
 
-Partial supportPartial
+Partial support Partial
 
 Notes __
 
      Notes __Filtering is not supported.
-|  Partial support45
+|  Partial support 45
 
 Notes __
 
-Partial support45
+Partial support 45
 
 Notes __
 
@@ -3222,11 +3190,11 @@ Notes __
 
      Notes __Filtering is supported from version 50.
      Notes __If the filter parameter is empty, Firefox raises an exception.  
-`onCommitted.transitionQualifiers`|  Full support Yes| No support
-No| Full support 48| Full support 17| Full support 48  
-`onCommitted.transitionType`| Full support Yes| No support No|
-Full support 48| Full support 17| Full support 48  
-`onCompleted`| Full support Yes
+`onCommitted.transitionQualifiers`|  Full support Yes|  No support No|  Full
+support 48|  Full support 17|  Full support 48  
+`onCommitted.transitionType`|  Full support Yes|  No support No|  Full support
+48|  Full support 17|  Full support 48  
+`onCompleted`|  Full support Yes
 
 Notes __
 
@@ -3273,20 +3241,20 @@ Notes __
 
      Notes __Filtering is supported from version 50.
      Notes __If the filter parameter is empty, Firefox raises an exception.  
-`onCreatedNavigationTarget`|  Partial supportPartial
+`onCreatedNavigationTarget`|  Partial support Partial
 
 Notes __
 
-Partial supportPartial
+Partial support Partial
 
 Notes __
 
      Notes __If a blocked popup is unblocked by the user, the event is still not sent.
-|  Full support Yes| Partial support54
+|  Full support Yes|  Partial support 54
 
 Notes __
 
-Partial support54
+Partial support 54
 
 Notes __
 
@@ -3301,23 +3269,22 @@ Full support 17
 Notes __
 
      Notes __If a blocked popup is unblocked by the user, the event is still not sent.
-|  Partial support54
+|  Partial support 54
 
 Notes __
 
-Partial support54
+Partial support 54
 
 Notes __
 
      Notes __If the filter parameter is empty, Firefox raises an exception.
      Notes __If a blocked popup is unblocked by the user, the event is then sent.
      Notes __This event is only sent in the 'window.open()' case.  
-`onCreatedNavigationTarget.sourceProcessId`|  Full support Yes| Full
-support Yes| No support No| Full support 17| No support
-No  
-`onCreatedNavigationTarget.windowId`| No support No| Full support
-Yes| Full support 54| Full support 17| Full support 54  
-`onDOMContentLoaded`| Full support Yes
+`onCreatedNavigationTarget.sourceProcessId`|  Full support Yes|  Full support
+Yes|  No support No|  Full support 17|  No support No  
+`onCreatedNavigationTarget.windowId`|  No support No|  Full support Yes|  Full
+support 54|  Full support 17|  Full support 54  
+`onDOMContentLoaded`|  Full support Yes
 
 Notes __
 
@@ -3382,11 +3349,11 @@ Full support Yes
 Notes __
 
      Notes __Filtering is not supported
-|  Partial support45
+|  Partial support 45
 
 Notes __
 
-Partial support45
+Partial support 45
 
 Notes __
 
@@ -3401,35 +3368,33 @@ Full support 17
 Notes __
 
      Notes __If the filter parameter is empty, Opera matches all URLs.
-|  Partial support48
+|  Partial support 48
 
 Notes __
 
-Partial support48
+Partial support 48
 
 Notes __
 
      Notes __Filtering is supported from version 50.
      Notes __If the filter parameter is empty, Firefox raises an exception.  
-`onErrorOccurred.error`|  Full support Yes| Full support Yes| No
-support No| Full support 17| No support No  
-`onHistoryStateUpdated`| Full support Yes| Partial supportPartial
+`onErrorOccurred.error`|  Full support Yes|  Full support Yes|  No support No|
+Full support 17|  No support No  
+`onHistoryStateUpdated`|  Full support Yes|  Partial support Partial
 
 Notes __
 
-Partial supportPartial
+Partial support Partial
 
 Notes __
 
      Notes __Filtering is not supported.
-|  Partial support47| Full support 17| Full support 48  
-`onHistoryStateUpdated.transitionQualifiers`| Full support Yes| No
-support No| Full support 48| Full support 17| Full
-support 48  
-`onHistoryStateUpdated.transitionType`| Full support Yes| No
-support No| Full support 48| Full support 17| Full
-support 48  
-`onReferenceFragmentUpdated`| Full support Yes
+|  Partial support 47|  Full support 17|  Full support 48  
+`onHistoryStateUpdated.transitionQualifiers`|  Full support Yes|  No support
+No|  Full support 48|  Full support 17|  Full support 48  
+`onHistoryStateUpdated.transitionType`|  Full support Yes|  No support No|
+Full support 48|  Full support 17|  Full support 48  
+`onReferenceFragmentUpdated`|  Full support Yes
 
 Notes __
 
@@ -3438,20 +3403,20 @@ Full support Yes
 Notes __
 
      Notes __If the filter parameter is empty, Chrome matches all URLs.
-|  Partial supportPartial
+|  Partial support Partial
 
 Notes __
 
-Partial supportPartial
+Partial support Partial
 
 Notes __
 
      Notes __Filtering is not supported.
-|  Partial support45
+|  Partial support 45
 
 Notes __
 
-Partial support45
+Partial support 45
 
 Notes __
 
@@ -3476,14 +3441,11 @@ Notes __
 
      Notes __Filtering is supported from version 50.
      Notes __If the filter parameter is empty, Firefox raises an exception.  
-`onReferenceFragmentUpdated.transitionQualifiers`|  Full support Yes|
-No support No| Full support 48| Full support 17| Full
-support 48  
-`onReferenceFragmentUpdated.transitionType`| Full support Yes| No
-support No| Full support 48| Full support 17| Full
-support 48  
-`onTabReplaced`| Full support Yes| Full support Yes| Full
-support 45
+`onReferenceFragmentUpdated.transitionQualifiers`|  Full support Yes|  No
+support No|  Full support 48|  Full support 17|  Full support 48  
+`onReferenceFragmentUpdated.transitionType`|  Full support Yes|  No support
+No|  Full support 48|  Full support 17|  Full support 48  
+`onTabReplaced`|  Full support Yes|  Full support Yes|  Full support 45
 
 Notes __
 
@@ -3492,7 +3454,7 @@ Full support 45
 Notes __
 
      Notes __Although you can add listeners for this event, it will never fire because the underlying functionality is not supported.
-|  Full support 17| Full support 48
+|  Full support 17|  Full support 48
 
 Notes __
 
@@ -3508,8 +3470,7 @@ Notes __
 ---|---|---|---|---|---  
 `BlockingResponse`|  Yes|  Yes| 45| 48|  Yes  
 `HttpHeaders`|  Yes|  Yes| 45| 48|  Yes  
-`MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES`|  Yes|  Yes| 45| 48|
- Yes  
+`MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES`|  Yes|  Yes| 45| 48|  Yes  
 `RequestFilter`|  Yes|  Yes| 45 *| 48 *|  Yes  
 `RequestFilter.urls`|  Yes|  Yes| 45 *| 48 *|  Yes  
 `RequestFilter.windowId`|  Yes|  Yes| 53| 53|  Yes  
@@ -3556,17 +3517,15 @@ Notes __
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`BlockingResponse`|  Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 48  
-`HttpHeaders`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 48  
-`MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES`| Full support Yes|
-Full support Yes| Full support 45| Full support Yes| Full
-support 48  
-`RequestFilter`| Full support Yes| Full support Yes| Partial
-support45| Full support Yes| Partial support48  
-`RequestFilter.urls`| Full support Yes| Full support Yes| Full
-support 45
+`BlockingResponse`|  Full support Yes|  Full support Yes|  Full support 45|
+Full support Yes|  Full support 48  
+`HttpHeaders`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 48  
+`MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES`|  Full support Yes|  Full
+support Yes|  Full support 45|  Full support Yes|  Full support 48  
+`RequestFilter`|  Full support Yes|  Full support Yes|  Partial support 45|
+Full support Yes|  Partial support 48  
+`RequestFilter.urls`|  Full support Yes|  Full support Yes|  Full support 45
 
 Notes __
 
@@ -3575,7 +3534,7 @@ Full support 45
 Notes __
 
      Notes __Before Firefox 56, moz-extension:// URLs were not allowed.
-|  Full support Yes| Full support 48
+|  Full support Yes|  Full support 48
 
 Notes __
 
@@ -3584,13 +3543,13 @@ Full support 48
 Notes __
 
      Notes __Before Firefox 56, moz-extension:// URLs were not allowed.  
-`RequestFilter.windowId`|  Full support Yes| Full support Yes|
-Full support 53| Full support Yes| Full support 53  
-`RequestFilter.tabId`| Full support Yes| Full support Yes| Full
-support 53| Full support Yes| Full support 53  
-`ResourceType`| Partial support44| No support No| Partial
-support45| Partial support31| Partial support48  
-`ResourceType.ping`| Full support 49
+`RequestFilter.windowId`|  Full support Yes|  Full support Yes|  Full support
+53|  Full support Yes|  Full support 53  
+`RequestFilter.tabId`|  Full support Yes|  Full support Yes|  Full support 53|
+Full support Yes|  Full support 53  
+`ResourceType`|  Partial support 44|  No support No|  Partial support 45|
+Partial support 31|  Partial support 48  
+`ResourceType.ping`|  Full support 49
 
 Notes __
 
@@ -3599,7 +3558,7 @@ Full support 49
 Notes __
 
      Notes __Requests sent by navigator.sendBeacon(), and CSP reports in Chrome 49-57 (Opera 36-44), are also labeled as `ping`.
-|  No support No| Full support 45| Full support 36
+|  No support No|  Full support 45|  Full support 36
 
 Notes __
 
@@ -3609,28 +3568,28 @@ Notes __
 
      Notes __Requests sent by navigator.sendBeacon(), and CSP reports in Chrome 49-57 (Opera 36-44), are also labeled as `ping`.
 |  Full support 48  
-`ResourceType.font`| Full support 49| No support No| Full
-support 45| Full support 36| Full support 48  
-`ResourceType.media`| Full support 58| No support No| Full
-support 45| Full support 45| Full support 48  
-`ResourceType.websocket`| Full support 58| No support No| Full
-support 45| Full support 45| Full support 48  
-`ResourceType.csp_report`| Full support 58| No support No| Full
-support 45| Full support 45| Full support 48  
-`ResourceType.xbl`| No support No| No support No| Full
-support 45| No support No| Full support 48  
-`ResourceType.xslt`| No support No| No support No| Full
-support 45| No support No| Full support 48  
-`ResourceType.beacon`| No support No| No support No| Full
-support 45| No support No| Full support 48  
-`ResourceType.xml_dtd`| No support No| No support No| Full
-support 45| No support No| Full support 48  
-`ResourceType.imageset`| No support No| No support No| Full
-support 45| No support No| Full support 48  
-`ResourceType.web_manifest`| No support No| No support No| Full
-support 45| No support No| Full support 48  
-`ResourceType.object_subrequest`| No support No| No support No|
-Full support 55
+`ResourceType.font`|  Full support 49|  No support No|  Full support 45|  Full
+support 36|  Full support 48  
+`ResourceType.media`|  Full support 58|  No support No|  Full support 45|
+Full support 45|  Full support 48  
+`ResourceType.websocket`|  Full support 58|  No support No|  Full support 45|
+Full support 45|  Full support 48  
+`ResourceType.csp_report`|  Full support 58|  No support No|  Full support 45|
+Full support 45|  Full support 48  
+`ResourceType.xbl`|  No support No|  No support No|  Full support 45|  No
+support No|  Full support 48  
+`ResourceType.xslt`|  No support No|  No support No|  Full support 45|  No
+support No|  Full support 48  
+`ResourceType.beacon`|  No support No|  No support No|  Full support 45|  No
+support No|  Full support 48  
+`ResourceType.xml_dtd`|  No support No|  No support No|  Full support 45|  No
+support No|  Full support 48  
+`ResourceType.imageset`|  No support No|  No support No|  Full support 45|  No
+support No|  Full support 48  
+`ResourceType.web_manifest`|  No support No|  No support No|  Full support 45|
+No support No|  Full support 48  
+`ResourceType.object_subrequest`|  No support No|  No support No|  Full
+support 55
 
 Notes __
 
@@ -3639,7 +3598,7 @@ Full support 55
 Notes __
 
      Notes __Requests have been reported as `object_subrequest` before, but the type was missing in the `ResourceType` object before Firefox 55.
-|  No support No| Full support 55
+|  No support No|  Full support 55
 
 Notes __
 
@@ -3648,60 +3607,59 @@ Full support 55
 Notes __
 
      Notes __Requests have been reported as `object_subrequest` before, but the type was missing in the `ResourceType` object before Firefox 55.  
-`StreamFilter`|  No support No| No support No| Full support
-57| No support No| Full support 57  
-`StreamFilter.close`| No support No| No support No| Full
-support 57| No support No| Full support 57  
-`StreamFilter.disconnect`| No support No| No support No| Full
-support 57| No support No| Full support 57  
-`StreamFilter.error`| No support No| No support No| Full
-support 57| No support No| Full support 57  
-`StreamFilter.ondata`| No support No| No support No| Full
-support 57| No support No| Full support 57  
-`StreamFilter.onerror`| No support No| No support No| Full
-support 57| No support No| Full support 57  
-`StreamFilter.onstart`| No support No| No support No| Full
-support 57| No support No| Full support 57  
-`StreamFilter.onstop`| No support No| No support No| Full
-support 57| No support No| Full support 57  
-`StreamFilter.resume`| No support No| No support No| Full
-support 57| No support No| Full support 57  
-`StreamFilter.status`| No support No| No support No| Full
-support 57| No support No| Full support 57  
-`StreamFilter.suspend`| No support No| No support No| Full
-support 57| No support No| Full support 57  
-`StreamFilter.write`| No support No| No support No| Full
-support 57| No support No| Full support 57  
-`UploadData`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 48  
-`filterResponseData`| No support No| No support No| Full
-support 57| No support No| Full support 57  
-`handlerBehaviorChanged`| Full support Yes| Full support Yes|
-Full support 45| Full support Yes| Full support 48  
-`onAuthRequired`| Full support Yes| Full support Yes| Partial
-support54
+`StreamFilter`|  No support No|  No support No|  Full support 57|  No support
+No|  Full support 57  
+`StreamFilter.close`|  No support No|  No support No|  Full support 57|  No
+support No|  Full support 57  
+`StreamFilter.disconnect`|  No support No|  No support No|  Full support 57|
+No support No|  Full support 57  
+`StreamFilter.error`|  No support No|  No support No|  Full support 57|  No
+support No|  Full support 57  
+`StreamFilter.ondata`|  No support No|  No support No|  Full support 57|  No
+support No|  Full support 57  
+`StreamFilter.onerror`|  No support No|  No support No|  Full support 57|  No
+support No|  Full support 57  
+`StreamFilter.onstart`|  No support No|  No support No|  Full support 57|  No
+support No|  Full support 57  
+`StreamFilter.onstop`|  No support No|  No support No|  Full support 57|  No
+support No|  Full support 57  
+`StreamFilter.resume`|  No support No|  No support No|  Full support 57|  No
+support No|  Full support 57  
+`StreamFilter.status`|  No support No|  No support No|  Full support 57|  No
+support No|  Full support 57  
+`StreamFilter.suspend`|  No support No|  No support No|  Full support 57|  No
+support No|  Full support 57  
+`StreamFilter.write`|  No support No|  No support No|  Full support 57|  No
+support No|  Full support 57  
+`UploadData`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 48  
+`filterResponseData`|  No support No|  No support No|  Full support 57|  No
+support No|  Full support 57  
+`handlerBehaviorChanged`|  Full support Yes|  Full support Yes|  Full support
+45|  Full support Yes|  Full support 48  
+`onAuthRequired`|  Full support Yes|  Full support Yes|  Partial support 54
 
 Notes __
 
-Partial support54
+Partial support 54
 
 Notes __
 
      Notes __To handle a request asynchronously, return a Promise from the listener.
-|  Full support Yes| Partial support54
+|  Full support Yes|  Partial support 54
 
 Notes __
 
-Partial support54
+Partial support 54
 
 Notes __
 
      Notes __To handle a request asynchronously, return a Promise from the listener.  
-`onAuthRequired.asyncBlocking`|  Full support Yes| Full support
-Yes| No support No| Full support Yes| No support No  
-`onBeforeRedirect`| Full support Yes| Full support Yes| Full
-support 46| Full support Yes| Full support 48  
-`onBeforeRequest`| Full support Yes
+`onAuthRequired.asyncBlocking`|  Full support Yes|  Full support Yes|  No
+support No|  Full support Yes|  No support No  
+`onBeforeRedirect`|  Full support Yes|  Full support Yes|  Full support 46|
+Full support Yes|  Full support 48  
+`onBeforeRequest`|  Full support Yes
 
 Notes __
 
@@ -3791,11 +3749,11 @@ Full support 48
 Notes __
 
      Notes __Asynchronous event listeners are supported from version 52.  
-`onCompleted`|  Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 48  
-`onErrorOccurred`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 48  
-`onHeadersReceived`| Full support Yes
+`onCompleted`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 48  
+`onErrorOccurred`|  Full support Yes|  Full support Yes|  Full support 45|
+Full support Yes|  Full support 48  
+`onHeadersReceived`|  Full support Yes
 
 Notes __
 
@@ -3842,10 +3800,10 @@ Notes __
 
      Notes __Modification of the 'Content-Type' header is supported from version 51.
      Notes __Asynchronous event listeners are supported from version 52.  
-`onResponseStarted`|  Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 48  
-`onSendHeaders`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| Full support 48  
+`onResponseStarted`|  Full support Yes|  Full support Yes|  Full support 45|
+Full support Yes|  Full support 48  
+`onSendHeaders`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  Full support 48  
   
 ## windows
 
@@ -3922,7 +3880,7 @@ Full support Yes
 Notes __
 
      Notes __`panel` and `detached_panel` are not supported.
-|  Full support 45| Full support Yes
+|  Full support 45|  Full support Yes
 
 Notes __
 
@@ -3932,21 +3890,21 @@ Notes __
 
      Notes __`detached_panel` is not supported.
 |  No support No  
-`WINDOW_ID_CURRENT`| Full support 18| Full support Yes| Full
-support 45| Full support 15| No support No  
-`WINDOW_ID_NONE`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| No support No  
-`Window`| Partial supportPartial| Partial supportPartial| Partial
-support45| Partial supportPartial| No support No  
-`Window.alwaysOnTop`| Full support 19| No support No| Full
-support 45| Full support 15| No support No  
-`Window.focused`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| No support No  
-`Window.height`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| No support No  
-`Window.id`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| No support No  
-`Window.incognito`| Full support Yes| Full support Yes
+`WINDOW_ID_CURRENT`|  Full support 18|  Full support Yes|  Full support 45|
+Full support 15|  No support No  
+`WINDOW_ID_NONE`|  Full support Yes|  Full support Yes|  Full support 45|
+Full support Yes|  No support No  
+`Window`|  Partial support Partial|  Partial support Partial|  Partial support
+45|  Partial support Partial|  No support No  
+`Window.alwaysOnTop`|  Full support 19|  No support No|  Full support 45|
+Full support 15|  No support No  
+`Window.focused`|  Full support Yes|  Full support Yes|  Full support 45|
+Full support Yes|  No support No  
+`Window.height`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  No support No  
+`Window.id`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  No support No  
+`Window.incognito`|  Full support Yes|  Full support Yes
 
 Alternate Name __
 
@@ -3955,47 +3913,46 @@ Full support Yes
 Alternate Name __
 
      Alternate Name __Uses the non-standard name:`inPrivate`
-|  Full support 45| Full support Yes| No support No  
-`Window.left`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| No support No  
-`Window.sessionId`| Full support 31| No support No| No
-support No| Full support 18| No support No  
-`Window.state`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| No support No  
-`Window.tabs`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| No support No  
-`Window.title`| No support No| No support No| Full support
-56| No support No| No support No  
-`Window.top`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| No support No  
-`Window.type`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| No support No  
-`Window.width`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| No support No  
-`WindowState`| Full support Yes| Partial supportPartial| Partial
-support45| Full support Yes| No support No  
-`WindowState.minimized`| Full support Yes| No support No| Full
-support 45| Full support Yes| No support No  
-`WindowState.maximized`| Full support Yes| No support No| Full
-support 45| Full support Yes| No support No  
-`WindowState.fullscreen`| Full support Yes| No support No| Full
-support 45| Full support Yes| No support No  
+|  Full support 45|  Full support Yes|  No support No  
+`Window.left`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  No support No  
+`Window.sessionId`|  Full support 31|  No support No|  No support No|  Full
+support 18|  No support No  
+`Window.state`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  No support No  
+`Window.tabs`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  No support No  
+`Window.title`|  No support No|  No support No|  Full support 56|  No support
+No|  No support No  
+`Window.top`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  No support No  
+`Window.type`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  No support No  
+`Window.width`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  No support No  
+`WindowState`|  Full support Yes|  Partial support Partial|  Partial support
+45|  Full support Yes|  No support No  
+`WindowState.minimized`|  Full support Yes|  No support No|  Full support 45|
+Full support Yes|  No support No  
+`WindowState.maximized`|  Full support Yes|  No support No|  Full support 45|
+Full support Yes|  No support No  
+`WindowState.fullscreen`|  Full support Yes|  No support No|  Full support 45|
+Full support Yes|  No support No  
 `WindowState.docked`
 
 Deprecated __Non-standard __
 
-|  Full support Yes| No support No| No support No| Full
-support Yes| No support No  
-`WindowType`| Full support Yes| Partial supportPartial| Full
-support 45| Full support Yes| No support No  
-`WindowType.panel`| Full support Yes| No support No| Full
-support 45| Full support Yes| No support No  
-`WindowType.app`| Full support Yes| No support No| Full
-support 45| Full support Yes| No support No  
-`WindowType.devtools`| Full support Yes| No support No| Full
-support 45| Full support Yes| No support No  
-`create`| Full support Yes| Full support Yes| Full support
-45
+|  Full support Yes|  No support No|  No support No|  Full support Yes|  No
+support No  
+`WindowType`|  Full support Yes|  Partial support Partial|  Full support 45|
+Full support Yes|  No support No  
+`WindowType.panel`|  Full support Yes|  No support No|  Full support 45|  Full
+support Yes|  No support No  
+`WindowType.app`|  Full support Yes|  No support No|  Full support 45|  Full
+support Yes|  No support No  
+`WindowType.devtools`|  Full support Yes|  No support No|  Full support 45|
+Full support Yes|  No support No  
+`create`|  Full support Yes|  Full support Yes|  Full support 45
 
 Notes __
 
@@ -4005,90 +3962,110 @@ Notes __
 
      Notes __'url' and 'tabId options can't both be set together.
      Notes __The returned 'Window' object contains the 'tabs' property only from version 52 onwards.
-|  Full support Yes| No support No  
-`get`| Partial supportPartial| Full support Yes| Full support
-45| Partial supportPartial| No support No  
-`get.getInfo`| Partial support18| Full support Yes| Full
-support 45| Partial support15| No support No  
-`getAll`| Partial supportPartial| Partial supportPartial| Full
-support 45| Partial supportPartial| No support No  
-`getAll.populate`| Full support Yes| No support No| Full
-support 45| Full support Yes| No support No  
-`getAll.windowTypes`| Full support 46| Full support Yes| Full
-support 45| Full support 33| No support No  
-`getCurrent`| Partial supportPartial| Full support Yes| Full
-support 45| Partial supportPartial| No support No  
-`getCurrent.getInfo`| Partial support18| Full support Yes| Full
-support 45| Partial support15| No support No  
-`getLastFocused`| Partial supportPartial| Full support Yes| Full
-support 45| Partial supportPartial| No support No  
-`getLastFocused.getInfo`| Partial support18| Full support Yes|
-Full support 45| Partial support15| No support No  
-`onCreated`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| No support No  
-`onFocusChanged`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| No support No  
-`onRemoved`| Full support Yes| No support No| Full support
-45| Full support Yes| No support No  
-`remove`| Full support Yes| No support No| Full support 45|
-Full support Yes| No support No  
-`update`| Partial supportPartial| Partial supportPartial| Partial
-support45| Partial supportPartial| No support No  
-`update.drawAttention`| Full support Yes| No support No| Full
-support 45| Full support Yes| No support No  
-`update.focused`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| No support No  
-`update.height`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| No support No  
-`update.left`| Full support Yes| No support No| Full support
-45| Full support Yes| No support No  
-`update.state`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| No support No  
-`update.titlePreface`| No support No| No support No| Full
-support 56| No support No| No support No  
-`update.top`| Full support Yes| No support No| Full support
-45| Full support Yes| No support No  
-`update.width`| Full support Yes| Full support Yes| Full
-support 45| Full support Yes| No support No  
+|  Full support Yes|  No support No  
+`get`|  Partial support Partial|  Full support Yes|  Full support 45|  Partial
+support Partial|  No support No  
+`get.getInfo`|  Partial support 18|  Full support Yes|  Full support 45|
+Partial support 15|  No support No  
+`getAll`|  Partial support Partial|  Partial support Partial|  Full support
+45|  Partial support Partial|  No support No  
+`getAll.populate`|  Full support Yes|  No support No|  Full support 45|  Full
+support Yes|  No support No  
+`getAll.windowTypes`|  Full support 46|  Full support Yes|  Full support 45|
+Full support 33|  No support No  
+`getCurrent`|  Partial support Partial|  Full support Yes|  Full support 45|
+Partial support Partial|  No support No  
+`getCurrent.getInfo`|  Partial support 18|  Full support Yes|  Full support
+45|  Partial support 15|  No support No  
+`getLastFocused`|  Partial support Partial|  Full support Yes|  Full support
+45|  Partial support Partial|  No support No  
+`getLastFocused.getInfo`|  Partial support 18|  Full support Yes|  Full
+support 45|  Partial support 15|  No support No  
+`onCreated`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  No support No  
+`onFocusChanged`|  Full support Yes|  Full support Yes|  Full support 45|
+Full support Yes|  No support No  
+`onRemoved`|  Full support Yes|  No support No|  Full support 45|  Full
+support Yes|  No support No  
+`remove`|  Full support Yes|  No support No|  Full support 45|  Full support
+Yes|  No support No  
+`update`|  Partial support Partial|  Partial support Partial|  Partial support
+45|  Partial support Partial|  No support No  
+`update.drawAttention`|  Full support Yes|  No support No|  Full support 45|
+Full support Yes|  No support No  
+`update.focused`|  Full support Yes|  Full support Yes|  Full support 45|
+Full support Yes|  No support No  
+`update.height`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  No support No  
+`update.left`|  Full support Yes|  No support No|  Full support 45|  Full
+support Yes|  No support No  
+`update.state`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  No support No  
+`update.titlePreface`|  No support No|  No support No|  Full support 56|  No
+support No|  No support No  
+`update.top`|  Full support Yes|  No support No|  Full support 45|  Full
+support Yes|  No support No  
+`update.width`|  Full support Yes|  Full support Yes|  Full support 45|  Full
+support Yes|  No support No  
   
-
-
 The compatibility table in this page is generated from structured data. If
 you'd like to contribute to the data, please check out <https://github.com/mdn
 /browser-compat-data> and send us a pull request.
 
-
-
- **Acknowledgements** 
+**Acknowledgements**
 
 Microsoft Edge compatibility data is supplied by Microsoft Corporation and is
 included here under the Creative Commons Attribution 3.0 United States
 License.
 
-
-
-]
-
   *[Firefox for Android __]: Firefox for Android
+  *[ Full support
+]: Full support
+
   *[ Alternate Name __]: Uses the non-standard name: <code>inPrivate</code>
+  *[
+Partial support
+
+]: Partial support
+
   *[Mobile __]: Mobile
   *[Firefox __]: Firefox
   *[Non-standard __]: Non-standard. Expect poor cross-browser support.
-  *[ Full support]: Full support
-  *[ Full support]: Full support
-  *[Full support]: Full support
+  *[
+No support
+
+]: No support
+
   *[Edge __]: Edge
   *[Opera __]: Opera
-  *[ No support]: No support
   *[Chrome __]: Chrome
-  *[ Partial support]: Partial support
+  *[
+Full support
+
+]: Full support
+
   *[ Notes __]: See implementation notes
+  *[
+ No support
+
+]: No support
+
   *[ Non-standard __]: Non-standard. Expect poor cross-browser support.
-  *[No support]: No support
+  *[ No support
+]: No support
+
+  *[
+ Full support
+
+]: Full support
+
   *[Desktop __]: Desktop
-  *[Partial support]: Partial support
   *[Alternate Name __]: Uses the non-standard name: <code>inPrivate</code>
-  *[Notes __]: See implementation notes
+  *[
+ Partial support
+
+]: Partial support
+
   *[Deprecated __]: Deprecated. Not for use in new websites.
-  *[ No support]: No support
+  *[Notes __]: See implementation notes
 

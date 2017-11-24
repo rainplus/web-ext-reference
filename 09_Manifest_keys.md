@@ -1,23 +1,13 @@
-[
-
-
-
 The manifest.json file is a [JSON](/en-US/docs/Glossary/JSON)-formatted file,
 and is the only file that every extension using WebExtension APIs must
 contain.
-
-
 
 Using manifest.json, you specify basic metadata about your extension such as
 the name and version, and can also specify aspects of your extension's
 functionality, such as background scripts, content scripts, and browser
 actions.
 
-
-
 manifest.json keys are listed below:
-
-
 
   * [applications](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications)
   * [author](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author)
@@ -51,32 +41,20 @@ manifest.json keys are listed below:
 
 
 
-\xa0
-
-
-
 `"manifest_version"`, `"version"`, and `"name"` are the only mandatory keys.
 `"default_locale"` must be present if the "_locales" directory is present and
 must be absent otherwise. `"applications"` is not supported in Google Chrome,
 and is mandatory in Firefox before Firefox 48 and Firefox for Android.
 
-
-
 You can access your extension's manifest from the extension's JavaScript using
 the [`runtime.getManifest()`](/en-US/docs/Mozilla/Add-
 ons/WebExtensions/API/runtime/getManifest "None.") function:
-
-
 
     
     
     browser.runtime.getManifest().version;
 
-
-
 ## Browser compatibility
-
-
 
 | Chrome| Edge| Firefox| Firefox for Android| Opera  
 ---|---|---|---|---|---  
@@ -135,9 +113,9 @@ script sources: they must be served over HTTPS.
 | Desktop __| Mobile __  
 ---|---|---  
 | Chrome __| Edge __| Firefox __| Opera __| Firefox for Android __  
-`applications`|  No support No| No support No| Full support
-48| No support No| Full support 48  
-`author`| Full support Yes| Full support Yes
+`applications`|  No support No|  No support No|  Full support 48|  No support
+No|  Full support 48  
+`author`|  Full support Yes|  Full support Yes
 
 Notes __
 
@@ -146,8 +124,8 @@ Full support Yes
 Notes __
 
      Notes __This key is mandatory in Microsoft Edge.
-|  Full support 52| Full support Yes| Full support 52  
-`background`| Full support Yes| Full support Yes
+|  Full support 52|  Full support Yes|  Full support 52  
+`background`|  Full support Yes|  Full support Yes
 
 Notes __
 
@@ -156,16 +134,16 @@ Full support Yes
 Notes __
 
      Notes __The 'persistent' property is mandatory.
-|  Partial support48| Full support Yes| Partial support48  
-`browser_action`| Partial supportPartial| Partial supportPartial|
-Partial support48| Partial supportPartial| Partial support55  
-`chrome_settings_overrides`| Full support Yes| No support No|
-Partial support55| No support No| No support No  
-`chrome_url_overrides`| Partial supportPartial| No support No|
-Partial support54| Partial supportPartial| No support No  
-`commands`| Partial supportPartial| No support No| Partial
-support48| Partial supportPartial| No support No  
-`content_scripts`| Full support Yes
+|  Partial support 48|  Full support Yes|  Partial support 48  
+`browser_action`|  Partial support Partial|  Partial support Partial|  Partial
+support 48|  Partial support Partial|  Partial support 55  
+`chrome_settings_overrides`|  Full support Yes|  No support No|  Partial
+support 55|  No support No|  No support No  
+`chrome_url_overrides`|  Partial support Partial|  No support No|  Partial
+support 54|  Partial support Partial|  No support No  
+`commands`|  Partial support Partial|  No support No|  Partial support 48|
+Partial support Partial|  No support No  
+`content_scripts`|  Full support Yes
 
 Notes __
 
@@ -174,11 +152,11 @@ Full support Yes
 Notes __
 
      Notes __Content scripts are not applied to tabs already open when the extension is loaded.
-|  Full support Yes| Partial support48
+|  Full support Yes|  Partial support 48
 
 Notes __
 
-Partial support48
+Partial support 48
 
 Notes __
 
@@ -192,16 +170,16 @@ Full support Yes
 Notes __
 
      Notes __Content scripts are not applied to tabs already open when the extension is loaded.
-|  Partial support48
+|  Partial support 48
 
 Notes __
 
-Partial support48
+Partial support 48
 
 Notes __
 
      Notes __Content scripts won't be injected into empty iframes at 'document_start' even if you specify that value in 'run_at'.  
-`content_security_policy`|  Full support Yes| Full support Yes
+`content_security_policy`|  Full support Yes|  Full support Yes
 
 Notes __
 
@@ -219,7 +197,7 @@ Full support 48
 Notes __
 
      Notes __Firefox does not support 'http://127.0.0.1' or 'http://localhost' as script sources: they must be served over HTTPS.
-|  Full support Yes| Full support 48
+|  Full support Yes|  Full support 48
 
 Notes __
 
@@ -228,61 +206,61 @@ Full support 48
 Notes __
 
      Notes __Firefox does not support 'http://127.0.0.1' or 'http://localhost' as script sources: they must be served over HTTPS.  
-`default_locale`|  Full support Yes| Full support Yes| Full
-support 48| Full support Yes| Full support 48  
-`description`| Full support Yes| Full support Yes| Full
-support 48| Full support Yes| Full support 48  
-`developer`| No support No| No support No| Full support 52|
-Full support Yes| Full support 52  
-`devtools_page`| Full support Yes| No support No| Full
-support 54| Full support Yes| No support No  
-`homepage_url`| Full support Yes| No support No| Full
-support 48| Full support Yes| Full support 48  
-`icons`| Full support Yes| Full support Yes| Full support
-48| Full support Yes| Full support 48  
-`incognito`| Full support Yes| No support No| Partial
-support48| Full support Yes| Partial support48  
-`manifest_version`| Full support Yes| Full support Yes| Full
-support 48| Full support Yes| Full support 48  
-`name`| Full support Yes| Full support Yes| Full support 48|
-Full support Yes| Full support 48  
-`omnibox`| Full support Yes| No support No| Full support 52|
-Full support Yes| No support No  
-`optional_permissions`| Partial supportPartial| No support No|
-Partial support55| Partial supportPartial| Partial support55  
-`options_ui`| Partial supportPartial| No support No| Partial
-support52| Partial supportPartial| No support No  
-`page_action`| Partial supportPartial
+`default_locale`|  Full support Yes|  Full support Yes|  Full support 48|
+Full support Yes|  Full support 48  
+`description`|  Full support Yes|  Full support Yes|  Full support 48|  Full
+support Yes|  Full support 48  
+`developer`|  No support No|  No support No|  Full support 52|  Full support
+Yes|  Full support 52  
+`devtools_page`|  Full support Yes|  No support No|  Full support 54|  Full
+support Yes|  No support No  
+`homepage_url`|  Full support Yes|  No support No|  Full support 48|  Full
+support Yes|  Full support 48  
+`icons`|  Full support Yes|  Full support Yes|  Full support 48|  Full support
+Yes|  Full support 48  
+`incognito`|  Full support Yes|  No support No|  Partial support 48|  Full
+support Yes|  Partial support 48  
+`manifest_version`|  Full support Yes|  Full support Yes|  Full support 48|
+Full support Yes|  Full support 48  
+`name`|  Full support Yes|  Full support Yes|  Full support 48|  Full support
+Yes|  Full support 48  
+`omnibox`|  Full support Yes|  No support No|  Full support 52|  Full support
+Yes|  No support No  
+`optional_permissions`|  Partial support Partial|  No support No|  Partial
+support 55|  Partial support Partial|  Partial support 55  
+`options_ui`|  Partial support Partial|  No support No|  Partial support 52|
+Partial support Partial|  No support No  
+`page_action`|  Partial support Partial
 
 Notes __
 
-Partial supportPartial
+Partial support Partial
 
 Notes __
 
      Notes __SVG icons are not supported.
-|  Partial supportPartial
+|  Partial support Partial
 
 Notes __
 
-Partial supportPartial
+Partial support Partial
 
 Notes __
 
      Notes __SVG icons are not supported.
      Notes __'default_icon' must be an object, with explicit sizes.
-|  Full support 48| Partial supportPartial| No support No  
-`permissions`| Full support Yes| Partial supportPartial| Partial
-support48| Full support Yes| Partial support48  
-`protocol_handlers`| No support No| No support No| Partial
-support54| No support No| Partial support54  
-`short_name`| Full support Yes| Full support Yes| Full
-support 48| Full support Yes| Full support 48  
-`sidebar_action`| No support No| No support No| Partial
-support54| Partial supportPartial| No support No  
-`theme`| Full support Yes| No support No| Full support 55|
-No support No| No support No  
-`version`| Full support Yes
+|  Full support 48|  Partial support Partial|  No support No  
+`permissions`|  Full support Yes|  Partial support Partial|  Partial support
+48|  Full support Yes|  Partial support 48  
+`protocol_handlers`|  No support No|  No support No|  Partial support 54|  No
+support No|  Partial support 54  
+`short_name`|  Full support Yes|  Full support Yes|  Full support 48|  Full
+support Yes|  Full support 48  
+`sidebar_action`|  No support No|  No support No|  Partial support 54|
+Partial support Partial|  No support No  
+`theme`|  Full support Yes|  No support No|  Full support 55|  No support No|
+No support No  
+`version`|  Full support Yes
 
 Notes __
 
@@ -291,44 +269,126 @@ Full support Yes
 Notes __
 
      Notes __Valid Chrome versions are a subset of valid Firefox versions.
-|  Full support Yes| Full support 48| Full support Yes|
-Full support 48  
-`web_accessible_resources`| Full support Yes| Full support Yes|
-Full support 48| Full support Yes| Full support 48  
+|  Full support Yes|  Full support 48|  Full support Yes|  Full support 48  
+`web_accessible_resources`|  Full support Yes|  Full support Yes|  Full
+support 48|  Full support Yes|  Full support 48  
   
-
-
 ## Example
-
-
 
 Quick syntax example for manifest.json:
 
-
-
     
     
-    {  "applications": {    "gecko": {      "id": "addon@example.com",      "strict_min_version": "42.0"    }  },  "background": {    "scripts": ["jquery.js", "my-background.js"],    "page": "my-background.html"  },  "browser_action": {    "default_icon": {      "19": "button/geo-19.png",      "38": "button/geo-38.png"    },    "default_title": "Whereami?",    "default_popup": "popup/geo.html"  },  "commands": {    "toggle-feature": {\xa0     "suggested_key": {\xa0\xa0\xa0     "default": "Ctrl+Shift+Y",\xa0\xa0\xa0     "linux": "Ctrl+Shift+U"\xa0     },  \xa0\xa0\xa0 "description": "Send a 'toggle-feature' event"    }  },  "content_security_policy": "script-src 'self' https://example.com; object-src 'self'",  "content_scripts": [    {      "exclude_matches": ["*://developer.mozilla.org/*"],      "matches": ["*://*.mozilla.org/*"],      "js": ["borderify.js"]    }  ],  "default_locale": "en",  "description": "...",  "icons": {    "48": "icon.png",    "96": "icon@2x.png"  },  "manifest_version": 2,  "name": "...",  "page_action": {    "default_icon": {      "19": "button/geo-19.png",      "38": "button/geo-38.png"    },    "default_title": "Whereami?",    "default_popup": "popup/geo.html"  },  "permissions": ["webNavigation"],  "version": "0.1",  "web_accessible_resources": ["images/my-image.png"]}
+    {
+      "applications": {
+        "gecko": {
+          "id": "addon@example.com",
+          "strict_min_version": "42.0"
+        }
+      },
+    
+      "background": {
+        "scripts": ["jquery.js", "my-background.js"],
+        "page": "my-background.html"
+      },
+    
+      "browser_action": {
+        "default_icon": {
+          "19": "button/geo-19.png",
+          "38": "button/geo-38.png"
+        },
+        "default_title": "Whereami?",
+        "default_popup": "popup/geo.html"
+      },
+    
+      "commands": {
+        "toggle-feature": {
+          "suggested_key": {
+            "default": "Ctrl+Shift+Y",
+            "linux": "Ctrl+Shift+U"
+          },
+          "description": "Send a 'toggle-feature' event"
+        }
+      },
+    
+      "content_security_policy": "script-src 'self' https://example.com; object-src 'self'",
+    
+      "content_scripts": [
+        {
+          "exclude_matches": ["*://developer.mozilla.org/*"],
+          "matches": ["*://*.mozilla.org/*"],
+          "js": ["borderify.js"]
+        }
+      ],
+    
+      "default_locale": "en",
+    
+      "description": "...",
+    
+      "icons": {
+        "48": "icon.png",
+        "96": "icon@2x.png"
+      },
+    
+      "manifest_version": 2,
+    
+      "name": "...",
+    
+      "page_action": {
+        "default_icon": {
+          "19": "button/geo-19.png",
+          "38": "button/geo-38.png"
+        },
+        "default_title": "Whereami?",
+        "default_popup": "popup/geo.html"
+      },
+    
+      "permissions": ["webNavigation"],
+    
+      "version": "0.1",
+    
+      "web_accessible_resources": ["images/my-image.png"]
+    }
 
 
 
-\xa0
+  *[
+ No support
 
-]
+]: No support
 
-  *[Full support]: Full support
-  *[ Full support]: Full support
+  *[
+No support
+
+]: No support
+
+  *[
+ Partial support
+
+]: Partial support
+
   *[Edge __]: Edge
   *[Opera __]: Opera
-  *[No support]: No support
-  *[ No support]: No support
   *[Firefox for Android __]: Firefox for Android
   *[Desktop __]: Desktop
-  *[Partial support]: Partial support
+  *[
+Partial support
+
+]: Partial support
+
   *[Mobile __]: Mobile
-  *[ Partial support]: Partial support
+  *[
+ Full support
+
+]: Full support
+
   *[Firefox __]: Firefox
   *[Notes __]: See implementation notes
+  *[
+Full support
+
+]: Full support
+
   *[ Notes __]: See implementation notes
   *[Chrome __]: Chrome
 

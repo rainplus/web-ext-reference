@@ -1,44 +1,23 @@
-[
-
-
-
 To help illustrate how to develop extensions, we maintain a repository of
 simple example extensions at <https://github.com/mdn/webextensions-examples>.
 This article describes the WebExtension APIs used in that repository.
-
-
 
 These examples work in Firefox Nightly: most work in earlier versions of
 Firefox, but check the [strict_min_version](/en-US/Add-
 ons/WebExtensions/manifest.json/applications) key in the extension's
 manifest.json to make sure.
 
-
-
 If you want to try out these examples, you have three main choices:
 
-
-
-
-
   1. Clone the repository, then load the extension straight from its source directory, using the ["Load Temporary Add-on"](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) feature. The extension will stay loaded until you restart Firefox.
-
-
   2. Clone the repository, then use the [web-ext](/en-US/Add-ons/WebExtensions/Getting_started_with_web-ext) command line tool to run Firefox with the extension installed.
-
-
   3. Clone the repository, then go to the [build](https://github.com/mdn/webextensions-examples/tree/master/build) directory. This contains built and signed versions of all the examples, so you can just open them in Firefox (using File/Open File) and install them permanently, just like an extension you would install from [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/).
-
-
-
 
 If you want to contribute to the repository, [send us a pull
 request!](https://github.com/mdn/webextensions-
 examples/blob/master/CONTRIBUTING.md)
 
-
-
-Name| Description| JavaScript APIs  
+Name | Description | JavaScript APIs  
 ---|---|---  
 [annotate-page](https://github.com/mdn/webextensions-examples/tree/master
 /annotate-page) | Displays a sidebar that lets you take notes on web pages. |
@@ -480,7 +459,4 @@ ons/WebExtensions/API/windows/create)
 [`windows.getCurrent`](/en-US/Add-ons/WebExtensions/API/windows/getCurrent)  
 [`windows.remove`](/en-US/Add-ons/WebExtensions/API/windows/remove)  
 [`windows.update`](/en-US/Add-ons/WebExtensions/API/windows/update)  
-  
-  
-]
 

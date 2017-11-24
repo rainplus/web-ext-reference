@@ -1,5 +1,3 @@
-[
-
 Add-ons using the techniques described in this document are considered a
 legacy technology in Firefox. Don't use these techniques to develop new add-
 ons. Use [WebExtensions](/en-US/Add-ons/WebExtensions) instead. If you
@@ -26,29 +24,12 @@ A wiki page containing [resources, migration paths, office hours, and
 more](https://wiki.mozilla.org/Add-ons/developer/communication), is available
 to help developers transition to the new technologies.
 
-
-
 This section contains links to documentation for legacy technology for add-on
 development, including:
 
-
-
-
-
   * [Add-on SDK](/en-US/docs/Mozilla/Add-ons/SDK)
-
-
   * [Legacy extensions for Firefox for Android](/en-US/docs/Mozilla/Add-ons/Legacy_Firefox_for_Android)
-
-
   * Earlier technology 
     * [Bootstrapped extensions](/en-US/docs/Mozilla/Add-ons/Bootstrapped_extensions)
-
-
     * [Overlay extensions](/en-US/docs/Mozilla/Add-ons/Overlay_Extensions)
-
-
-
-
-]
 

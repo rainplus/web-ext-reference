@@ -1,11 +1,16 @@
 #!/bin/python
-# conding:utf-8
+# encoding:utf-8
 
 import requests as r
 from bs4 import BeautifulSoup
 # import re
 import html2text
 import os
+
+import sys
+
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 # import json
 
@@ -92,8 +97,8 @@ class MDN:
 			if isinstance(value, dict):
 				with open(summary, "aw+")  as file:
 					file.write("{}* [{}]({})\n".format(place, key, key + ".md"))
-				print key,value[key]
-				self.create_file_with_dir_and_md(key+".md",value[key])
+				print key, value[key]
+				self.create_file_with_dir_and_md(key + ".md", value[key])
 				del value[key]
 				dirs = key + "/"
 				self.print_content(value, index + 1, dirs)
@@ -116,7 +121,7 @@ class MDN:
 			return
 		dirName = os.path.dirname(file_name)
 		# print dirName
-		if not os.path.exists(dirName) and dirName !="./" and dirName != '':
+		if not os.path.exists(dirName) and dirName != "./" and dirName != '':
 			os.system("mkdir -p " + dirName)
 		with open(file_name, "aw+") as file:
 
@@ -124,14 +129,18 @@ class MDN:
 				response = r.get(self.base_url + url)
 				if response.status_code == 200:
 					html2text.inline_links = False
-					article = str(BeautifulSoup(response.content, 'html.parser').select("#wikiArticle"))
-					# print html2text(article)
-					md = html2text.html2text(
-						article)
-					file.writelines(md)
+					articles = BeautifulSoup(response.content, 'html.parser').select("#wikiArticle")
+					if len(articles) >0:
+						md = html2text.html2text(str(articles[0]))
+						file.write(md)
+
+
+
 
 
 if __name__ == "__main__":
+	os.system("ls |grep -vE 'README.md|mdn_content.py'|xargs rm -rf")
+
 	mdn = MDN(start_url)
 	mdn.get_content()
 	mdn.print_content(mdn.content)

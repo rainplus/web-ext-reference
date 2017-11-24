@@ -1,145 +1,96 @@
-[
-
-
-
 There are two essential steps to getting people to use your add-on: they need
 to discover your add-on and open the listing page, then the listing page needs
 to encourage them to click the Add to Firefox button. The content you add to a
 listing is therefore vital: from making effective use of keywords in your
 descriptions, to get visibility in external search engine results, through
-having an icon that attracts a user\u2019s attention from a category list, to
+having an icon that attracts a user’s attention from a category list, to
 screenshots that show how useful your add-on is.
-
-
 
 So, let us look at some of the ways you can encourage users to get to your
 listing page and, once there, install your add-on.
 
+## Your add-on’s name
 
-
-## Your add-on\u2019s name
-
-
-
-You want your add-on\u2019s name to be unique and descriptive, so it gives the
-user a good indication of what your add-on does. If your add-on does something
-similar to existing add-ons\u2014a note taking app for example\u2014don\u2019t
-be tempted to call your add-on \u201cBarbara\u201d to differentiate it.
-Rather, look for a descriptive name that is not in use, such as \u201cBest
-notes\u201d, \u201cFast notes\u201d, or similar.
-
-
+You want your add-on’s name to be unique and descriptive, so it gives the user
+a good indication of what your add-on does. If your add-on does something
+similar to existing add-ons—a note taking app for example—don’t be tempted to
+call your add-on “Barbara” to differentiate it. Rather, look for a descriptive
+name that is not in use, such as “Best notes”, “Fast notes”, or similar.
 
 Another advantage of using a unique name is that you also get a unique slug on
 addons.mozilla.org (commonly referred to as AMO) that matches your add-on
 name.
 
-
-
 ## Create a captivating icon
 
-
-
-Your add-on\u2019s icon could be as important, if not more so, as your add-
-on\u2019s name. An eye-catching icon can draw users to your add-on in a
-category list or search. Where possible, make the icon relevant to your add-
-on\u2019s function\u2014for example, a notepad for a notes application. Also,
-unless it is part of a recognizable brand, do not include words or letters in
-your icon: you will be using the same icon across all locales, so words or
-letters may not translate well. You can load icons at two
-resolutions\u201432x32 and 64x64\u2014in either PNG or JPEG format, but
-consider using SVG or similar vector format for the icon\u2019s source, to get
-optimum scaling.
-
-
+Your add-on’s icon could be as important, if not more so, as your add-on’s
+name. An eye-catching icon can draw users to your add-on in a category list or
+search. Where possible, make the icon relevant to your add-on’s function—for
+example, a notepad for a notes application. Also, unless it is part of a
+recognizable brand, do not include words or letters in your icon: you will be
+using the same icon across all locales, so words or letters may not translate
+well. You can load icons at two resolutions—32x32 and 64x64—in either PNG or
+JPEG format, but consider using SVG or similar vector format for the icon’s
+source, to get optimum scaling.
 
 ## Create a meaningful set of keywords
 
-
-
-Before writing your add-on\u2019s summary and description, or adding version
+Before writing your add-on’s summary and description, or adding version
 details, think about the keywords someone might use to search for an add-on
 such as yours. You can add these keywords as tags to your add-on listing (in
 the Basic Information section). With careful use in your summary, description,
 and version details, the keywords will also help users discover your add-on
 through web searches. And, when you use keywords in your text, remember to
-keep their use natural: forcing keywords in won\u2019t help readability nor
-will it improve search rankings.
-
-
+keep their use natural: forcing keywords in won’t help readability nor will it
+improve search rankings.
 
 ## Make sure your summary is just long enough
-
-
 
 The summary description for your add-on is limited to 250 characters, but do
 not consider it a challenge to use all the available characters. Keep your
 summary as short as possible while highlighting the key features of your add-
 on and how they will benefit the user. Be direct and to-the-point.
 
-
-
 ## Focus on key features in your screenshots
 
-
-
-There isn\u2019t a practical limit to the number of screenshots you can
-include in an add-on\u2019s listing, but don\u2019t keep adding them: make
-sure each screenshot shows a key feature of your add-on. Do not be afraid to
-annotate your screenshots. However, you can only load one set of screenshots,
-although you can localize their descriptions. So, annotate to highlight
-features but explain the annotations in text, not on the screenshot, and avoid
-adding text to the images.
-
-
+There isn’t a practical limit to the number of screenshots you can include in
+an add-on’s listing, but don’t keep adding them: make sure each screenshot
+shows a key feature of your add-on. Do not be afraid to annotate your
+screenshots. However, you can only load one set of screenshots, although you
+can localize their descriptions. So, annotate to highlight features but
+explain the annotations in text, not on the screenshot, and avoid adding text
+to the images.
 
 Capture the smallest possible screenshots, ideally no larger than 700x525px as
-this is the maximum size of the screenshots displayed in AMO\u2019s pop-up
-viewer.
-
-
+this is the maximum size of the screenshots displayed in AMO’s pop-up viewer.
 
 You also have the option to reorder your screenshots, so make sure they tell a
-story about your add-on\u2019s features. This will help users gain a better
+story about your add-on’s features. This will help users gain a better
 understanding of how your add-on will work for them.
-
-
 
 ## The add-on description can be longer, but not too long
 
-
-
 While the add-on summary is limited to 250 characters, you are not practically
-limited when it comes to the add-on\u2019s description and version details.
-However, don\u2019t think you need to use this freedom to write a novel.
-
-
+limited when it comes to the add-on’s description and version details.
+However, don’t think you need to use this freedom to write a novel.
 
 Most users will take only a few seconds to scan your listing to determine if
 your add-on is of interest to them. So, make the opening comments in the
 description impactful. Then make sure the remainder of the descriptions says
 what needs to be said, but no more. Also, use the available HTML formatting to
 make your copy easier to scan. For example, list key features in bullets and
-highlight keywords or phrases that describe your add-on\u2019s features.
-
-
+highlight keywords or phrases that describe your add-on’s features.
 
 As with the summary, remember the key is to tell the user why your add-on will
 matter to them: do not just describe features, explain the benefits to the
 user.
-
-
 
 Similarly, when you are adding version details, be crisp and to-the-point.
 Make sure you highlight fixes to any issues users have raised or improvements
 implemented from user suggestions. If prospective users see that you listen,
 they will be more inclined to try your add-on.
 
-
-
 ## Make it local
-
-
 
 If your extension is developed using WebExtension APIs, we offer comprehensive
 support for internationalizing your extension, using the [`i18n`](/en-
@@ -148,39 +99,27 @@ your extension. You can use these APIs to get localized strings from locale
 files packaged with your extension, find out the browser's current language,
 and find out the value of its Accept-Language header.") API, so you can add
 translations and localize your extension. You also have the option to localize
-almost all the text content of your add-on\u2019s listing, including its name.
-
-
+almost all the text content of your add-on’s listing, including its name.
 
 You will want to add a localized listing for each language your add-on
 supports. However, even if your add-on does not offer a wide selection of
 localized versions, localizing the listing content can help make your add-on
 more accessible to users around the world.
 
-
-
 Also, remember to set the most appropriate default locale, so that users
 browsing in languages you have not localized to get the best impression of
-your add-on. \xa0
-
-
+your add-on.
 
 ## Make it experimental
 
-
-
 If your add-on is an experiment, flag this when you submit it to AMO. While
-doing so will reduce the add-on\u2019s visibility on AMO, it is important to
-make sure that users are aware, so their expectations are appropriate. If you
-do not mark an experimental add-on, you could end up with poor reviews that
-your add-on does not deserve, and once you have a poor rating and poor
-reviews, it can take a lot of work to build a better reputation.
-
-
+doing so will reduce the add-on’s visibility on AMO, it is important to make
+sure that users are aware, so their expectations are appropriate. If you do
+not mark an experimental add-on, you could end up with poor reviews that your
+add-on does not deserve, and once you have a poor rating and poor reviews, it
+can take a lot of work to build a better reputation.
 
 ## Select the right platforms and versions
-
-
 
 If your add-on does not work on Android be sure to select only Linux, Mac OS,
 and Windows as the supported platforms. This will avoid issues with users
@@ -189,45 +128,29 @@ Firefox version. For more information on defining version support, if you need
 to, see the manifest.json [applications key](https://developer.mozilla.org/en-
 US/Add-ons/WebExtensions/manifest.json/applications).
 
-
-
 ## Categorize well
-
-
 
 You can select up to two categories to describe your add-on. Choose carefully
 to get the best match. However, do not include your add-on in a second
 category if one will do, as spamming a category could do more harm than good.
 
-
-
 ## Be prepared to provide support
 
-
-
 Providing support for your add-on gives potential users the assurance that
-they will be able to get any issues resolved. In your add-on\u2019s listing
-you can provide details of its homepage, an email address for support, and the
-address of a support page on your website or the add-on\u2019s website. If you
-can, provide all three of these. However, as a minimum, consider offering an
-email address for support.
-
-
+they will be able to get any issues resolved. In your add-on’s listing you can
+provide details of its homepage, an email address for support, and the address
+of a support page on your website or the add-on’s website. If you can, provide
+all three of these. However, as a minimum, consider offering an email address
+for support.
 
 ## Set up a developer profile
-
-
 
 Your developer profile enables you to provide information about the reasons
 behind the creation of your add-on and what you plan next for its development.
 You do not need to create a developer profile, but if you do, as with all
 other descriptions of your add-on, make comments short and to the point.
 
-
-
 ## Use plain language in any privacy policy or license agreement
-
-
 
 If your add-on makes use of personal data, you will need a privacy policy, and
 you may want or need an end user license agreement. Make sure these are
@@ -235,64 +158,28 @@ written in plain language, not legalese. Plain language makes these documents
 accessible to your users and makes it more likely they will install your add-
 on.
 
-
-
-
-
 Remember to include the text of your privacy policy and license agreement in
-your add-on\u2019s listing details, even if you host a copy on your website or
-in the add-on.
-
-
-
-
+your add-on’s listing details, even if you host a copy on your website or in
+the add-on.
 
 ## Gently ask for a review
-
-
 
 Ratings and reviews are a huge benefit to your add-on, assuming they are good.
 When you are happy that you have the features and quality needed in your add-
 on, consider requesting users to complete a review.
 
-
-
 However, take care with requesting reviews, here are some guidelines:
 
-
-
-
-
   * Do not make leaving a review a requirement of accessing features within your add-on.
-
-
   * Do not repeatedly request the user to provide a review, if they do not want to provide a review nagging them could result in them uninstalling your add-on.
-
-
   * Do give the user time to learn about and use most of your add-ons features before requesting a review.
-
-
-  * Do not try to influence the user\u2019s review by pre-populating the comments section or selecting a five-star rating.
-
-
-
+  * Do not try to influence the user’s review by pre-populating the comments section or selecting a five-star rating.
 
 And, when users suggest improvements or highlight issues in the reviews, use
 the reply feature to acknowledge their feedback.
 
-
-
 ## Some other points
 
-
-
-
-
   * Where several people have helped in writing the add-on, make sure they are listed as Authors.
-
-
   * Keep any requests for contributions appropriate.
-
-
-]
 
