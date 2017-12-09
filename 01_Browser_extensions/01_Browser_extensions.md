@@ -23,7 +23,7 @@
 
   * [介绍](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface)
   * [工具栏按钮](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action)
-  * [工具栏弹出按钮]](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)
+  * [工具栏弹出按钮](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)
   * [地址栏按钮](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)
   * [地址栏弹出按钮](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)
   * [内容菜单项](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items)

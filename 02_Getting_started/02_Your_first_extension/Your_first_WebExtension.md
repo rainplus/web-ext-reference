@@ -1,175 +1,119 @@
-In this article we'll walk through creating an extension for Firefox, from
-start to finish. The extension just adds a red border to any pages loaded from
-"mozilla.org" or any of its subdomains.
+在这篇文章中我们通过从头到尾进行创建一个firefox拓展。拓展只是装简单地给mozilla.org及子域名的页面添加红色的边框。
 
-The source code for this example is on GitHub: <https://github.com/mdn
-/webextensions-examples/tree/master/borderify>.
+本章节源代码: [Github](https://github.com/mdn/webextensions-examples/tree/master/borderify)
 
-First, you'll need Firefox version 45 or later.
+首先，请确认你的firefox浏览器版本>=45
 
-## Writing the extension
+## 写拓展
 
-Create a new directory and navigate to it:
+创建一个文件夹并进入:
 
-    
-    
     mkdir borderify
     cd borderify
 
 ### manifest.json
 
-Now create a new file called "manifest.json" directly under the "borderify"
-directory. Give it the following contents:
+在文件夹下创建 manifest.json文件，并添加如下内容：
 
-    
-    
-    {
-    
+    {    
       "manifest_version": 2,
       "name": "Borderify",
       "version": "1.0",
-    
       "description": "Adds a red border to all webpages matching mozilla.org.",
-    
       "icons": {
         "48": "icons/border-48.png"
       },
-    
       "content_scripts": [
         {
           "matches": ["*://*.mozilla.org/*"],
           "js": ["borderify.js"]
         }
       ]
-    
     }
 
-  * The first three keys: `[manifest_version](/en-US/Add-ons/WebExtensions/manifest.json/manifest_version)`, `[name](/en-US/Add-ons/WebExtensions/manifest.json/name)`, and `[version](/en-US/Add-ons/WebExtensions/manifest.json/version)`, are mandatory and contain basic metadata for the extension.
-  * `[description](/en-US/Add-ons/WebExtensions/manifest.json/description)` is optional, but recommended: it's displayed in the Add-ons Manager.
-  * `[icons](/en-US/Add-ons/WebExtensions/manifest.json/icons)` is optional, but recommended: it allows you to specify an icon for the extension, that will be shown in the Add-ons Manager.
+  * 前三个键值: [manifest_version](/en-US/Add-ons/WebExtensions/manifest.json/manifest_version), [name](/en-US/Add-ons/WebExtensions/manifest.json/name), 和 [version](/en-US/Add-ons/WebExtensions/manifest.json/version)是拓展强制的基本元数据。
+  * [description](/en-US/Add-ons/WebExtensions/manifest.json/description)是可选的, 但建议加上: 它可以简单描述拓展的功能.
+  * [icons](/en-US/Add-ons/WebExtensions/manifest.json/icons)是可选的, 但建议加上: 它可以标识你的拓展，并在拓展中心进行展示.
 
-The most interesting key here is `[content_scripts](/en-US/Add-
-ons/WebExtensions/manifest.json/content_scripts)`, which tells Firefox to load
-a script into Web pages whose URL matches a specific pattern. In this case,
-we're asking Firefox to load a script called "borderify.js" into all HTTP or
-HTTPS pages served from "mozilla.org" or any of its subdomains.
+最有趣的键值是`[content_scripts](/en-US/Add-ons/WebExtensions/manifest.json/content_scripts)`, 它告诉浏览器在页面上加载这些匹配了模式的脚本. 在上面的例子中,我们在`*://*.mozilla.org/*`下加载了`borderify.js`.
 
-  * [Learn more about content scripts.](/en-US/Add-ons/WebExtensions/Content_scripts)
-  * [Learn more about match patterns](/en-US/Add-ons/WebExtensions/Match_patterns).
+  * [了解内容脚本](/en-US/Add-ons/WebExtensions/Content_scripts)
+  * [了解匹配模式(正则)](/en-US/Add-ons/WebExtensions/Match_patterns).
 
-[In some situations you need to specify an ID for your extension](/en-US/Add-
-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-
-on_ID). If you do need to specify an add-on ID, include the  `[applications
-](/en-US/Add-ons/WebExtensions/manifest.json/applications)` key in
-`manifest.json` and set its `gecko.id` property:
+[在特殊的情况下你需要添加ID标高你的拓展](/en-US/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID). 如果需要指定一个ID,要添加`[applications](/en-US/Add-ons/WebExtensions/manifest.json/applications)` 键值,并设置gecko.id,如下:
 
-    
-    
     "applications": {
       "gecko": {
         "id": "borderify@example.com"
       }
     }
 
-### icons/border-48.png
+### 图标 icons/border-48.png
 
-The extension should have an icon. This will be shown next to the extension's
-listing in the Add-ons Manager. Our manifest.json promised that we would have
-an icon at "icons/border-48.png".
+拓展应用有一个图标,它会展示在拓展管理中心,我们的manifest.json提供一个图标`icons/border-48.png`.
 
-Create the "icons" directory directly under the "borderify" directory. Save an
-icon there named "border-48.png".  You could use [the one from our
-example](https://github.com/mdn/webextensions-
-examples/blob/master/borderify/icons/border-48.png), which is taken from the
-Google Material Design iconset, and is used under the terms of the [Creative
-Commons Attribution-ShareAlike](https://creativecommons.org/licenses/by-
-sa/3.0/) license.
+在文件夹下创建一个icons的文件夹,在保存`border-48.png`文件到icons下.你可以使用我们的[样例文件](https://github.com/mdn/webextensions-examples/blob/master/borderify/icons/border-48.png),一个google material 设计风格的图标,使用了协议[Creative Commons Attribution-ShareAlike](https://creativecommons.org/licenses/by-sa/3.0/) 
 
-If you choose to supply your own icon, It should be 48x48 pixels. You could
-also supply a 96x96 pixel icon, for high-resolution displays, and if you do
-this it will be specified as the `96` property of the `icons` object in
-manifest.json:
-
-    
+如果你选择使用自己的图标,应用选择48x48像素,你也可以提供96x96像素,添加如下:
     
     "icons": {
       "48": "icons/border-48.png",
       "96": "icons/border-96.png"
     }
 
-Alternatively, you could supply an SVG file here, and it will be scaled
-correctly. (Though: if you're using SVG and your icon includes text, you may
-want to use your SVG editor's "convert to path" tool to flatten the text, so
-that it scales with a consistent size/position.)
+可选的,你可以提供SVG矢量图,通过计算的方式指定大小和位置.
 
-  * [Learn more about specifying icons.](/en-US/Add-ons/WebExtensions/manifest.json/icons)
+  * [关于使用图样的更多说明.](/en-US/Add-ons/WebExtensions/manifest.json/icons)
 
 ### borderify.js
+最后添加`borderify.js`文件,并写入如下的内容
 
-Finally, create a file called "borderify.js" directly under the "borderify"
-directory. Give it this content:
-
-    
-    
     document.body.style.border = "5px solid red";
 
-This script will be loaded into the pages that match the pattern given in the
-`content_scripts` manifest.json key. The script has direct access to the
-document, just like scripts loaded by the page itself.
+这个文件会被`content_scripts`中的模式匹配到到加载到到相关页面下
 
-  * [Learn more about content scripts.](/en-US/Add-ons/WebExtensions/Content_scripts)
+  * [深入学习内容脚本](/en-US/Add-ons/WebExtensions/Content_scripts)
 
-## Trying it out
+## 尝试使用
 
-First, double check that you have the right files in the right places:
+重新检查一下你的拓展文件
 
-    
-    
     borderify/
         icons/
             border-48.png
         borderify.js
         manifest.json
 
-### Installing
+### 安装
 
-Open "about:debugging" in Firefox, click "Load Temporary Add-on" and select
-any file in your extension's directory:
+打开 "about:debugging" 页面, 选中 "调试拓展" 并选中你的文件夹进行加载到浏览器.
 
-The extension will now be installed, and will stay until you restart Firefox.
+这样应用就被安装了,直到你重启了浏览器,否则它会一直存在.
 
-Alternatively, you can run the extension from the command line using the [web-
-ext](/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext)
-tool.
+可选的你使用使用命令行进行操作,参考[web-ext](/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext)
 
-### Testing
+### 测试
 
-Now try visiting a page under "mozilla.org", and you should see the red border
-round the page:
+现在访问mozilla.org的页面,你会发现页面被包裹了一层红边框:
 
-Don't try it on addons.mozilla.org, though! Content scripts are currently
-blocked on that domain.
+不要尝试访问addons.mozilla.org,它目前是禁止的.
 
-Try experimenting a bit. Edit the content script to change the color of the
-border, or do something else to the page content. Save the content script,
-then reload the extensions's files by clicking the "Reload" button in
-about:debugging. You can see the changes right away:
+尝试不同的体验,修改内容脚本,改变边框的颜色,并重新加载拓展
 
-  * [Learn more about loading extensions](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
+  * [重新加载拓展](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
 
-## Packaging and publishing
+## 打包和发布
 
-For other people to use your extension, you need to package it and submit it
-to Mozilla for signing. To learn more about that, see ["Publishing your
-extension"](/en-US/docs/Mozilla/Add-
-ons/WebExtensions/Publishing_your_WebExtension).
+为了人们可以使用你的拓展,你需要打包和提交给Mozilla进行签名.
 
-## What's next?
+  * [发布你的拓展](/en-US/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension).
+
+## 接下来
 
 Now you've got an idea of the process of developing a WebExtension for
 Firefox, try:
 
-  * [reading more about the anatomy of an extension](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
-  * [writing a more complex extension](/en-US/Add-ons/WebExtensions/Your_second_WebExtension)
-  * [reading about the JavaScript APIs available for extensions.](/en-US/Add-ons/WebExtensions/API)
+  * [剖析一个应用](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
+  * [写一个复杂的应用](/en-US/Add-ons/WebExtensions/Your_second_WebExtension)
+  * [查阅extensions可用的JavaScripts APIs](/en-US/Add-ons/WebExtensions/API)
 
