@@ -1,74 +1,51 @@
-An extension consists of a collection of files, packaged for distribution and
-installation. In this article, we will quickly go through the files that might
-be present in an extension.
+拓展其实本质就是一些文件的集合，用来打包发布后进行安装。这本节中，我们快速解析拓展中的文件。
 
 ## manifest.json
 
-This is the only file that must be present in every extension. It contains
-basic metadata such as its name, version and the permissions it requires. It
-also provides pointers to other files in the extension.
+这个文件描述并展示一个拓展的全部内部。它包含了元数据，版本，权限，并指向其他文件。
 
-This manifest can also contain pointers to several other types of files:
+manifest.json会指定如下几种文件类型：
 
-  * [Background pages](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts): Implement long-running logic.
+  * [背景页 Background pages](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts): Implement long-running logic.
   * Icons for the extension and any buttons it might define.
-  * [Sidebars, popups, and options pages](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Sidebars_popups_options_pages): HTML documents that provide content for various user interface components.
-  * [Content scripts](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts): JavaScript included with your extension, that you will inject into web pages.
+  * [边栏，弹出层，选项页 Sidebars, popups, and options pages](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Sidebars_popups_options_pages): HTML documents that provide content for various user interface components.
+  * [内容脚本 Content scripts](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts): JavaScript included with your extension, that you will inject into web pages.
 
 ![](https://mdn.mozillademos.org/files/13669/webextension-anatomy.png)
 
-See the [manifest.json](/en-US/docs/Mozilla/Add-
-ons/WebExtensions/manifest.json) reference page for all the details.
+[点击查询manifest.json更多详情](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
 
-Other than those referenced from the manifest, an extension can include
-additional [Extension pages](https://developer.mozilla.org/en-US/Add-
-ons/WebExtensions/Anatomy_of_a_WebExtension#Extension_pages) with supporting
+除了上面的页面，拓展还可以包含 [Extension pages](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Extension_pages)
 files.
 
-## Background scripts
+## 背景脚本 Background scripts
 
-Extensions often need to maintain long-term state or perform long-term
-operations independently of the lifetime of any particular web page or browser
-window. That is what background scripts are for.
+扩展往往需要长期维持的状态 或长期执行操作独立于任何特定的网页浏览器或临时窗口。那背景脚本是什么。
 
-Background scripts are loaded as soon as the extension is loaded and stay
-loaded until the extension is disabled or uninstalled. You can use any of the
-[WebExtension APIs](/en-US/Add-ons/WebExtensions/API) in the script, as long
-as you have requested the necessary [permissions](/en-US/docs/Mozilla/Add-
-ons/WebExtensions/manifest.json/permissions).
+背景脚本（background script）会在拓展被加载的时候加载，直到拓展被卸载或禁用，在背景脚本中，你可以使用任意的[WebExtension APIs](/en-US/Add-ons/WebExtensions/API)，只要你配置了相应的[权限 permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)
 
 ### Specifying background scripts
 
-You can include a background script using the `background` key in
-"manifest.json":
+你可以在manifest.json中指定背景脚本的使用：
 
-    
-    
+    "manifest.json":
     // manifest.json
-    
     "background": {
       "scripts": ["background-script.js"]
     }
 
-You can specify multiple background scripts: if you do, they run in the same
-context, just like multiple scripts that are loaded into a single web page.
+你可以指定多个背景脚本，它们就像一个web页面加载多个脚本一样。
 
 ### Background script environment
 
 #### DOM APIs
 
-Background scripts run in the context of special pages called background
-pages. This gives them a `[window](/en-US/docs/Web/API/Window)` global, along
-with all the standard DOM APIs provided by that object.
+背景脚本所运行在的页面就是背景页，拥有一个[window](/en-US/docs/Web/API/Window)全局变量，提供了标准的DOM APIs的对象。
 
-You do not have to supply your background page. If you include a background
-script, an empty background page will be created for you.
+背景页只是一种可选的选择，你的拓展只包含背景脚本的时候，拓展会自己包含一个空白的背景页面
 
-However, you can choose to supply your background page as a separate HTML
-file:
+当然你可以特殊地指定一个背景页：
 
-    
-    
     // manifest.json
     
     "background": {
@@ -77,117 +54,70 @@ file:
 
 #### WebExtension APIs
 
-Background scripts can use any of the [WebExtension APIs](/en-US/Add-
-ons/WebExtensions/API) in the script, as long as their extension has the
-necessary [permissions](/en-US/docs/Mozilla/Add-
-ons/WebExtensions/manifest.json/permissions).
+在背景脚本中，你可以使用任意的[WebExtension APIs](/en-US/Add-ons/WebExtensions/API)，只要你配置了相应的[权限 permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
 #### Cross-origin access
 
-Background scripts can make XHR requests to any hosts for which they have
-[host permissions](/en-US/docs/Mozilla/Add-
-ons/WebExtensions/manifest.json/permissions).
+背景脚本拥有跨域权限，通过配置[host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)进行设置.
 
 #### Web content
 
-Background scripts do not get direct access to web pages. However, they can
-load [content scripts](/en-US/docs/Mozilla/Add-
-ons/WebExtensions/Content_scripts) into web pages and can [communicate with
-these content scripts using a message-passing API](/en-US/Add-
-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts).
+背景脚本并不直接访问web页面。它们的作用只是进行加载[内容脚本]((/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts))并通过[消息机制](/en-US/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts)与内容脚本进行交互。
 
-#### Content security policy
+#### 内容安全策略 Content security policy
 
-Background scripts are restricted from certain potentially dangerous
-operations, like the use of `[eval()](/en-
-US/docs/Web/JavaScript/Reference/Global_Objects/eval)`, through a Content
-Security Policy. See [Content Security Policy](/en-US/docs/Mozilla/Add-
-ons/WebExtensions/Content_Security_Policy) for more details on this.
+背景脚本的执行权限太大，会存在一个安全隐患。就像`eval()`操作，更多详情请查阅[Content Security Policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
 
-## Sidebars, popups, options pages
+## 边栏，弹出层，选项页 Sidebars, popups, options pages
 
-Your extension can include various user interface components whose content is
-defined using an HTML document:
+你的拓展可以包含如下几个与用户交互的组件：
 
-  * a [sidebar](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars) is a pane that is displayed at the left-hand side of the browser window, next to the web page
-  * a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) is a dialog that you can display when the user clicks on a [toolbar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action) or [address bar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)
-  * an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) is a page that's shown when the user accesses your add-on's preferences in the browser's native add-ons manager.
+  * [边栏 sidebar](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars) 是网页内容中左边的面板
+  * [弹出层 popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) 是点击 [工具栏按钮](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action) 或 [地址栏按钮](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)弹出的面板
+  * [选项页面 options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) 是显示拓展配置的页面
 
-For each of these components, you create an HTML file and point to it using a
-specific property in [manifest.json](/en-US/docs/Mozilla/Add-
-ons/WebExtensions/manifest.json). The HTML file can include CSS and JavaScript
-files, just like a normal web page.
+上面的每种组件，你可以在manifest.json指定一个html页面（可以包含css和js）进行使用。
 
-All of these are a type of [Extension pages](/en-US/docs/Mozilla/Add-
-ons/WebExtensions/user_interface/Extension_pages), and unlike a normal web
-page, your JavaScript can use all the same privileged WebExtension APIs as
-your background script. They can even directly access variables in the
-background page using [`runtime.getBackgroundPage()`](/en-US/docs/Mozilla/Add-
-ons/WebExtensions/API/runtime/getBackgroundPage "Retrieves the Window object
-for the background page running inside the current extension.").
+还有另外的一种页面 [Extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages),它也拥有拓展的全部权限，并可以通过 [`runtime.getBackgroundPage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage "Retrieves the Window object
+for the background page running inside the current extension.") 返回拓展的window对象.
 
 ## Extension pages
 
-You can also include HTML documents in your extension which are not attached
-to some predefined user interface component. Unlike the documents you might
-provide for sidebars, popups, or options pages, these don't have an entry in
-manifest.json. However, they do also get access to all the same privileged
-WebExtension APIs as your background script.
+您还可以在扩展中包含HTML文档，这些文档未附加到预定义的用户界面组件中。与文件不同，您可能
+提供工具条，弹出窗口，或选择的页面，这些没有在manifest.json文件条目。然而，他们也可以获得所有相同的特权。
+webextension API作为你的背景脚本。
 
-You'd typically load a page like this using [`windows.create()`](/en-
-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/create "Creates a new
-window.") or [`tabs.create()`](/en-US/docs/Mozilla/Add-
-ons/WebExtensions/API/tabs/create "Creates a new tab.").
-
-See [Extension pages](/en-US/docs/Mozilla/Add-
-ons/WebExtensions/user_interface/Extension_pages) to learn more.
+你通常会加载一个页面使用[ `window.create() ` ](/en-US/docs/Mozilla/Add-ons/WebExtensionsAPI/window/create "创建一个新的窗口。")或[ `tab.create()` ](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/create "Creates a new tab.")
+查阅 [Extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages) 获取更多详情.
 
 ## Content scripts
 
-Use content scripts to access and manipulate web pages. Content scripts are
-loaded into web pages and run in the context of that particular page.
+内容脚本是作为加载页面的一部分,内容脚本是访问并操作网页页面的主体.
 
-Content scripts are extension-provided scripts which run in the context of a
-web page; this differs from scripts which are loaded by the page itself,
-including those which are provided in [`<script>`](/en-
-US/docs/Web/HTML/Element/script "The HTML <script> element is used to embed or
-reference an executable script.") elements within the page.
+内容脚本的网页中运行,不同于页面自己加载的脚本,内容脚本也使用<script>进行加载,
 
-Content scripts can see and manipulate the page's DOM, just like normal
-scripts loaded by the page.
 
-Unlike normal page scripts, they can:
+内容脚本像正常的脚本一样可以操作页面的DOM树的内容
 
-  * Make cross-domain XHR requests.
-  * Use a small subset of the [WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API).
-  * Exchange messages with their background scripts and can in this way indirectly access all the WebExtension APIs.
+区别于页面正常的脚本,它还可以:
 
-Content scripts cannot directly access normal page scripts but can exchange
-messages with them using the standard `[window.postMessage()](/en-
-US/docs/Web/API/Window/postMessage)` API.
+  * 跨域请求.
+  * 使用部分[WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API).
+  * 通过WebExtension APIs与背景脚本交互消息.
 
-Usually, when we talk about content scripts, we are referring to JavaScript,
-but you can inject CSS into web pages using the same mechanism.
+内容脚本不能直接访问正常页面,但可以通过[window.postMessage()](/en-US/docs/Web/API/Window/postMessage) API使用消息机制进行交互.
 
-See the [content scripts](/en-US/docs/Mozilla/Add-
-ons/WebExtensions/Content_scripts) article to learn more.
+我们谈论的内容脚本无非就是js,所能我们可以注入css
+
+查阅[内容脚本](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) 获取更多详情.
 
 ## Web accessible resources
 
-Web accessible resources are resources such as images, HTML, CSS, and
-JavaScript that you include in the extension and want to make accessible to
-content scripts and page scripts. Resources which are made web-accessible can
-be referenced by page scripts and content scripts using a special URI scheme.
+我们拓展中的页面,可以包含HTML,CSS,js还有图片,引用资源的方式也是正常的URI模式.
 
-For example, if a content script wants to insert some images into web pages,
-you could include them in the extension and make them web accessible. Then the
-content script could create and append `[img](/en-
-US/docs/Web/HTML/Element/img)` tags which reference the images via the `src`
-attribute.
+例如,一个内容脚本想要在页面中插入一张图片,可以在内容脚本中创建并添加[img](/en-US/docs/Web/HTML/Element/img)元素并通过引src引用图片的URI.
 
-To learn more, see the documentation for the [web_accessible_resources](/en-
-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources)
-manifest.json key.
+查阅[web_accessible_resources](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources)获取更多详情
 
 
 
