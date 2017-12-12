@@ -1,27 +1,18 @@
-To intercept HTTP requests, use the [`webRequest`](/en-US/docs/Mozilla/Add-
-ons/WebExtensions/API/webRequest "Add event listeners for the various stages
-of making an HTTP request. The event listener receives detailed information
-about the request, and can modify or cancel the request.") API. This API
-enables you to add listeners for various stages of making an HTTP request. In
-the listeners, you can:
+要拦截HTTP请求，请使用[`webRequest`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest "为各个阶段添加事件侦听器做出一个HTTP请求。 事件监听器接收详细信息关于请求，并且可以修改或者取消请求。")API。这个API使您能够为发出HTTP请求的各个阶段添加监听器。 在监听器中，你可以：
 
-  * get access to request headers and bodies, and response headers
-  * cancel and redirect requests
-  * modify request and response headers
+   *获得访问请求标题和正文，和响应头
+   *取消并重定向请求
+   *修改请求和响应头
 
-In this article we'll look at three different uses for the `webRequest`
-module:
+在本文中，我们将看看`webRequest`的三种不同用途模块：
 
-  * Logging request URLs as they are made.
-  * Redirecting requests.
-  * Modifying request headers.
+   *记录请求URL。
+   *请求重定向。
+   *修改请求头。
 
-## Logging request URLs
+## 记录URL日志
 
-Create a new directory called "requests". In that directory, create a file
-called "manifest.json" which has the following contents:
-
-    
+创建一个名为“请求”的新目录。 在该目录中创建一个文件称为“manifest.json”，其具有以下内容：
     
     {
       "description": "Demonstrating webRequests",
@@ -39,9 +30,7 @@ called "manifest.json" which has the following contents:
       }
     }
 
-Next, create a file called "background.js" with the following contents:
-
-    
+接下来，创建一个名为“background.js”的文件，内容如下：
     
     function logURL(requestDetails) {
       console.log("Loading: " + requestDetails.url);
@@ -53,30 +42,14 @@ Next, create a file called "background.js" with the following contents:
     );
     
     
+在这里我们使用[`onBeforeRequest`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest "这个事件是在一个请求即将被触发时触发的。 如果你想取消或重定向请求，是一个很好的地方")在启动请求之前调用`logURL（）`函数。 `logURL（）`函数从事件对象获取请求的URL并将其记录到浏览器控制台。 “{url：[<all_urls>”]} [pattern]（/ en-US / Add-ons / WebExtensions / Match_patterns）意味着我们将拦截所有URL的HTTP请求。
 
-Here we use [`onBeforeRequest`](/en-US/docs/Mozilla/Add-
-ons/WebExtensions/API/webRequest/onBeforeRequest "This event is triggered when
-a request is about to be made, and before headers are available. This is a
-good place to listen if you want to cancel or redirect the request.") to call
-the `logURL()` function just before starting the request. The `logURL()`
-function grabs the URL of the request from the event object and logs it to the
-browser console. The `{urls: ["<all_urls>"]}` [pattern](/en-US/Add-
-ons/WebExtensions/Match_patterns) means we will intercept HTTP requests to all
-URLs.
+要测试它，[先安装拓展](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), [打开浏览器控制台](/en-US/docs/Tools/Browser_Console)，然后打开一些网页。 在浏览器控制台中，您应该可以看到浏览器请求的任何资源的URL。
 
-To test it out, [install the extension](/en-US/Add-
-ons/WebExtensions/Temporary_Installation_in_Firefox), [open the Browser
-Console](/en-US/docs/Tools/Browser_Console), and open some Web pages. In the
-Browser Console, you should see the URLs for any resources that the browser
-requests:
+## 请求重定向
 
-## Redirecting requests
+现在让我们使用`webRequest`重定向HTTP请求。 首先，用下面的内容替换manifest.json：
 
-Now let's use `webRequest` to redirect HTTP requests. First, replace
-manifest.json with this:
-
-    
-    
     {
     
       "description": "Demonstrating webRequests",
@@ -96,14 +69,10 @@ manifest.json with this:
     
     }
 
-The only change here is to add the `"webRequestBlocking"` `[permission](/en-
-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)`. We need to
-ask for this extra permission whenever we are actively modifying a request.
+唯一修改了的地方是添加了 "webRequestBlocking" [权限](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). 无论何时我们主动修改请求，我们都需要额外的权限。
 
-Next, replace "background.js" with this:
+接下来，重写"background.js":
 
-    
-    
     var pattern = "https://mdn.mozillademos.org/*";
     
     function redirect(requestDetails) {
@@ -119,45 +88,23 @@ Next, replace "background.js" with this:
       ["blocking"]
     );
 
-Again, we use the [`onBeforeRequest`](/en-US/docs/Mozilla/Add-
-ons/WebExtensions/API/webRequest/onBeforeRequest "This event is triggered when
-a request is about to be made, and before headers are available. This is a
-good place to listen if you want to cancel or redirect the request.") event
-listener to run a function just before each request is made. This function
-will replace the target URL with the `redirectUrl` specified in the function.
+再一次，我们使用了 [`onBeforeRequest`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest "This event is triggered when a request is about to be made, and before headers are available. This is a good place to listen if you want to cancel or redirect the request.") 监听每一个请求. 函数会在`redirect`中将目标的url替换。
 
-This time we are not intercepting every request: the `{urls:[pattern],
-types:["image"]}` option specifies that we should only intercept requests (1)
-to URLs residing under "https://mdn.mozillademos.org/" (2) for image
-resources. See [`webRequest.RequestFilter`](/en-US/docs/Mozilla/Add-
-ons/WebExtensions/API/webRequest/RequestFilter "An object describing filters
-to apply to webRequest events.") for more on this.
-
-Also note that we're passing an option called `"blocking"`: we need to pass
-this whenever we want to modify the request. It makes the listener function
-block the network request, so the browser waits for the listener to return
-before continuing. See the [`webRequest.onBeforeRequest`](/en-US/docs/Mozilla
-/Add-ons/WebExtensions/API/webRequest/onBeforeRequest "This event is triggered
-when a request is about to be made, and before headers are available. This is
-a good place to listen if you want to cancel or redirect the request.")
-documentation for more on `"blocking"`.
-
-To test it out, open a page on MDN that contains a lot of images (for example
-<https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor>), [reload the
-extension](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox
-#Reloading_a_temporary_add-on), and then reload the MDN page:
-
-## Modifying request headers
-
-Finally we'll use `webRequest` to modify request headers. In this example
-we'll modify the "User-Agent" header so the browser identifies itself as Opera
-12.16, but only when visiting pages under http://useragentstring.com/".
-
-The "manifest.json" can stay the same as in the previous example.
-
-Replace "background.js" with code like this:
-
+我们并没有监听每一个请求:  `{urls:[pattern],types:["image"]}` 指定了我们进行拦截的请求
     
+* 只在"https://mdn.mozillademos.org/" 下面的url请求
+* 只针对图片资源.查阅[webRequest.RequestFilter`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter "An object describing filters to apply to webRequest events.") 获得更多详情
+
+我们想修改请求的内容的时候，我们要传输一个参数`blocking`,这让监听器阻塞请求，等待监听器返回结果才能继续执行。
+查阅 [`webRequest.onBeforeRequest`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest "This event is triggered when a request is about to be made, and before headers are available. This is a good place to listen if you want to cancel or redirect the request.")获取关于"blocking"更多的信息.
+
+测试这个拓展要重新打开一个mdn上多图处的页面，重新加载拓展，并重新打开MDN的页面。
+## 修改请求头
+最后我们使用`webRequest` 来修改请求头信息. 在这个案例中我们进行 "User-Agent" 修改成 Opera 12.16, 仅在http://useragentstring.com/的页面下
+
+"manifest.json"保持如上面的例子一致。
+
+替换"background.js" 如下:
     
     var targetPage = "http://useragentstring.com/*";
     
@@ -178,35 +125,14 @@ Replace "background.js" with code like this:
       ["blocking", "requestHeaders"]
     );
 
-Here we use the [`onBeforeSendHeaders`](/en-US/docs/Mozilla/Add-
-ons/WebExtensions/API/webRequest/onBeforeSendHeaders "This event is triggered
-before sending any HTTP data, but after all HTTP headers are available. This
-is a good place to listen if you want to modify HTTP request headers.") event
-listener to run a function just before the request headers are sent.
+我们使用了 [`onBeforeSendHeaders`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeSendHeaders "This event is triggered before sending any HTTP data, but after all HTTP headers are available. This is a good place to listen if you want to modify HTTP request headers.") 事件监听来监听请求在发送请求头。
 
-The listener function will be called only for requests to URLs matching the
-`targetPage` [pattern](/en-US/Add-ons/WebExtensions/Match_patterns). Also note
-that we've again passed `"blocking"` as an option. We've also passed
-`"requestHeaders"`, which means that the listener will be passed an array
-containing the request headers that we expect to send. See
-[`webRequest.onBeforeSendHeaders`](/en-US/docs/Mozilla/Add-
-ons/WebExtensions/API/webRequest/onBeforeSendHeaders "This event is triggered
-before sending any HTTP data, but after all HTTP headers are available. This
-is a good place to listen if you want to modify HTTP request headers.") for
-more information on these options.
+监听匹配了 `targetPage` [pattern](/en-US/Add-ons/WebExtensions/Match_patterns)的请求. 同时我们还发送了`"blocking"` 参数. 
+我们还发送了requestHeaders，这意味着监听器将传递一个包含我们期望发送的请求头的数组.查阅[`webRequest.onBeforeSendHeaders`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeSendHeaders "This event is triggered before sending any HTTP data, but after all HTTP headers are available. This is a good place to listen if you want to modify HTTP request headers.") 来获取更多的信息.
 
-The listener function looks for the "User-Agent" header in the array of
-request headers, replaces its value with the value of the `ua` variable, and
-returns the modified array. This modified array will now be sent to the
-server.
+侦听器函数在请求头数组中查找“User-Agent”头，用“ua”变量的值替换其值，并返回修改过的数组。 这个修改过的数组现在将被发送到服务器。
 
-To test it out, open [useragentstring.com](http://useragentstring.com/) and
-check that it identifies the browser as Firefox. Then reload the extension,
-reload [useragentstring.com](http://useragentstring.com/), and check that
-Firefox is now identified as Opera:
+## 了解更多
 
-## Learn more
-
-To learn about all the things you can do with the `webRequest` API, see its
-[reference documentation](/en-US/Add-ons/WebExtensions/API/WebRequest).
+要了解所有可以使用“webRequest”API执行的操作，请参阅 [reference documentation](/en-US/Add-ons/WebExtensions/API/WebRequest).
 

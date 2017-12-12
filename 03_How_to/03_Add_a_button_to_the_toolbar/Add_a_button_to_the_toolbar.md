@@ -1,26 +1,19 @@
-Toolbar buttons are one of the main UI components available to extensions.
-Toolbar buttons live in the main browser toolbar and contain an icon. When the
-user clicks the icon, one of two things can happen:
+工具栏按钮是扩展可用的主要UI组件之一。
+工具栏按钮位于主浏览器工具栏中，并包含一个图标。 当用户点击图标的时候，可能会发生以下两件事之一：
 
-  * If you have specified a popup for the icon, the popup is shown. Popups are transient dialogs specified using HTML, CSS, and JavaScript.
-  * If you have not specified a popup, a click event is generated, which you can listen for in your code and perform some other kind of action in response to.
+   * 如果您为图标指定了弹出窗口，则弹出窗口会显示。 弹出窗口是使用HTML，CSS和JavaScript指定的瞬态对话框。
+   * 如果您没有指定弹出窗口，则会生成一个点击事件，您可以在代码中侦听，并执行其他一些响应操作。
+   
+使用WebExtension API时，这些按钮被称为“浏览器操作（行为）”，并设置如下：
 
-With WebExtension APIs, these kinds of buttons are called "browser actions",
-and are set up like so:
+  *在manifest.json的主键[browser_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)是用来定义按钮的
+  *JavaScript API `[browserAction](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)` 监听点击事件并作出响应
+  
+## 一个简单的按钮
 
-  * The manifest.json key `[browser_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)` is used to define the button.
-  * The JavaScript API `[browserAction](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)` is used to listen for clicks and change the button or perform actions via your code.
+在本节中，我们将创建一个向工具栏添加按钮的扩展。当用户单击按钮时，我们将在新选项卡中打开<https://developer.mozilla.org>。
 
-## A simple button
-
-In this section we'll create an extension that adds a button to the toolbar.
-When the user clicks the button, we'll open <https://developer.mozilla.org> in
-a new tab.
-
-First, create a new directory, "button", and create a file called
-"manifest.json" inside it with the following contents:
-
-    
+创建manifest.js:    
     
     {
     
@@ -42,30 +35,12 @@ First, create a new directory, "button", and create a file called
     
     }
 
-This specifies that we'll have a [background script](/en-US/Add-
-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) named
-"background.js", and a browser action (button) whose icons will live in the
-"icons" directory.
-
-These icons are from the
-[bitsies!](https://www.iconfinder.com/iconsets/bitsies) iconset created by
-Recep Kütük.
-
-Next, create the "icons" directory inside the "buttons" directory, and save
-the two icons shown below inside it:
-
-  * "page-16.png" (![](https://mdn.mozillademos.org/files/13476/page-16.png))
-  * "page-32.png" (![](https://mdn.mozillademos.org/files/13478/page-32.png)).
+特别说明：我们使用了"background.js"作为后台脚本,一个浏览器操作按钮的图标。
 
 
+存在多个图标的情况下，浏览器会选择高清那个进行显示。
 
-We have two icons so we can use the bigger one in high-density displays. The
-browser will take care of selecting the best icon for the current display.
-
-Next, create "background.js" in the extension's root directory, and give it
-the following contents:
-
-    
+接下来创建background.js的内容    
     
     function openPage() {
       browser.tabs.create({
@@ -75,13 +50,9 @@ the following contents:
     
     browser.browserAction.onClicked.addListener(openPage);
 
-This listens for the browser action's click event; when the event fires, the
-`openPage()` function is run, which opens the specified page using the `[tabs
-](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs)` API.
+监听浏览器行为的点击事件，当触发时，打开一个新标签，页面url是https://developer.mozilla.org
 
-At this point the complete extension should look like this:
-
-    
+完整的拓展内容如下：
     
     button/
         icons/
@@ -90,14 +61,11 @@ At this point the complete extension should look like this:
         background.js
         manifest.json
 
-Now [install the extension](https://developer.mozilla.org/en-US/Add-
-ons/WebExtensions/Temporary_Installation_in_Firefox) and click the button:
+安装拓展并进行测试
 
-## Adding a popup
+## 添加一个弹出窗口
 
-Let's try adding a popup to the button. Replace manifest.json with this:
-
-    
+我们尝试一下点击按钮弹出一个弹出层。我们替换manifest.json如下：
     
     {
     
@@ -117,17 +85,13 @@ Let's try adding a popup to the button. Replace manifest.json with this:
     
     }
 
-We've made three changes from the original:
+我们做了如下变更:
 
-  * We no longer reference "background.js", because now we're going to handle the extension's logic in the popup's script (you are allowed background.js as well as a popup, it's just that we don't need it in this case).
-  * We've added `"browser_style": true`, which will help the styling of our popup look more like part of the browser.
-  * Finally, we've added `"default_popup": "popup/choose_page.html"`, which is telling the browser that this browser action is now going to display a popup when clicked, the document for which can be found at "popup/choose_page.html".
-
-So now we need to create that popup. Create a directory called "popup" then
-create a file called "choose_page.html" inside it. Give it the following
-contents:
-
-    
+  * 我们不再引用后台脚本"background.js", 因为我们要做的业务逻辑放在了弹出层中。
+  * 我们添加了`"browser_style": true`, 让弹出层的风格更加像浏览器风格。
+  * 最后我们添加了 `"default_popup": "popup/choose_page.html"`页面作为弹出层显示的页面。
+  
+我们傅的弹层页面的代码如下：
     
     <!DOCTYPE html>
     
@@ -146,19 +110,9 @@ contents:
     
     </html>
 
-You can see that this is a normal HTML page containing three [`<div>`](/en-
-US/docs/Web/HTML/Element/div "The HTML <div> element is the generic container
-for flow content and does not inherently represent anything. Use it to group
-elements for purposes such as styling \(using the class or id attributes\),
-marking a section of a document in a different language \(using the lang
-attribute\), and so on.") elements, each with the name of a Mozilla site
-inside. It also includes a CSS file and a JavaScript file, which we'll add
-next.
+您可以看到，这是一个普通的HTML页面，包含三个[`<div>`](/en-US/docs/Web/HTML/Element/div) HTML <div>元素是流内容的通用容器，不是固有地表示任何东西，用它来为元素分组，例如样式\（使用class或id attributes \），以不同的语言标记文档的一部分\（使用lang属性\），等等。 ）元素，每个元素内都有一个Mozilla网站的名称。 它还包括一个CSS文件和一个JavaScript文件，我们将在下面添加。
 
-Create a file called "choose_page.css" inside the "popup" directory, and give
-it these contents:
-
-    
+添加它的css文件：
     
     html, body {
       width: 300px;
@@ -176,11 +130,7 @@ it these contents:
       background-color: #CFF2F2;
     }
 
-This is just a bit of styling for our popup.
-
-Next, create a "choose_page.js" file inside the "popup" directory, and give it
-these contents:
-
+创建choose_page.js的内容：
     
     
     document.addEventListener("click", function(e) {
@@ -195,15 +145,9 @@ these contents:
     
     });
 
-In our JavaScript, we listen for clicks on the popup choices. We first check
-to see if the click landed on one of the page-choices; if not, we don't do
-anything else. If the click did land on a page-choice, we construct a URL from
-it, and open a new tab containing the corresponding page. Note that we can use
-WebExtension APIs in popup scripts, just as we can in background scripts.
+在我们的JavaScript中，我们倾听点击弹出选择。 我们首先检查点击是否落在其中一个页面选项上; 如果没有，我们什么都不做。 如果点击确实落在了一个页面选项上，我们就从它构建一个URL，并打开一个包含相应页面的新标签。 请注意，我们可以在弹出脚本中使用WebExtension API，就像在后台脚本中一样。
 
-The extension's final structure should look like this:
-
-    
+本拓展的最后架构如下：
     
     button/
         icons/
@@ -215,31 +159,26 @@ The extension's final structure should look like this:
             choose_page.js
         manifest.json
 
-Now reload the extension, click the button again, and try clicking on the
-choices in the popup:
+进行加载并测试
 
-## Page actions
+## 页面操作
 
-[Page actions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Page_actions) are
-just like browser actions, except that they are for actions which are relevant
-only for particular pages, rather than the browser as a whole.
+[Page actions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Page_actions) 页面操作就像浏览器操作一样，除了它们是针对仅针对特定页面的操作，而不是作为整体的浏览器。
 
-While browser actions are always shown, page actions are only shown in tabs
-where they are relevant. Page action buttons are displayed in the URL bar,
-rather than the browser toolbar.
+尽管始终显示浏览器操作，但页面操作仅显示在与其相关的标签中。 页面操作按钮显示在URL栏中，而不是浏览器工具栏中。
 
-## Learn more
+## 了解更多
 
-  * `[browser_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)` manifest key
-  * `[browserAction](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)` API
-  * Browser action examples: 
+  * [浏览器操作 browser_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) manifest key
+  * [JavaScript APIs browserAction](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) API
+  * 浏览器操作样例: 
     * [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
     * [Bookmark it!](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it)
     * [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)
     * [inpage-toolbar-ui](https://github.com/mdn/webextensions-examples/tree/master/inpage-toolbar-ui)
     * [open-my-page-button](https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button)
-  * `[page_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action)` manifest key
-  * `[pageAction](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction)` API
-  * Page action examples: 
+  * [page_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key
+  * [pageAction](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API
+  * 页面操作样例: 
     * [chill-out](https://github.com/mdn/webextensions-examples/tree/master/chill-out)
 

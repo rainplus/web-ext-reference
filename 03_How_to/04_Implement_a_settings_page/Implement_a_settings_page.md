@@ -1,30 +1,20 @@
-A settings page gives users a way to see and change settings (sometimes also
-called "preferences" or "options") for the extension.
+设置页面使用户能够查看和更改扩展的设置（有时也称为“首选项”或“选项”）。
 
-With WebExtension APIs, settings are generally stored using the `[storage
-](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage)` API. Implementing a
-settings page is a three-step process:
+使用WebExtension API时，设置通常使用[storage](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage)API存储。 实现设置页面有三个步骤：
 
-  * Write an HTML file that displays settings and lets the user change them.
-  * Write a script, included from the HTML file, that populates the settings page from storage and updates stored settings when the user changes them.
-  * Set the path to the HTML file as the `[options_ui](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)` key in manifest.json. By doing this, the HTML document will be shown in the browser's add-on manager, alongside the extension's name and description.
+   * 编写一个显示设置的HTML文件，让用户改变它们。
+   * 编写一个包含在HTML文件中的脚本，用于填充存储设置页面，并在用户更改存储设置时更新存储的设置。
+   * 在manifest.json中设置HTML文件的路径为`[options_ui](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json options_ui)`。 通过这样做，HTML文档将显示在浏览器的插件管理器中，以及扩展名和描述。
 
-You can also open this page programmatically using the
-`[runtime.openOptionsPage()](/en-US/docs/Mozilla/Add-
-ons/WebExtensions/API/runtime/openOptionsPage)` function.
+您还可以使用`[runtime.openOptionsPage()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage)`功能以编程方式打开此页面。
 
-## A simple extension
+## 一个简单的拓展
 
-First, we'll write an extension that adds a blue border to every page the user
-visits.
+首先，我们将编写一个扩展，为用户访问的每个页面添加蓝色边框。
 
-Create a new directory called "settings", then create a file called
-"manifest.json" inside it with the following contents:
+创建一个名为“settings”的新目录，然后在其中创建一个名为“manifest.json”的文件，其内容如下：
 
-    
-    
     {
-    
       "manifest_version": 2,
       "name": "Settings example",
       "version": "1.0",
@@ -35,67 +25,47 @@ Create a new directory called "settings", then create a file called
           "js": ["borderify.js"]
         }
       ]
-    
     }
 
-This extension instructs the browser to load a content script called
-"borderify.js" into all web pages the user visits.
+该扩展指示浏览器在用户访问的所有网页中加载名为“borderify.js”的内容脚本。
 
-Next, create a file called "borderify.js" inside the "settings" directory, and
-give it these contents:
+接下来，在“settings”目录下创建一个名为“borderify.js”的文件，并给它们这些内容：
 
-    
-    
     document.body.style.border = "10px solid blue";
 
 This just adds a blue border to the page.
 
-Now [install the extension](https://developer.mozilla.org/en-US/Add-
-ons/WebExtensions/Temporary_Installation_in_Firefox) and test it — open up any
-web page you like:
+安装和测试
 
 ## Adding settings
 
-Now let's create a settings page to allow the user to set the color of the
-border.
+现在让我们创建一个设置页面，让用户设置边框的颜色。
 
-First, update "manifest.json" so it has these contents:
+首先，更新“manifest.json”，使其具有以下内容：
 
-    
-    
     {
-    
       "manifest_version": 2,
       "name": "Settings example",
       "version": "1.0",
-    
       "content_scripts": [
         {
           "matches": ["<all_urls>"],
           "js": ["borderify.js"]
         }
       ],
-    
       "options_ui": {
         "page": "options.html"
       },
-    
       "permissions": ["storage"]
-    
     }
     
+我们添加了两个新的清单键：
 
-We've added two new manifest keys:
+   * [options_ui](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)这将HTML文档设置为此扩展的设置页面（也称为选项页面）。
+   * [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)：我们将使用[storage](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage) API来存储设置，我们需要请求使用这个API的权限。
 
-  * `[options_ui](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)`: This sets an HTML document to be the settings page (also called options page) for this extension.
-  * `[permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)`: We'll use the `[storage](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage)` API to store the settings, and we need to ask permission to use this API.
+接下来，因为我们已经承诺提供“options.html”，所以我们来创建它。在“settings”目录下创建一个具有这个名字的文件，并给它以下内容：
 
-Next, because we've promised to provide "options.html", let's create it.
-Create a file with that name inside the "settings" directory, and give it the
-following contents:
-
-    
-    
     <!DOCTYPE html>
     
     <html>
@@ -115,21 +85,13 @@ following contents:
       </body>
     
     </html>
-    
 
-This defines a [`<form>`](/en-US/docs/Web/HTML/Element/form "The HTML <form>
-element represents a document section that contains interactive controls to
-submit information to a web server.") with a labeled text [`<input>`](/en-
-US/docs/Web/HTML/Element/input "The HTML <input> element is used to create
-interactive controls for web-based forms in order to accept data from the
-user.") and a submit [`<button>`](/en-US/docs/Web/HTML/Element/button "The
-HTML <button> element represents a clickable button."). It also includes a
-script called "options.js".
 
-Create "options.js", again in the "settings" directory, and give it the
-following contents:
 
-    
+这定义了一个[<form>](/en-US/docs/Web/HTML/Element/form) HTML 元素表示一个文档部分，其中包含交互式控件以向Web服务器提交信息。 与一个带标签的文本[<input>](/en- US/docs/Web/HTML/Element/input) HTML <input>元素用于为基于Web的表单创建交互式控件， <button>元素代表一个可点击的按钮。 它还包含一个名为“options.js”的脚本。
+
+
+再次在“settings”目录中创建“options.js”，并给它以下内容：
     
     function saveOptions(e) {
       e.preventDefault();
@@ -155,22 +117,15 @@ following contents:
     document.addEventListener("DOMContentLoaded", restoreOptions);
     document.querySelector("form").addEventListener("submit", saveOptions);
     
+他做了如下两点：
 
-This does two things:
+   *当文档已经加载时，它使用[storage.local.get()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get)。 如果该值未设置，则使用默认的“蓝色”。
+   *当用户通过点击“保存”提交表单时，它使用[storage.local.set()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set)。
 
-  * When the document has loaded, it fetches the value of "color" from storage using `[storage.local.get()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get)`. If the value isn't set, it uses the default "blue".
-  * When the user submits the form by clicking "Save", it stores the value of the textbox using `[storage.local.set()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set)`.
+最后，更新“borderify.js”以从存储中读取边框颜色：
 
-Finally, update "borderify.js" to read the border color from storage:
+由于52版之前的Firefox版本中存在[storage.local.get()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get)中的错误，下面的代码将不起作用。 为了使它在52以下的Firefox版本中起作用，必须将`onGot（）`中两个`item.color`改为`item [0] .color`。
 
-Due to a bug in [browser.storage.local.get()](/en-US/docs/Mozilla/Add-
-ons/WebExtensions/API/storage/StorageArea/get) in Firefox versions prior to
-52, the following code will not function. To make it function in Firefox
-versions below 52, the two occurrences of `item.color` in `onGot()` must be
-changed to `item[0].color`.
-
-    
-    
      function onError(error) {
       console.log(`Error: ${error}`);
     }
@@ -187,31 +142,21 @@ changed to `item[0].color`.
     getting.then(onGot, onError);
     
 
-At this point, the complete extension should look like this:
+再次检查拓展的文件：
 
-    
-    
     settings/
         borderify.js
         manifest.json
         options.html
         options.js
 
-Now:
+加载拓展并进行测试
 
-  * [reload the extension](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on)
-  * load a web page
-  * open the settings page and change the border color
-  * reload the web page to see the difference.
+## 了解更多
 
-In Firefox you can access the settings page by visiting about:addons and
-clicking the "Preferences" button next to the extension's entry.
-
-## Learn more
-
-  * `[options_ui](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)` manifest key reference documentation
-  * `[storage](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage)` API reference documentation
-  * open the settings page directly from your extension using the `[runtime.openOptionsPage()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage)` API
-  * Settings page example: 
+  * [options_ui](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) manifest key 参考文档
+  * [storage](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage) API 参考文档
+  * 直接使用API打开首选页 [runtime.openOptionsPage()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) API
+  * 设置页面案例: 
     * [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)
 
