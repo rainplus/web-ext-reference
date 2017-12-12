@@ -1,23 +1,15 @@
-Commonly referred to as a [browser action](/en-US/docs/Mozilla/Add-
-ons/WebExtensions/API/browserAction), this user interface option is a button
-added to the browser toolbar. Users click the button to interact with your
-extension.  
+这个用户界面选项是一个添加到浏览器工具栏的按钮，通常被称为[browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)。 用户点击按钮与您的拓展进行交互。
 ![](https://mdn.mozillademos.org/files/12966/browser-action.png)
 
-Use this button when your extension's features are applicable to almost all
-web pages. The toolbar button is visible in all browser tabs.
+当您的拓展功能适用于几乎所有的网页时，请使用此按钮。 工具栏按钮在所有浏览器选项卡中都可见。
 
-Compare to the [address bar button](/en-US/docs/Mozilla/Add-
-ons/WebExtensions/Page_actions), which offers similar behavior but is used in
-situations where the extension needs to be accessed on specific pages only.
+与[address bar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/Page_actions)相比，它提供了类似的行为，但只在需要在特定页面上访问拓展的情况下使用。
 
-## Specifying the browser action
+## 指定浏览器操作
 
-You define the browser action's properties using the
-`[browser_action](https://developer.mozilla.org/en-US/docs/Mozilla/Add-
-ons/WebExtensions/manifest.json/browser_action)` key in manifest.json:
 
-    
+191/5000
+您可以使用manifest.json中的[browser_action](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)键来定义浏览器操作的属性：    
     
     "browser_action": {
       "default_icon": {
@@ -27,38 +19,21 @@ ons/WebExtensions/manifest.json/browser_action)` key in manifest.json:
       "default_title": "Whereami?"
     }
 
-The only mandatory key is `default_icon`.
+强制要求的属性只有`default_icon`.
 
-There are two ways to specify a browser action: with or without a [popup](/en-
-US/Add-ons/WebExtensions/Popups). If you don't specify a popup, when the user
-clicks the button an event is dispatched to the extension, which the extension
-listens for using [`browserAction.onClicked`](https://developer.mozilla.org
-/en-US/docs/Mozilla/Add-ons/WebExtensions/API/BrowserAction/onClicked "Fired
-when a browser action icon is clicked. This event will not fire if the browser
-action has a popup."):
+有两种方法来指定浏览器操作：带或不带[ 弹出窗口 popup](/en-US/Add-ons/WebExtensions/Popups)。 如果你没有指定弹出窗口，当用户点击按钮时，一个事件被分配给扩展，扩展侦听使用[`browserAction.onClicked`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/BrowserAction/onClicked "Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup.")点击浏览器动作图标时触发，如果浏览器动作弹出，此事件不会触发。
 
-    
-    
     browser.browserAction.onClicked.addListener(handleClick);
 
-If you specify a popup, the click event is not dispatched: instead, the popup
-is shown when the user clicks the button. The user is able to interact with
-the popup and it closes automatically when the user clicks outside it. See the
-[Popup ](/en-US/Add-ons/WebExtensions/Popups)article for more details on
-creating and managing popups.
+如果指定一个弹出窗口，则不会分派点击事件：相反，当用户单击按钮时会显示弹出窗口。 用户能够与弹出窗口进行交互，并在用户点击外部时自动关闭。 有关创建和管理弹出窗口的更多详细信息，请参阅[`Popup`](/en-US/Add-ons/WebExtensions/Popups)
 
-Note that your extension can have only one browser action.
+请注意，您的扩展程序只能有一个浏览器操作。
 
-You can change any of the browser action properties programmatically using the
-`[browserAction](https://developer.mozilla.org/en-US/docs/Mozilla/Add-
-ons/WebExtensions/API/browserAction)` API.
+您可以使用编程方式更改任何浏览器操作属性[browserAction](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) API.
 
-## Examples
 
-The [webextensions-examples](https://github.com/mdn/webextensions-examples)
-repo on GitHub contains several examples of extensions that uses browser
-actions:
+## 案例
 
-  * [bookmark-it](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/) uses a browser action without a popup.
-  * [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify) uses a browser action with a popup.
-
+[拓展案例](https://github.com/mdn/webextensions-examples)中包含了几个关于浏览器行为的案例：
+  * [bookmark-it](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/)没有使用popup
+  * [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify) 使用了popup
