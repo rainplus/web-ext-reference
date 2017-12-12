@@ -1,21 +1,10 @@
-Match patterns are a way to specify groups of URLs: a match pattern matches a
-specific set of URLs. They are for extensions using WebExtensions APIs in a
-few places, most notably to specify which documents to load [content scripts
-](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) into, and to
-specify which URLs to add `[webRequest](/en-US/docs/Mozilla/Add-
-ons/WebExtensions/API/webRequest)` listeners to.
+Match patterns are a way to specify groups of URLs: a match pattern matches a specific set of URLs. They are for extensions using WebExtensions APIs in a few places, most notably to specify which documents to load [content scripts ](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) into, and to specify which URLs to add `[webRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)` listeners to.
 
-APIs that use match patterns usually accept a list of match patterns, and will
-perform the appropriate action if the URL matches any of the patterns. See,
-for example, the `[content_scripts](/en-US/docs/Mozilla/Add-
-ons/WebExtensions/manifest.json/content_scripts)` key in manifest.json.
+APIs that use match patterns usually accept a list of match patterns, and will perform the appropriate action if the URL matches any of the patterns. See,for example, the `[content_scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts)` key in manifest.json.
 
 ## Match pattern structure
 
-All match patterns are specified as strings. Apart from the special
-["<all_urls>"](/en-US/Add-ons/WebExtensions/Match_patterns#%3Call_urls%3E)
-pattern, match patterns consist of three parts: _scheme_ , _host_ , and
-_path_. The scheme and host are separated by "://".
+All match patterns are specified as strings. Apart from the special ["<all_urls>"](/en-US/Add-ons/WebExtensions/Match_patterns#%3Call_urls%3E) pattern, match patterns consist of three parts: _scheme_ , _host_ , and _path_. The scheme and host are separated by "://".
 
     
     
@@ -37,8 +26,7 @@ The _host_ component may take one of three forms:
 Form | Matches  
 ---|---  
 "*" | Any host.  
-"*." followed by part of the hostname. | The given host and any of its
-subdomains.  
+"*." followed by part of the hostname. | The given host and any of its subdomains.  
 A complete hostname, without wildcards. | Only the given host.  
   
 _host_ is optional only if the _scheme_ is "file".
@@ -49,15 +37,11 @@ Note that the wildcard may only appear at the start.
 
 The path component must begin with a "/".
 
-After that, it may subsequently contain any combination of the "*" wildcard
-and any of the characters that are allowed in URL paths. Unlike _host_ , the
-_path_ component may contain the "*" wildcard in the middle or at the end, and
-the "*" wildcard may appear more than once.
+After that, it may subsequently contain any combination of the "*" wildcard and any of the characters that are allowed in URL paths. Unlike _host_ , the _path_ component may contain the "*" wildcard in the middle or at the end, and the "*" wildcard may appear more than once.
 
 ### <all_urls>
 
-The special value "<all_urls>" matches all URLs under any of the supported
-schemes: that is, "http", "https", "file", "ftp", "app".
+The special value "<all_urls>" matches all URLs under any of the supported schemes: that is, "http", "https", "file", "ftp", "app".
 
 ## Examples
 
