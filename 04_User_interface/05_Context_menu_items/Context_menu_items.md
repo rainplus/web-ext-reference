@@ -1,18 +1,16 @@
-This user interface option adds one or more items to a browser context menu.
+此用户界面选项将一个或多个项目添加到浏览器上下文菜单。
 
-![Example of content menu items added by a WebExtension, from the context-menu-demo
-example](https://mdn.mozillademos.org/files/15051/context_menu_example.png)
+![Example of content menu items added by a WebExtension, from the context-menu-demo example](https://mdn.mozillademos.org/files/15051/context_menu_example.png)
 
-You would use this option to expose features that are relevant to specific browser or web page contexts. For example, you could show features to open a graphic editor when the user clicks on an image or offer a feature to save page content when part of a page is selected. You can add plain menu items, checkbox items, radio button groups, and separators to menus. Once a context menu item has been added using [`contextMenus.create`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/create "The documentation about this has not yet been written; please consider contributing!") it's displayed in all browser tabs, but you can hide it by removing it with
-[`contextMenus.remove`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/remove "The documentation about this has not yet been written; please consider contributing!").
+您可以使用此选项来公开与特定浏览器或网页上下文相关的功能。 例如，当用户单击图像时可以显示要打开图形编辑器的功能，或者在选择页面的一部分时提供保存页面内容的功能。 您可以将普通菜单项，复选框项目，单选按钮组和分隔符添加到菜单。 使用[`contextMenus.create`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/create)添加上下文菜单项后，它会显示在所有浏览器选项卡中，但是您可以隐藏它 通过删除它[`contextMenus.remove`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/remove).
 
 ## Specifying context menu items
 
-You manage context menu items programmatically, using the [`contextMenus`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus "The documentation about this has not yet been written; please consider contributing!") API. However, you need to request the `contextMenus` permission in your manifest.json to be able to take advantage of the API.
+您可以使用[`contextMenus`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus) API以编程方式管理上下文菜单项。 但是，您需要在manifest.json中请求`contextMenus`权限，以便能够利用API。
 
     "permissions": ["contextMenus"]
 
-You can then add (and update or delete) the context menu items in your extension's background script. To create a menu item you specify an id, its title, and the context menus it should appear on:
+然后，您可以添加（并更新或删除）扩展程序的后台脚本中的上下文菜单项。 要创建一个菜单项，你需要指定一个id，它的标题和上下文菜单：
 
     browser.contextMenus.create({
       id: "log-selection",
@@ -20,8 +18,8 @@ You can then add (and update or delete) the context menu items in your extension
       contexts: ["selection"]
     }, onCreated);
 
-Your extension then listens for clicks on the menu items. The passed information about the item clicked, the context where the click happened, and details of the tab where the click took place can then be used to invoke the
-appropriate extension functionality.
+
+然后，您的扩展程序会监听菜单项上的点击。 所传递的关于被点击的项目的信息，点击发生的上下文以及发生点击的标签的细节可以被用来调用适当的扩展功能。
 
     browser.contextMenus.onClicked.addListener(function(info, tab) {
       switch (info.menuItemId) {
@@ -32,12 +30,9 @@ appropriate extension functionality.
       }
     })
 
-## Examples
+## 示例
+在[GitHub](https://github.com/mdn/webextensions-examples)上的仓库，包含几个使用上下文菜单的例子：
 
-The [webextensions-examples](https://github.com/mdn/webextensions-examples)
-repo on GitHub, contains several examples of extensions that use context menu
-items:
-
-  * [menu-demo](https://github.com/mdn/webextensions-examples/tree/master/menu-demo) adds several items to the browser's context menu.
-  * [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/master/context-menu-copy-link-with-types) adds a context menu item to links that copies the URL to the clipboard, as plain text and rich HTML.
+  * [menu-demo](https://github.com/mdn/webextensions-examples/tree/master/menu-demo) 将几个项目添加到浏览器的上下文菜单中。
+  * [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/master/context-menu-copy-link-with-types) 将上下文菜单项添加到将URL复制到剪贴板，如纯文本和丰富的HTML。
 

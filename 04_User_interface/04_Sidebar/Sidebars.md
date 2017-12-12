@@ -1,30 +1,32 @@
-A sidebar is a pane that is displayed at the left-hand side of the browser window, next to the web page. The browser provides a UI that enables the user to see the currently available sidebars and to select a sidebar to display. For example, Firefox has a "View > Sidebar" menu. Only one sidebar can be shown at a time, and that sidebar will be displayed for all tabs and all browser windows.
+侧边栏是一个窗格，显示在浏览器窗口的左侧，位于网页旁边。 浏览器提供了一个用户界面，使用户能够看到当前可用的侧边栏，并选择一个边栏来显示。 例如，Firefox有一个“View> Sidebar”菜单。 每次只能显示一个边栏，该边栏将显示所有选项卡和所有浏览器窗口。
 
-The browser may include a number of built-in sidebars. For example, Firefox includes a sidebar for interacting with bookmarks:
+浏览器可能包含一些内置的侧边栏。 例如，Firefox包含一个用于与书签交互的侧栏：
 
-![](https://mdn.mozillademos.org/files/14825/bookmarks-sidebar.png)Using the `sidebar_action` manifest.json key, an extension can add its own sidebar to the browser. It will be listed alongside the built-in sidebars, and the user will be able to open it using the same mechanism as for the built-in sidebars.
+![](https://mdn.mozillademos.org/files/14825/bookmarks-sidebar.png) 
 
-Like a browser action popup, you specify the sidebar's contents as an HTML document. When the user opens the sidebar, its document is loaded into every open browser window. Each window gets its own instance of the document. When new windows are opened, they get their own sidebar documents as well.
+使用`sidebar_action`manifest.json键，拓展展可以将自己的侧边栏添加到浏览器。它将与内置的侧边栏一起列出，用户将能够使用与内置侧边栏相同的机制打开它。
 
-You can set a document for a particular tab using the [`sidebarAction.setPanel()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/setPanel "Sets the HTML document that defines the content of this sidebar.") function.
-A sidebar can figure out which window it belongs to using the [`windows.getCurrent()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/getCurrent "The documentation about this has not yet been written; please consider contributing!") API:
+与浏览器操作弹出窗口一样，您可以将边栏的内容指定为HTML文档。 当用户打开边栏时，其文档被加载到每个打开的浏览器窗口中。 每个窗口都有自己的文档实例。 当新窗口打开时，他们也获得自己的边栏文档。
+
+您可以使用[`sidebarAction.setPanel（）`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/setPanel "Sets the HTML document that defines the content of this sidebar.") 为特定选项卡设置文档.
+一个边栏可以找出它属于哪个窗口使用 [`windows.getCurrent()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/getCurrent "The documentation about this has not yet been written; please consider contributing!") API:
 
     // sidebar.js
     browser.windows.getCurrent({populate: true}).then((windowInfo) => {
       myWindowId = windowInfo.id;
     });
 
-This is useful if a sidebar wants to display different content for different windows. For an example of this, see the ["annotate-page" example](https://github.com/mdn/webextensions-examples/tree/master/annotate-page).
+如果边栏想要为不同的窗口显示不同的内容，这很有用。 有关这方面的示例，请参阅[“注释页面”示例](https://github.com/mdn/webextensions-examples/tree/master/annotate-page).
 
-Sidebar documents get access to the same set of privileged JavaScript APIs that the extension's background and popup scripts get. They can get direct access to the background page (unless the sidebar belongs to incognito mode window) using [`runtime.getBackgroundPage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage "Retrieves the Window object for the background page running inside the current extension."), and can interact with content scripts or native applications using messaging APIs like[`tabs.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage "Sends a single message from the extension's background scripts \(or other privileged scripts, such as popup scripts or options page scripts\) to any content scripts that belong to the extension and are running in the specified tab.") and [`runtime.sendNativeMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage "Sends a single message from an extension to a native application.").
+边栏文档可以访问扩展程序的后台和弹出脚本获得的相同特权JavaScript API。 他们可以使用[`runtime.getBackgroundPage（）`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage "Retrieves the Window object for the background page running inside the current extension.") 直接访问后台页面（除非侧边栏属于隐身模式窗口）,并且可以使用消息API[`tabs.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage "Sends a single message from the extension's background scripts \(or other privileged scripts, such as popup scripts or options page scripts\) to any content scripts that belong to the extension and are running in the specified tab.")和[`runtime.sendNativeMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage "Sends a single message from an extension to a native application.")与内容脚本或本机应用程序进行交互
 
-Sidebar documents are unloaded when their browser window is closed or when the user closes the sidebar. This means that unlike background pages, sidebar documents don't stay loaded all the time, but unlike browser action popups,they stay loaded while the user interacts with web pages.
+当浏览器窗口关闭或用户关闭边栏时，边栏文档将被关闭。这意味着与背景页面不同，边栏文档不会始终保持加载状态，但与浏览器操作弹出窗口不同，它们在用户与网页交互时保持加载状态。
 
-When an extension that defines a sidebar is first installed, its sidebar will be opened automatically. This is intended to help the user understand that the extension includes a sidebar. Note that it's not possible for extension to open sidebars programmatically: sidebars can only be opened by the user.
+首次安装定义侧栏的扩展时，其侧栏将自动打开。 这旨在帮助用户了解该扩展程序包含侧边栏。请注意，扩展程序无法以编程方式打开侧边栏：侧边栏只能由用户打开。
 
 ## Specifying sidebars
 
-To specify a sidebar, define the default document with the `[sidebar_action](/en-US/Add-ons/WebExtensions/manifest.json/sidebar_action)` manifest.json key, alongside a default title and icon:
+要指定侧边栏，请使用[sidebar_action](/en-US/Add-ons/WebExtensions/manifest.json/sidebar_action)manifest.json键以及默认标题和图标来定义默认文档：
 
     "sidebar_action": {
       "default_title": "My sidebar",
@@ -32,14 +34,12 @@ To specify a sidebar, define the default document with the `[sidebar_action](/en
       "default_icon": "sidebar_icon.png"
     }
 
-You can change the title, panel, and icon programmatically using the [`sidebarAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction "Gets and sets properties of an extension's sidebar.") API.
+您可以使用[`sidebarAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction "Gets and sets properties of an extension's sidebar.") API以编程方式更改标题，面板和图标。。
 
-Title and icon are shown to the user in any UI provided by the browser to list sidebars, such as the "View > Sidebar" menu in Firefox.
+标题和图标在浏览器提供的任何UI中向用户显示，以列出侧边栏，例如Firefox中的“查看>侧边栏”菜单。
 
 ## Example
-
-The [webextensions-examples](https://github.com/mdn/webextensions-examples)
-repo on GitHub, contains several examples of extensions that use a sidebar:
+在[GitHub](https://github.com/mdn/webextensions-examples)上的仓库，包含几个使用侧边栏的扩展的例子：
 
   * [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page) uses a sidebar.
 

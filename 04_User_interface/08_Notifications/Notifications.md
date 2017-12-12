@@ -1,16 +1,16 @@
-Notifications allow you to communicate information about your extension or its content using the underlying operating system's notification service:
+通知允许您使用底层操作系统的通知服务来传递有关您的扩展或其内容的信息：
 
 ![](https://mdn.mozillademos.org/files/14043/notify-shadowed.png)
 
-Notifications can include a call to action for the user, and your add-on can listen for the user clicking the notification or the notification closing.
+通知可以包括对用户的调用，并且您的插件可以监听用户单击通知或通知关闭。
 
 ## Specifying notifications
 
-You manage notifications programmatically, using the [`notifications`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications "Display notifications to the user, using the underlying operating system's notification mechanism. Because this API uses the operating system's notification mechanism, the details of how notifications appear and behave may differ according to the operating system and the user's settings.") API. To use this API you must request the `notifications` permission in your manifest.json:
+使用[`notifications`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications)以编程方式管理通知使用底层操作系统的通知机制向用户显示通知。 操作系统的通知机制，通知显示和行为的细节可能因操作系统和用户的设置而异。“）API。 要使用此API，您必须在您的manifest.json中请求`notifications`权限：
 
     "permissions": ["notifications"]
 
-You then use [`notifications.create`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/create "Creates and displays a notification.") to create your notifications, as in this example from [notify-link-clicks-i18n:](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)
+然后使用[`notifications.create`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/create "Creates and displays a notification.")来创建通知。示例[通知链路-点击-I18N：](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)
 
     var title = browser.i18n.getMessage("notificationTitle");
     var content = browser.i18n.getMessage("notificationContent", message.url);
@@ -21,18 +21,17 @@ You then use [`notifications.create`](/en-US/docs/Mozilla/Add-ons/WebExtensions/
       "message": content
     });
 
-This code creates a notification with an icon, title, and message.
+此代码创建一个带有图标，标题和消息的通知。
 
-If the notification includes a call to action, you can listen for the user clicking the notification to call the function to handle the action:
+如果通知包含一个号召性用语，则可以监听用户单击该通知以调用该函数来处理该操作：
 
     browser.notifications.onClicked.addListener(handleClick);
-    
 
-If you are issuing calls to action through notifications, you will also want to define the optional notification `id`, so you can figure out which call to action the user has selected.
+如果您正在通过通知发出呼叫，则还需要定义可选通知“id”，以便您可以确定用户选择了哪个呼叫。
 
 ## Examples
 
-The [webextensions-examples](https://github.com/mdn/webextensions-examples) repo on GitHub, contains several examples of extensions that use the creates notifications:
+在[GitHub](https://github.com/mdn/webextensions-examples)上的仓库，包含几个使用提示功能的例子：
 
-  * [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) uses the creates notifications.
+  * [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) 使用创建提示。
 

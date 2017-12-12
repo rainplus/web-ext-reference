@@ -1,14 +1,18 @@
-An Options page enables you to define preferences for your extension that your users can change. Users can access the options page for an extension from the browser's add-ons manager:
 
-The way users access the page, and the way it's integrated into the browser's user interface, will vary from one browser to another.
+“选项”页面使您可以定义用户可以更改的扩展的首选项。 用户可以从浏览器的加载项管理器访问扩展的选项页面：
 
-You can open the page programmatically by calling [`runtime.openOptionsPage()`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/Runtime/openOptionsPage "If your add-on does not have an options page, or the browser failed to create one for some other reason, runtime.lastError will be set.").
+用户访问该页面的方式，以及将其集成到浏览器用户界面的方式因浏览器而异
 
-Options pages have a Content Security Policy that restricts the sources from which they can load resources, and disallows some unsafe practices such as the use of `[eval()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)`. See [Content Security Policy](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) for more details.
 
-## Specifying the options page
+您可以通过调用[`runtime.openOptionsPage()`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/Runtime/openOptionsPage "If your add-on does not have an options page, or the browser failed to create one for some other reason, runtime.lastError will be set.")以编程方式打开页面.
 
-To create an options page, write an HTML file defining the page. This page can include CSS and JavaScript files, like a normal web page. This page, from the [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour) example, includes a JavaScript file:
+选项页面有一个内容安全策略，限制它们可以从中加载资源的来源，并且禁止一些不安全的做法，比如使用[eval()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)。 有关更多详细信息，请参阅[内容安全策略](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)。
+
+
+## 指定选项页
+
+要创建选项页面，请编写一个定义页面的HTML文件。 这个页面可以包含CSS和JavaScript文件，就像普通的网页一样。 此页面来自[收藏颜色](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)示例，其中包含一个JavaScript文件：
+
 
     <!DOCTYPE html>
     
@@ -28,22 +32,21 @@ To create an options page, write an HTML file defining the page. This page can i
     
     </html>
 
-JavaScript running in the page can use all the [WebExtension APIs](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API) that the add-on has [permissions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-
-ons/WebExtensions/manifest.json/permissions) for. In particular, you can use the [`storage`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/Storage "Enables WebExtensions to store and retrieve data, and listen for changes to stored items.") API to persist preferences.
+运行在页面上的JavaScript可以使用附件具有[permissions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-
+ons/WebExtensions/manifest.json/permissions)的所有[WebExtension APIs](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API)。 特别是，您可以使用[`storage`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/Storage)启用WebExtensions存储和检索数据，API监听存储的项目的变化来保持偏好。
 
-Package the page's files in your extension.
-
-You also need to include the `[options_ui](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)` key in your manifest.json file, giving it the URL to the page.
+将页面的文件打包到您的扩展中。
+您还需要在manifest.json文件中包含[options_ui](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)键， 给它的网页的地址。
 
     "options_ui": {
       "page": "options.html",
       "browser_style": true
     },
 
-## Examples
+## 示例
 
-The [webextensions-examples](https://github.com/mdn/webextensions-examples) repo on GitHub, contains several examples of extensions that use an options
-page:
+在[GitHub](https://github.com/mdn/webextensions-examples)上的仓库，包含几个使用选项页的例子：
+
 
   * [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour) example extension with options page
 

@@ -1,24 +1,23 @@
-Using the [`omnibox`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox "Enables extensions to implement customised behavior when the user types into the browser's address bar.") API, extensions can customize the suggestions offered in the browser address bar's drop-down when the user enters a keyword.
+使用[`omnibox`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox)当用户输入浏览器的地址栏时，允许扩展实现自定义行为。 当用户输入关键字时，浏览器地址栏下拉菜单中提供的建议。
 
 ![Example showing the result of the firefox_code_search WebExtension's customization of the address bar suggestions.](https://mdn.mozillademos.org/files/15075/omnibox_example_full.png)
 
-This enables your extension to, for example, search a library of free ebooks or, as in the example above, a repository of code examples.
+这使得您的扩展能够搜索免费电子书库，或者像上面的例子那样搜索代码示例的存储库。
 
-## Specifying the omnibox customization
+## 指定多功能框的自定义
 
-You tell your extension that it is going to customize the address bar suggestions by including the [omnibox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox) key and definition of the trigger keyword in its [manifest.json](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file:
+你告诉你的扩展名，它将自定义地址栏的建议，包括[omnibox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox)键和在其[manifest.json](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json)文件中定义触发的关键字：
 
       "omnibox": { "keyword" : "cs" }
 
-In the extension's background JavaScript file, using[`omnibox.setDefaultSuggestion()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox/setDefaultSuggestion "The documentation about this has not yet been written; please consider contributing!"), you can optionally define the first suggestion to be displayed in the address bar drop-down. Use this to provide a hint on how to use the feature:
+在扩展的后台JavaScript文件中，使用[`omnibox.setDefaultSuggestion()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox/setDefaultSuggestion)关于此的文档尚未编写;请 考虑贡献！“），您可以选择定义要在地址栏下拉菜单中显示的第一个建议。 使用这个提示如何使用该功能：
 
     browser.omnibox.setDefaultSuggestion({
       description: `Search the firefox codebase
         (e.g. "hello world" | "path:omnibox.js onInputChanged")`
     });
 
-You can then add the code to provide the customized content by listening for [`omnibox.onInputStarted`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox/onInputStarted "The documentation about this has not yet been written; please consider contributing!"), which is dispatched when the user has typed the keyword and a space, and [`omnibox.onInputChanged`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox/onInputChanged "Fired whenever the user changes their input, after they have started interacting with your extension by entering its keyword in the address bar and then pressing the space key."), which is dispatched whenever the user updates the address bar entry. You can then populate the suggestions, in this case building a search of https://searchfox.org/mozilla-central using the term
-entered by the user:
+然后，您可以通过侦听[`omnibox.onInputStarted`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox/onInputStarted "The documentation about this has not yet been written; please consider contributing!")当用户更改输入时，通过在地址栏中输入关键字，然后按空格键开始与您的扩展进行交互之后触发。每当用户更新地址栏条目时调度。 然后，您可以填充这些建议，在这种情况下，使用该术语构建 https://searchfox.org/mozilla-central 的搜索
 
     browser.omnibox.onInputChanged.addListener((text, addSuggestions) => {
       let headers = new Headers({"Accept": "application/json"});
@@ -31,9 +30,11 @@ entered by the user:
         .then(addSuggestions);
     });
 
-If the extension set a default suggestion using [`omnibox.setDefaultSuggestion()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox/setDefaultSuggestion "The documentation about this has not yet been written; please consider contributing!"), then this will appear first in the drop-down.
+如果扩展名使用[`omnibox.setDefaultSuggestion()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox/setDefaultSuggestion "The documentation about this has not yet been written; please consider contributing!")，那么这将首先出现在下拉列表中。
 
-The extension can then listen for the user clicking one of the suggestions, using [`omnibox.onInputEntered`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox/onInputEntered "Fired when the user has selected one of the suggestions your extension has added to the address bar's drop-down list."). If the default suggestion is clicked the user's custom term is returned, otherwise the suggestion's string is returned. Also, information on the user's browser preferences for handling new links is passed. In the code below the user's custom term is used to create a search otherwise, the suggested URL is opened:
+然后，扩展程序可以使用[`omnibox.onInputEntered`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox/onInputEntered "Fired when the user has selected one of the suggestions your extension has added to the address bar's drop-down list.")来监听用户单击其中一个建议。 您的扩展程序已添加到地址栏的下拉列表中的一个建议“）。 如果单击默认建议，则返回用户的自定义术语，否则返回建议的字符串。 而且，关于处理新链接的用户浏览器偏好的信息被传递。 在下面的代码中，用户的自定义术语用于创建搜索，否则将打开建议的URL：
+
+
     
     browser.omnibox.onInputEntered.addListener((text, disposition) => {
       let url = text;
@@ -56,9 +57,8 @@ The extension can then listen for the user clicking one of the suggestions, usin
 
 
 
-## Examples
+## 示例
+在[GitHub](https://github.com/mdn/webextensions-examples)上的仓库，包含几个使用多功能框的例子：
 
-The [webextensions-examples](https://github.com/mdn/webextensions-examples) repo on GitHub, contains several examples of extensions that use customizes the omnibox
-
-  * [firefox-code-search](https://github.com/mdn/webextensions-examples/tree/master/firefox-code-search) uses customizes the omnibox.
+  * [firefox-code-search](https://github.com/mdn/webextensions-examples/tree/master/firefox-code-search) 自定义多功能框
 
