@@ -4,7 +4,7 @@ This article explains briefly what a CSP is, what the default policy is and what
 
 [Content Security Policy](/en-US/docs/Web/HTTP/CSP) (CSP) is a mechanism to help prevent websites from inadvertantly executing malicious content. A website specifies a CSP using an HTTP header sent from the server. The CSP is mostly concerned with specifying legitimate sources of various types of content, such as scripts or embedded plugins. For example, a website can use it to specify that the browser should only execute JavaScript served from the website itself, and not from any other sources. A CSP can also instruct the browser to disallow potentially unsafe practices, such as the use of `[eval()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)`. 
 
-Like websites, extensions can load content from different sources. For example, a browser action's popup is specified as an HTML document, and it can include JavaScript and CSS from different sources, just like a normal web page:
+Like websites, extensions can load content from different sources. For example, a browser action popup is specified as an HTML document, and it can include JavaScript and CSS from different sources, just like a normal web page:
 
     
     
@@ -28,13 +28,12 @@ Like websites, extensions can load content from different sources. For example, 
           integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
           crossorigin="anonymous">
         </script>
-     
         <!-- Include my popup's own script-->
         <script src="popup.js"></script>
       </body>
-    
     </html>
 
+    
 Compared to a website, extensions have access to additional privileged APIs, so if they are compromised by malicious code, the risks are greater. For this reason:
 
   * a fairly strict content security policy is applied to extensions by default. See [default content security policy](/en-US/Add-ons/WebExtensions/Content_Security_Policy#Default_Content_Security_Policy).
@@ -58,7 +57,7 @@ This will be applied to any extension that has not explicitly set its own conten
 
 ### Location of script and object resources
 
-Under the default CSP you may only load [<script>](/en-US/docs/Web/HTML/Element/script) and [<object>](/en-US/docs/Web/HTML/Element/object) resources that are local to the extension.For example, consider a line like this in an extension's document:
+Under the default CSP you may only load [<script>](/en-US/docs/Web/HTML/Element/script) and [<object>](/en-US/docs/Web/HTML/Element/object) resources that are local to the extension.For example, consider a line like this in an extension s document:
 
     
     

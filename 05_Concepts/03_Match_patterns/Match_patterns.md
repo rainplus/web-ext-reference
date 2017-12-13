@@ -1,298 +1,83 @@
-Match patterns are a way to specify groups of URLs: a match pattern matches a specific set of URLs. They are for extensions using WebExtensions APIs in a few places, most notably to specify which documents to load [content scripts ](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) into, and to specify which URLs to add `[webRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)` listeners to.
+匹配模式是一种指定URL组的方法：匹配模式匹配特定的一组URL。 它们是在几个地方使用WebExtensions API进行的扩展，最显着的是指定将[内容脚本](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)加载到哪些文档中，并指定哪些URL添加[webRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)监听器。
 
-APIs that use match patterns usually accept a list of match patterns, and will perform the appropriate action if the URL matches any of the patterns. See,for example, the `[content_scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts)` key in manifest.json.
 
-## Match pattern structure
+使用匹配模式的API通常接受匹配模式列表，并且如果URL匹配任何模式，将执行适当的操作. 查看 manifest.json 中的[content_scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts)
 
-All match patterns are specified as strings. Apart from the special ["<all_urls>"](/en-US/Add-ons/WebExtensions/Match_patterns#%3Call_urls%3E) pattern, match patterns consist of three parts: _scheme_ , _host_ , and _path_. The scheme and host are separated by "://".
+## 匹配模式结构
 
-    
-    
-    <scheme>://<host><path>
+所有的匹配模式选定的字符串。 除了特殊["<all_urls>"](/en-US/Add-ons/WebExtensions/Match_patterns#%3Call_urls%3E)模式外，匹配模式由三部分组成：_scheme_，_host_和_path_。 方案和主机由“：//”分隔。
 
-### scheme
+    <方案>://<主机><路径>
 
-The _scheme_ component may take one of two forms:
+### 方案
 
-Form | Matches  
+_scheme_ 有两种格式:
+
+格式 | 匹配  
 ---|---  
-"*" | Only "http" and "https".  
-One of "http", "https", "file", "ftp", "app". | Only the given scheme.  
+"*" |  "http"  "https".  
+One of "http", "https", "file", "ftp", "app". | 只匹配其中之一
   
-### host
+### 主机
 
-The _host_ component may take one of three forms:
+_host_ 有两种格式:
 
-Form | Matches  
+格式 | 匹配  
 ---|---  
-"*" | Any host.  
-"*." followed by part of the hostname. | The given host and any of its subdomains.  
-A complete hostname, without wildcards. | Only the given host.  
+"*" | 匹配任意的域名.  
+"*." 剩余的主机名部分. | 指定的子域名 
+完成的没有通配符的主机名 | 只匹配指定的.  
   
-_host_ is optional only if the _scheme_ is "file".
+_host_ 当 _scheme_ 是file时候
 
-Note that the wildcard may only appear at the start.
+请注意，通配符只能出现在开头。
 
-### path
+### 路径
+路径的开头一定是"/".
 
-The path component must begin with a "/".
-
-After that, it may subsequently contain any combination of the "*" wildcard and any of the characters that are allowed in URL paths. Unlike _host_ , the _path_ component may contain the "*" wildcard in the middle or at the end, and the "*" wildcard may appear more than once.
+之后，它可能会包含任何“* ” 通配符和URL路径中允许的任何字符的组合。 与_host_不同，_path_ 组件可能在中间或末尾包含“* ”通配符，“ * ”通配符可能会多次出现。
 
 ### <all_urls>
 
-The special value "<all_urls>" matches all URLs under any of the supported schemes: that is, "http", "https", "file", "ftp", "app".
+特殊值“<all_urls>”匹配任何支持的方案下的所有URL：即“http”，“https”，“file”，“ftp”，“app”。
 
-## Examples
+示例表格不进行翻译
 
-Pattern | Example matches | Example non-matches  
----|---|---  
-  
-`<all_urls>`
+### 无效的模式匹配
 
-Match all URLs.
-
-|
-
-`http://example.org/`
-
-`ftp://files.somewhere.org/`
-
-`https://a.org/some/path/`
-
-|
-
-`resource://a/b/c/`  
-(unsupported scheme)  
-  
-`*://*.mozilla.org/*`
-
-Match all HTTP and HTTPS URLs that are hosted at "mozilla.org" or one of its
-subdomains.
-
-|
-
-`http://mozilla.org/`
-
-`https://mozilla.org/`
-
-`http://a.mozilla.org/`
-
-`http://a.b.mozilla.org/`
-
-`https://b.mozilla.org/path/`
-
-|
-
-`ftp://mozilla.org/`  
-(unmatched scheme)
-
-`http://mozilla.com/`  
-(unmatched host)
-
-`http://firefox.org/`  
-(unmatched host)  
-  
-`*://mozilla.org/`
-
-Match all HTTP and HTTPS URLs that are hosted at exactly "mozilla.org/".
-
-|
-
-`http://mozilla.org/`
-
-`https://mozilla.org/`
-
-|
-
-`ftp://mozilla.org/`  
-(unmatched scheme)
-
-`http://a.mozilla.org/`  
-(unmatched host)
-
-`http://mozilla.org/a`  
-(unmatched path)  
-  
-`ftp://mozilla.org/`
-
-Match only "ftp://mozilla.org/".
-
-| `ftp://mozilla.org` |
-
-`http://mozilla.org/`  
-(unmatched scheme)
-
-`ftp://sub.mozilla.org/`  
-(unmatched host)
-
-`ftp://mozilla.org/path`  
-(unmatched path)  
-  
-`https://*/path`
-
-Match HTTPS URLs on any host, whose path is "path".
-
-|
-
-`https://mozilla.org/path`
-
-`https://a.mozilla.org/path`
-
-`https://something.com/path`
-
-|
-
-`http://mozilla.org/path`  
-(unmatched scheme)
-
-`https://mozilla.org/path/`  
-(unmatched path)
-
-`https://mozilla.org/a`  
-(unmatched path)
-
-`https://mozilla.org/`  
-(unmatched path)  
-  
-`https://*/path/`
-
-Match HTTPS URLs on any host, whose path is "path/".
-
-|
-
-`https://mozilla.org/path/`
-
-`https://a.mozilla.org/path/`
-
-`https://something.com/path`/
-
-|
-
-`http://mozilla.org/path/`  
-(unmatched scheme)
-
-`https://mozilla.org/path`  
-(unmatched path)
-
-`https://mozilla.org/a`  
-(unmatched path)
-
-`https://mozilla.org/`  
-(unmatched path)  
-  
-`https://mozilla.org/*`
-
-Match HTTPS URLs only at "mozilla.org", with any path.
-
-|
-
-`https://mozilla.org/`
-
-`https://mozilla.org/path`
-
-`https://mozilla.org/another`
-
-`https://mozilla.org/path/to/doc`
-
-|
-
-`http://mozilla.org/path`  
-(unmatched scheme)
-
-`https://mozilla.com/path`  
-(unmatched host)  
-  
-`https://mozilla.org/a/b/c/`
-
-Match only this URL.
-
-| `https://mozilla.org/a/b/c/` | Anything else.  
-  
-`https://mozilla.org/*/b/*/`
-
-Match HTTPS URLs hosted on "mozilla.org", whose path contains a component "b"
-somewhere in the middle.
-
-|
-
-`https://mozilla.org/a/b/c/`
-
-`https://mozilla.org/d/b/f/`
-
-`https://mozilla.org/a/b/c/d/`
-
-|
-
-`https://mozilla.org/b/*/`  
-(unmatched path)
-
-`https://mozilla.org/a/b/`  
-(unmatched path)  
-  
-`file:///blah/*`
-
-Match any FILE URL whose path begins with "blah".
-
-|
-
-`file:///blah/`
-
-`file:///blah/bleh`
-
-| `file:///bleh/`  
-(unmatched path)  
-  
-### Invalid match patterns
-
-Invalid pattern | Reason  
+无效的模式 | 原因  
 ---|---  
-`resource://path/` | Unsupported scheme.  
-`https://mozilla.org` | No path.  
-`https://mozilla.*.org/` | "*" in host must be at the start.  
-`https://*zilla.org/` | "*" in host must be the only character or be followed
-by ".".  
-`http*://mozilla.org/` | "*" in scheme must be the only character.  
-`file://*` | Empty path: this should be "`file:///*`".  
+`resource://path/` | 不支持的方案.  
+`https://mozilla.org` | 没有路径.  
+`https://mozilla.*.org/` | "*" 必须在开头.  
+`https://*zilla.org/` | "*"在主机部分紧跟着的必须是 ".".  
+`http*://mozilla.org/` | 方案部分只能是字符.  
+`file://*` | 没有路径 应该是`file:///*`".  
   
 ## Testing match patterns
 
-When writing extensions, you don't generally work with match patterns
-directly: usually you pass a match pattern string into an API, and the API
-constructs a match pattern and uses it to test URLs. However, if you're trying
-to work out which match pattern to use, or debugging a problem with one, it
-can be useful to be able to create and test match patterns directly. This
-section explains how to do this.
+在编写扩展时，通常不直接使用匹配模式：通常将匹配模式字符串传递给API，API构造匹配模式并使用它来测试URL。 但是，如果您正在尝试确定使用哪种匹配模式，或者使用某种匹配模式进行调试，那么直接创建并测试匹配模式会很有用。 本节介绍如何做到这一点。
 
-First, open the developer tool settings and check the setting marked "Enable
-browser chrome and add-on debugging toolboxes":
+首先，打开开发人员工具设置并检查标记为“启用浏览器chrome和附加调试工具箱”的设置：
 
-Next, open the "Browser Console":
+接下来，打开“浏览器控制台”：
 
-This gives you a command line that you can use to execute privileged
-JavaScript in Firefox.
+这给你一个命令行，你可以使用它来在Firefox中执行特权JavaScript。
 
-Because code running in the Browser Console has system privileges, any time
-you use it to run code, you need to understand exactly what the code is doing.
-That includes the code samples in this article.
+由于在浏览器控制台中运行的代码具有系统特权，因此无论何时使用它来运行代码，都需要准确理解代码的作用。这包括本文中的代码示例。
 
-Now paste this code into the command line and press enter:
-
-    
+现在将这段代码粘贴到命令行并按下回车键：
     
     Cu.import("resource://gre/modules/MatchPattern.jsm");
     Cu.import("resource://gre/modules/BrowserUtils.jsm");
 
-This does two things:
+这有两点：
 
-  * imports "MatchPattern.jsm": this is the system module that implements match patterns. Specifically, the module contains a constructor for `MatchPattern` objects. `MatchPattern` objects define a function called `matches()`, that takes a URI and returns `true` or `false`.
-  * imports "BrowserUtils.jsm": this includes a function `makeURI()`, that converts a string into an `[nsIURI](/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI)` object. `nsIURI` is the type that `matches()` expects to receive.
+   *导入“MatchPattern.jsm”：这是实现匹配模式的系统模块。 具体来说，模块包含一个`MatchPattern`对象的构造函数。 MatchPattern对象定义了一个名为`matches（）的函数，它接受一个URI并返回“true”或“false”。
+   *导入“BrowserUtils.jsm”：这包括一个`makeURI（）`函数，它将字符串转换为`[nsIURI](/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI)。`nsIURI`是'matches（）`预期接收的类型。
 
-Now you can construct `MatchPattern` objects, construct URIs, and check
-whether the URIs match:
-
-    
-    
+现在你可以构造`MatchPattern`对象，构造URI，并检查URI是否匹配：
+        
     var match = new MatchPattern("*://mozilla.org/");
     
     var uri = BrowserUtils.makeURI("https://mozilla.org/");
@@ -301,13 +86,10 @@ whether the URIs match:
     uri = BrowserUtils.makeURI("https://mozilla.org/path");
     match.matches(uri); //        < false
 
-## Converting Match Patterns to Regular Expressions
+## 转换模式匹配到正则
 
-All match patterns can be representing by regular expressions. This code
-converts a match pattern to a regular expression:
+所有的匹配模式都可以用正则表达式来表示。 此代码将匹配模式转换为正则表达式：
 
-    
-    
     /**
      * Transforms a valid match pattern into a regular expression
      * which matches all URLs included by that pattern.

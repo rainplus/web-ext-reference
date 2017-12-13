@@ -1,21 +1,18 @@
-JavaScript APIs for WebExtensions can be used inside the extension's [background scripts](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) and in any other documents bundled with the extension, including [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_action) or [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Page_actions) popups, [sidebars](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sidebars), [options pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Options_pages), or [new tab pages](/en-US/Add-ons/WebExtensions/manifest.json/chrome_url_overrides). A few of these APIs can also be accessed by an extension's [content scripts](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts) (see the [list in the content script guide](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs)).
+用于WebExtensions的JavaScript API可以在扩展的[后台脚本 background_scripts](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) 以及与该扩展捆绑在一起的任何其他文档中使用，包括 [浏览器操作 browser_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_action)或[页面操作 page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Page_actions) 弹出窗口，[边栏 sidebar](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sidebars), [首选项页面 options pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Options_pages)或[ 新标签页面 new tab pages](/en-US/Add-ons/WebExtensions/manifest.json/chrome_url_overrides)。 这些API中的一部分还可以通过扩展的[内容脚本 Content_scripts](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts)访问请参阅[内容脚本中的列表](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs)
 
-To use the more powerful APIs you need to [request permission](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions) in your extension's manifest.json.
 
-You can access the APIs using the `browser` namespace:
+需要使用强大的API你需要在manifest.json中声明[权限](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions)
 
-    
-    
+参过`browser` 对象进行访问API:
+
     function logTabs(tabs) {
       console.log(tabs);
     }
     
     browser.tabs.query({currentWindow: true}, logTabs);
 
-Many of the APIs are asynchronous, returning a `[Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)`:
+如果使用的API是一个异步的，将返回[Promise 对象](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise):
 
-    
-    
     function logCookie(c) {
       console.log(c);
     }
@@ -29,255 +26,254 @@ Many of the APIs are asynchronous, returning a `[Promise](/en-US/docs/Web/JavaSc
     );
     setCookie.then(logCookie, logError);
 
-Note that this is different from Google Chrome's extension system, which uses the `chrome` namespace instead of `browser`, and which uses callbacks instead of promises for asynchronous functions. As a porting aid, the Firefox implementation of WebExtensions APIs supports `chrome` and callbacks as well as `browser` and promises. Mozilla has also written a polyfill which enables code that uses `browser` and promises to work unchanged in Chrome: <https://github.com/mozilla/webextension-polyfill>.
+请注意，这不同于Google Chrome的扩展系统，它使用`chrome`对象而不是`browser`，它使用回调而不是`Promise`而是异步函数。 Mozilla也写了一个polyfill移植工具，让Firefox支持`chrome`和callback能像`browser`和promise一样。 它使得使用`browser`的代码可以在Chrome中保持不变 <https://github.com/mozilla/webextension-polyfill>.
 
-Firefox also implements these APIs under the `chrome` namespace using callbacks. This allows code written for Chrome to run largely unchanged in Firefox for the APIs documented here.
+firefox 实现了让chrome的中chrome对象以及callback可以在不进行巨大修改的情况下在firefox中运行
 
-Microsoft Edge uses the `browser` namespace, but doesn't yet support promise-based asynchronous APIs. In Edge, for the time being, asynchronous APIs must use callbacks.
+MS Edge 也使用`browser`对象，但还不运行promise的API，仍然使用的是callback程序。
 
-Not all browsers support all the APIs: for the details, see [Browser support for JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs).
+并不是所有的浏览器都支持全部的APs,详情请查看[rowser support for JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs).
 
-## alarms
+## 定时器 alarms
 
-Schedule code to run at a specific time in the future. This is like`[setTimeout()](/en-US/docs/Web/API/WindowTimers/setTimeout)` and`[setInterval()](/en-US/docs/Web/API/WindowTimers/setInterval)`, except that those functions don't work with background pages that are loaded on demand.
+安排代码在未来的特定时间运行。 这就像[setTimeout（）](/en-US/docs/Web/API/WindowTimers/setTimeout)和[setInterval（）](/en-US/docs/Web/API/WindowTimers/setInterval)，只是这些函数不适用于按需加载的后台脚本中。
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms)
 
-## bookmarks
+## 书签 bookmarks
 
 The [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) [`bookmarks`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks "The documentation about this has not yet been written; please consider contributing!") API lets an extension interact with and manipulate the browser's bookmarking system.You can use it to bookmark pages, retrieve existing bookmarks, and edit,remove, and organize bookmarks.
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks)
 
-## browserAction
+## 浏览器操作 browserAction
 
-Adds a button to the browser's toolbar.
+添加一个工具栏的按钮
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)
 
-## browserSettings
+## 浏览器设置 browserSettings
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings)
 
-## browsingData
+## 浏览数据 browsingData
 
-Enables extensions to clear the data that is accumulated while the user is browsing.
+使用扩展程序可以清除用户正在浏览时累积的数据。
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData)
 
-## clipboard
+## 剪贴板 clipboard
 
-The clipboard API enables an extension to copy items to the system clipboard.Currently the API only supports copying images, but it's intended to support copying text and HTML in the future.
+剪贴板API允许扩展将项目复制到系统剪贴板。目前，API仅支持复制图像，但它会在将来支持复制文本和HTML。
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/clipboard)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/clipboard)
 
-## commands
+## 命令 commands
 
 Listen for the user executing commands that you have registered using the [`commands` manifest.json key](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/commands).
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/commands)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/commands)
 
-## contextualIdentities
+## 上下文标识 contextualIdentities
 
 Work with contextual identities: list, create, remove, and update contextual identities.
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities)
 
 ## cookies
 
-Enables extensions to get and set cookies, and be notified when they change.
+与cookies进行交互
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies)
 
-## devtools.inspectedWindow
+## 开发者工具检视窗口 devtools.inspectedWindow
 
 The `devtools.inspectedWindow` API lets a devtools extension interact with the window that the developer tools are attached to.
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow)
 
-## devtools.network
+## 开发者工具网络面板 devtools.network
 
 The `devtools.network` API lets a devtools extension get information about network requests associated with the window that the devtools are attached to (the inspected window).
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network)
 
-## devtools.panels
+## 开发者工具面板 devtools.panels
 
 The `devtools.panels` API lets a devtools extension define its user interface inside the devtools window.
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels)
 
-## downloads
+## 下载 downloads
 
-Enables extensions to interact with the browser's download manager. You can use this API module to download files, cancel, pause, resume downloads, and show downloaded files in the file manager.
+允许扩展程序与浏览器的下载管理器进行交互。 您可以使用此API模块下载文件，取消，暂停，恢复下载，并在文件管理器中显示下载的文件。
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads)
 
-## events
+## 事件 events
 
-Common types used by APIs that dispatch events.
+调度事件的API使用的常见类型。
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/events)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/events)
 
-## extension
+## 拓展 extension
 
 Utilities related to your extension. Get URLs to resources packages with your extension, get the `[Window](/en-US/docs/Web/API/Window)` object for your extension's pages, get the values for various settings. Note that the messaging APIs in this module are deprecated in favor of the equivalent APIs in the `[runtime](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime)` module.
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension)
 
-## extensionTypes
+## 拓展类型 extensionTypes
 
-Some common types used in other WebExtension APIs.
+其他WebExtension API中使用的一些常见类型。
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extensionTypes)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extensionTypes)
 
-## find
+## 查找 find
 
-Finds text in a web page, and highlights matches.
+在当前页面为查找内容，并高亮显示
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/find)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/find)
 
-## history
+## 历史 history
 
-Use the `history` API to interact with the browser history.
+使用history对象与
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history)
 
-## i18n
+## 国际化 i18n
 
-Functions to internationalize your extension. You can use these APIs to get localized strings from locale files packaged with your extension, find out the browser's current language, and find out the value of its [Accept-Language header](/en-US/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header).
+将您的扩展程序国际化的功能。 您可以使用这些API从您的扩展打包的语言环境文件中获取本地化的字符串，找出浏览器的当前语言，并找出其值 [Accept-Language header](/en-US/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header).
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n)
 
-## identity
+## 标识 identity
 
-Use the identity API to get an [OAuth2](https://oauth.net/2/) authorization code or access token, which an extension can then use to access user data from a service which supports OAuth2 access (such as a Google or a Facebook account).
+使用身份API获取[OAuth2](https://oauth.net/2/)授权码或访问令牌，然后扩展可以使用该令牌访问来自支持OAuth2访问的服务的用户数据（例如Google 或Facebook帐户）。
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity)
 
-## idle
+## 空闲 idle
 
+找出当前用户系统资源的空闲，锁和运行状态
 Find out when the user's system is idle, locked, or active.
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/idle)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/idle)
 
-## management
+## 管理 management
 
-Get information about installed add-ons.
+获取有关已安装的拓展信息。
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management)
 
-## menus
+## 菜单 menus
 
-Add items to the browser's menu system.
+将项目添加到浏览器的菜单系统。
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus)
 
-## notifications
+## 提示 notifications
 
-Display notifications to the user, using the underlying operating system's notification mechanism. Because this API uses the operating system's notification mechanism, the details of how notifications appear and behave may differ according to the operating system and the user's settings.
+使用底层操作系统的通知机制向用户显示通知。 由于此API使用操作系统的通知机制，因此根据操作系统和用户的设置，通知的显示方式和行为方式可能有所不同。
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications)
 
-## omnibox
+## 多功能框 omnibox
 
-Enables extensions to implement customised behavior when the user types into the browser's address bar.
+当用户输入浏览器的地址栏时，允许扩展实现自定义行为。
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox)
 
-## pageAction
+## 页面操作 pageAction
 
-A [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Page_actions) is a lickable icon inside the browser's address bar.
+ [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Page_actions) 是浏览器地址栏的一个图标
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction)
 
-## permissions
+## 权限 permissions
 
-Extensions need permissions to access many of the more powerful WebExtension APIs. They can ask for permissions at install time by including the permissions they need in the `[permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)` manifest.json key. The main advantages of asking for permissions at install time are:
-
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions)
+扩展需要访问许多功能更强大的WebExtension API的权限。 他们可以在安装时通过在manifest.json键中包含他们需要的权限[permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。 在安装时询问权限的主要优点参考[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions)
 
 ## pkcs11
 
-The `pkcs11` API enables an extension to enumerate [PKCS#11](https://en.wikipedia.org/wiki/PKCS_11) security modules, and to make them accessible to the browser as sources of keys and certificates.
+pkcs11 API允许扩展枚举[PKCS＃11](https://en.wikipedia.org/wiki/PKCS_11)安全模块，并使浏览器可以将其作为密钥和证书来源访问。
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11)
 
-## privacy
+## 隐私 privacy
 
-Access and modify various privacy-related browser settings.
+访问和修改各种隐私相关的浏览器设置。
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy)
 
-## proxy
+## 代理 proxy
 
-Use the proxy API to register an extended [Proxy Auto-Configuration (PAC) file](/en-US/Add-ons/WebExtensions/API/proxy#PAC_file_specification), which implements a policy for proxying web requests. This implementation deviates from standard PAC design in several ways because the de-facto specification for PAC files hasn't changed since its initial implementation circa 1995. There is no standards body maintaining the specification.
+使用代理API来注册一个扩展的[代理自动配置 Proxy Auto-Configuration (PAC) file](/en-US/Add-ons/WebExtensions/API/proxy#PAC_file_specification)，实现代理Web请求的策略。这种实现与标准的PAC设计有若干差异，因为事实上PAC文件规范自1995年初始实施以来并没有改变。没有任何标准维护规范。
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy)
 
-## runtime
+## 运行时 runtime
 
-This module provides information about your extension and the environment it's running in.
+此模块提供有关您的扩展程序及其运行环境的信息。
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime)
 
-## sessions
+## 会话 sessions
 
-Use the sessions API to list, and restore, tabs and windows that have been closed while the browser has been running.
+使用会话API列出并恢复在浏览器运行时已关闭的选项卡和窗口。
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions)
 
-## sidebarAction
+## 边样操作 sidebarAction
 
-Gets and sets properties of an extension's sidebar.
+获取并设置扩展的边栏的属性。
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction)
 
-## storage
+## 存储 storage
 
-Enables extensions to store and retrieve data, and listen for changes to stored items.
+使扩展程序能够存储和检索数据，并侦听对存储项目的更改。
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage)
 
-## tabs
+## 标签 tabs
 
-Interact with the browser's tab system.
+与浏览器的选项卡系统进行交互。
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs)
 
-## theme
+## 主题 theme
 
-Enables browser extensions to update the browser theme.
+使浏览器扩展程序能够更新浏览器主题
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme)
 
 ## topSites
 
-Use the topSites API to get an array containing all the sites listed in the browser's "New Tab" page.
+使用topSites API获取包含浏览器“新标签”页面中列出的所有网站的数组。
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/topSites)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/topSites)
 
-## types
+## 类型 types
 
-Defines the `BrowserSetting` type, which is used to represent a browser setting.
+定义用于表示浏览器设置的BrowserSetting类型。
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types)
 
-## webNavigation
+## 页面导航 webNavigation
 
-Add event listeners for the various stages of a navigation. A navigation consists of a frame in the browser transitioning from one URL to another, usually (but not always) in response to a user action like clicking a link or entering a URL in the location bar.
+为导航的各个阶段添加事件侦听器。导航由浏览器中的一个框架构成，从一个URL转换到另一个URL，通常（但不总是）响应用户的操作，如点击链接或在地址栏中输入URL。
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation)
 
-## webRequest
+## web请求 webRequest
 
-Add event listeners for the various stages of making an HTTP request. The event listener receives detailed information about the request, and can modify or cancel the request.
+为发出HTTP请求的各个阶段添加事件侦听器。 事件监听器接收关于请求的详细信息，并且可以修改或取消请求。
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)
 
-## windows
+## 窗口 windows
 
-Interact with browser windows. You can use this API to get information about open windows and to open, modify, and close windows. You can also listen for window open, close, and activate events.
+与浏览器窗口进行交互。 您可以使用此API获取有关打开的窗口以及打开，修改和关闭窗口的信息。 您还可以侦听窗口打开，关闭和激活事件。
 
-[API reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows)
+[API 参考文档](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows)
 

@@ -7,7 +7,7 @@ The example extension featured in this article — [notify-link-clicks-i18n](htt
 An internationalized extension can contain the same features as any other extension — [background scripts](/en-US/Add- ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts), [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts), etc. — but it also has some extra parts to allow it to switch between different locales. These are summarized in the following directory tree:
 
   * extension-root-directory/ 
-    * _locales 
+    * \_locales 
       * en 
         * messages.json 
           * English messages (strings)
@@ -24,18 +24,18 @@ An internationalized extension can contain the same features as any other extens
 
 Let's explore each of the new features in turn — each of the below sections represents a step to follow when internationalizing your extension.
 
-## Providing localized strings in _locales
+## Providing localized strings in \_locales
 
 You can look up language subtags using the _Find_ tool on the [Language subtag lookup page](http://r12a.github.io/apps/subtags/). Note that you need to search for the English name of the language.
 
 Every i18n system requires the provision of strings translated into all the different locales you want to support. In extensions, these are contained within a directory called `_locales`, placed inside the extension root. Each individual locale has its strings (referred to as messages) contained within a file called `messages.json`, which is placed inside a subdirectory of `_locales`, named using the language subtag for that locale's language.
 
-Note that if the subtag includes a basic language plus a regional variant, `then the language and variant are conventionally separated using a hyphen: for example, "en-US". However, in the directories under `_locales`, **the separator must be an underscore** : "en_US".
+Note that if the subtag includes a basic language plus a regional variant, then the language and variant are conventionally separated using a hyphen: for example, "en-US". However, in the directories under `_locales`, **the separator must be an underscore** : "en\_US".
 
 So [for example, in our sample app](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n/_locales) we have directories for"en" (English), "de" (German), "nl" (Dutch), and "ja" (Japanese). Each one of these has a `messages.json` file inside it.
 
 Let's now look at the structure of one of these files
-([_locales/en/messages.json](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/_locales/en/messages.json)):
+([\_locales/en/messages.json](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/_locales/en/messages.json)):
 
     
     
@@ -97,7 +97,7 @@ To call a message string like this, you need to specify it like this:
 
     
     
-    **__MSG_** + _messageName_ + **__**
+    **\_\_MSG\_** + _messageName_ + **\_\_**
 
 ### Specifying a default locale
 
@@ -211,7 +211,7 @@ Locales can be specified using only a language code, like `fr` or `en`, or they 
 Take the following example:
 
   * extension-root-directory/ 
-    * _locales 
+    * \_locales 
       * en_GB 
         * messages.json 
           * `{ "colorLocalised": { "message": "colour", "description": "Color." }, ... }`
